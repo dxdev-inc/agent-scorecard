@@ -18,7 +18,7 @@ import math
 from datetime import timedelta
 from pathlib import Path
 
-from . import verify
+from . import capture, verify
 from .schema import parse_ts
 
 STABILITY_WINDOW_DAYS = 14
@@ -92,17 +92,20 @@ def compute(events: list[dict], as_of: str | None = None) -> dict:
     out = {"as_of": as_of or "end of log"}
 
     # Coverage: how many asks became a unit, and how many carry a done test.
+    # Filler ("ok", "thanks") and probe prompts are not asks (METHOD.md section 1): the capture rules drop them, and
+    # they stay out of every denominator below unless the log itself made a unit for them.
+    asks = {a: v for a, v in asks.items() if a in by_ask or capture.capture(v["text"])}
     n_asks = len(asks)
     mapped = [a for a in asks if a in by_ask]
     with_done = [a for a in mapped if by_ask[a].get("done_when")]
     out["asks_without_unit"] = _m(round(1 - len(mapped) / n_asks, 3) if n_asks else None, n_asks - len(mapped), n_asks,
-                                  "share of all ask rows with no unit (includes filler)")
+                                  "share of asks with no unit (filler and probe rows excluded)")
     out["asks_with_done_test"] = _m(round(len(with_done) / n_asks, 3) if n_asks else None, len(with_done), n_asks)
 
     # Finish rate and time to done, over asks that became units.
     finished = [(a, by_ask[a]) for a in mapped if _done_ts(by_ask[a])]
     out["ask_finish_rate"] = _m(round(len(finished) / n_asks, 3) if n_asks else None, len(finished), n_asks,
-                                "asks whose unit is done at as_of, over all ask rows")
+                                "asks whose unit is done at as_of, over asks (filler and probe rows excluded)")
     mins = sorted((_done_ts(u) - asks[a]["ts"]).total_seconds() / 60 for a, u in finished)
     out["minutes_ask_to_done_median"] = _m(_pct(mins, 0.5), len(mins), len(finished), "nearest rank")
     out["minutes_ask_to_done_p90"] = _m(_pct(mins, 0.9), len(mins), len(finished), "nearest rank")

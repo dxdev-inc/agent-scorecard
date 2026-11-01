@@ -65,3 +65,17 @@ def test_replay_is_deterministic():
     a = loop.run([unit("a"), unit("b")], ok, good, loop.Pool(9))
     b = loop.run([unit("a"), unit("b")], ok, good, loop.Pool(9))
     assert a == b
+
+
+def test_last_unit_on_last_pool_slot_is_done_not_paused():
+    # Regression (review finding 7): the pool check used to run before the readiness check.
+    rep = loop.run([unit("a")], ok, good, loop.Pool(1, 900))
+    assert rep["stop_reason"] == "done" and rep["shipped"] == ["a"] and rep["resume_in_s"] is None
+
+
+def test_all_units_closed_with_a_future_idea_is_done_not_a_failure():
+    # Regression (review finding 7): a not-yet-due idea must not turn a finished run into max_iterations / failure.
+    idea = {"id": "i1", "review_by": "2999-01-01", "done_when": "x", "deliverable": "code",
+            "executor": "worker-1", "requester": "owner"}
+    rep = loop.run([unit("a")], ok, good, loop.Pool(9), loop.Config(max_iterations=1), ideas=[idea], today="2025-01-01")
+    assert rep["stop_reason"] == "done" and not rep["failure"]

@@ -39,7 +39,7 @@ def test_rows_are_well_formed():
 
 def test_known_answers():
     m = measure.compute(log())
-    assert m["asks_without_unit"]["n"] == 1 and m["asks_without_unit"]["of"] == 3
+    assert m["asks_without_unit"]["n"] == 0 and m["asks_without_unit"]["of"] == 2   # a3 is filler
     assert m["asks_with_done_test"]["n"] == 1            # u2 has no done_when
     assert m["ask_finish_rate"]["n"] == 1                # u2 was reopened, so only u1 is finished
     assert m["trust"]["value"] == 1.0 and m["trust"]["of"] == 1
@@ -60,7 +60,7 @@ def test_same_log_same_date_same_numbers():
 
 def test_as_of_cuts_the_log():
     early = measure.compute(log(), "2025-03-03T10:00:00Z")
-    assert early["ask_finish_rate"]["n"] == 0 and early["asks_without_unit"]["of"] == 3
+    assert early["ask_finish_rate"]["n"] == 0 and early["asks_without_unit"]["of"] == 2
     assert measure.compute(log(), "2025-03-03T23:30:00Z")["ask_finish_rate"]["n"] == 2
 
 
@@ -80,3 +80,31 @@ def test_sample_log_loads():
     rows = measure.load(SAMPLE)
     assert rows and all(r["class"] == "synthetic" for r in rows)
     assert measure.compute(rows)["trust"]["value"] is not None
+
+
+def test_filler_is_not_in_the_ask_denominator():
+    # Regression (review finding 3): "ok" is not an ask. 2 real asks, 1 finished: 1/2, not 1/3.
+    m = measure.compute(log())
+    assert m["ask_finish_rate"]["of"] == 2 and m["asks_with_done_test"]["of"] == 2
+
+
+def test_claimed_pass_counts_forced_unit_with_real_evidence_as_credited():
+    # Regression (review finding 2): u2 is forced but its pass carries real evidence from an independent checker.
+    rows = [e for e in log() if e.get("status") != "reopened"]   # keep u2 finished
+    for e in rows:
+        if e["type"] == "verify" and e["unit"] == "u2":
+            e["verifier"] = "checker-1"
+    m = measure.compute(rows)
+    assert m["claimed_pass_without_evidence"]["n"] == 0 and m["claimed_pass_without_evidence"]["of"] == 2
+
+
+def test_interventions_count_only_finished_units():
+    # Regression (review finding 12): an intervention on a unit that never finished must not inflate the rate.
+    rows = log() + [
+        ev("2025-03-03T09:30:00Z", "intervention", unit="u1"),
+        unit("2025-03-03T10:00:00Z", "u3", "a1"),
+        ev("2025-03-03T10:01:00Z", "status", unit="u3", status="open"),
+        ev("2025-03-03T10:30:00Z", "intervention", unit="u3"),
+    ]
+    m = measure.compute(rows)["interventions_per_finished_unit"]
+    assert m["n"] == 1 and m["of"] == 1   # u1 finished; u2 reopened; u3 open

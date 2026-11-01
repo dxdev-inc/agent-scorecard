@@ -57,9 +57,9 @@ Run `python -m factory_kit --help`.
    1230 rows, every row class=synthetic
 
 2. measure (MEASURED = computed from the log by a fixed rule)
-  asks_without_unit                        0.593   249/420   MEASURED
-  asks_with_done_test                      0.019   8/420   MEASURED
-  ask_finish_rate                          0.255   107/420   MEASURED
+  asks_without_unit                        0.517   183/354   MEASURED
+  asks_with_done_test                      0.023   8/354   MEASURED
+  ask_finish_rate                          0.302   107/354   MEASURED
   minutes_ask_to_done_median               233.0   107/107   MEASURED
   trust                                    0.196   21/107   MEASURED
   claimed_pass_without_evidence            0.652   45/69   MEASURED
