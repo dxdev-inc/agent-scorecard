@@ -49,7 +49,7 @@ def fold(events: list[dict], as_of: str | None = None) -> dict:
     cut = parse_ts(as_of) if as_of else None
     rows = [e for e in events if cut is None or parse_ts(e["ts"]) <= cut]
     rows.sort(key=lambda e: parse_ts(e["ts"]))
-    asks, units, idle, interventions = {}, {}, [], 0
+    asks, units, idle, interventions = {}, {}, [], []
     for e in rows:
         t = e["type"]
         if t == "ask":
@@ -68,7 +68,7 @@ def fold(events: list[dict], as_of: str | None = None) -> dict:
         elif t == "owner_idle":
             idle.append((parse_ts(e["start"]), parse_ts(e["end"])))
         elif t == "intervention":
-            interventions += 1
+            interventions.append(e["unit"])
     end = cut or (parse_ts(rows[-1]["ts"]) if rows else None)
     return {"asks": asks, "units": units, "idle": idle, "interventions": interventions, "as_of": cut, "end": end}
 
@@ -112,11 +112,12 @@ def compute(events: list[dict], as_of: str | None = None) -> dict:
     forced = [u for u in done_units if _final(u)[2]]
     trusted = [u for u in done_units if not _final(u)[2] and any(verify.evidence_backed(u, v) for v in u["verifies"])]
     any_pass = [u for u in done_units if any(v["result"] == "pass" for v in u["verifies"])]
+    credited = [u for u in any_pass if any(verify.evidence_backed(u, v) for v in u["verifies"])]   # forced or not
     out["trust"] = _m(round(len(trusted) / len(done_units), 3) if done_units else None, len(trusted), len(done_units),
                       "evidence-backed independent pass / all finished units; unproven units stay in the denominator")
     out["claimed_pass_without_evidence"] = _m(
-        round((len(any_pass) - len(trusted)) / len(any_pass), 3) if any_pass else None,
-        len(any_pass) - len(trusted), len(any_pass), "units with some pass event that the evidence rules do not credit")
+        round((len(any_pass) - len(credited)) / len(any_pass), 3) if any_pass else None,
+        len(any_pass) - len(credited), len(any_pass), "units with some pass event that the evidence rules do not credit")
     out["forced_done"] = _m(round(len(forced) / len(done_units), 3) if done_units else None, len(forced), len(done_units))
 
     # Stability: of the units that reached done and whose window has closed, how many were reopened or reverted.
@@ -141,8 +142,11 @@ def compute(events: list[dict], as_of: str | None = None) -> dict:
                                          f"trusted units finished during an idle episode of {IDLE_EPISODE_MIN_HOURS}h or more")
 
     # Interventions and cost.
+    done_ids = {u["id"] for u in done_units}
+    n_int = sum(1 for uid in s["interventions"] if uid in done_ids)
     out["interventions_per_finished_unit"] = _m(
-        round(s["interventions"] / len(done_units), 3) if done_units else None, s["interventions"], len(done_units))
+        round(n_int / len(done_units), 3) if done_units else None, n_int, len(done_units),
+        "interventions on units that finished, over finished units")
     toks = sum(u["tokens"] for u in done_units)
     out["tokens_per_finished_unit"] = _m(round(toks / len(done_units)) if done_units else None, toks, len(done_units))
     return out

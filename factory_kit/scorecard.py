@@ -12,6 +12,7 @@ bounds at best, and a single headline number invites causal claims the data cann
 from __future__ import annotations
 
 from . import capture, measure
+from .schema import parse_ts
 
 LIMITS = """Limits (read these next to every number above)
   - One operator and one log. Nothing here generalises to another team without its own log.
@@ -35,7 +36,7 @@ def _from_measured(name, m, key):
 def build(events: list[dict], as_of: str | None = None, estimates: dict | None = None,
           loop_report: dict | None = None, owner_words: dict | None = None) -> list[dict]:
     m = measure.compute(events, as_of)
-    cut = [e for e in events if as_of is None or e["ts"] <= as_of]
+    cut = [e for e in events if as_of is None or parse_ts(e["ts"]) <= parse_ts(as_of)]
     rp = capture.replay(cut, owner_words)
     rows = [
         _from_measured("asks with no unit", m, "asks_without_unit"),

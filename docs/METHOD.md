@@ -29,7 +29,7 @@ numerator of trust and stays in the denominator. A forced close is allowed, reco
 
 ## 3. Stability sits beside finish rate
 
-A higher finish rate could be a worse factory. So the share of done units reopened or reverted inside 14 days is
+A higher finish rate could be a worse factory. So the share of done transitions reopened or reverted inside 14 days is
 reported next to it, from the same events.
 
 ## 4. The loop is bounded, and the executor cannot move the goalposts

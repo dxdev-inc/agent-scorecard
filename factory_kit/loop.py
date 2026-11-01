@@ -68,11 +68,11 @@ def run(units: list[dict], executor, checker, pool: Pool, cfg: Config | None = N
         if elapsed >= cfg.wall_clock_s:
             stop = "wall_clock"
             break
-        if not pool.has_room():
+        ready = _ready(units, cfg)
+        if ready and not pool.has_room():
             stop = "paused_pool_exhausted"
             trace.append({"i": i, "event": "pause", "resume_in_s": pool.reset_in_s})
             break
-        ready = _ready(units, cfg)
         if not ready:
             started = False
             for idea in sorted([x for x in ideas if x["review_by"] <= today], key=lambda x: x["review_by"]):
@@ -125,7 +125,7 @@ def run(units: list[dict], executor, checker, pool: Pool, cfg: Config | None = N
             break
     else:
         stop = "max_iterations"
-    if stop == "max_iterations" and not _ready(units, cfg) and not ideas:
+    if stop == "max_iterations":
         stop = "done" if all(u["status"] != "open" for u in units) else stop
     return {"stop_reason": stop, "failure": stop in ("no_progress", "wall_clock", "max_iterations"),
             "iterations": ran, "elapsed_s": elapsed, "shipped": shipped, "escalated": escalated,
