@@ -1,0 +1,397 @@
+{
+ "note": "20 labelled cases. Labels are the author's. Use your own.",
+ "cases": [
+  {
+   "id": "k01",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k02",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "replay_output",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k03",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "page",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "render_capture",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k04",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "page",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "assertion",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k05",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "data",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "stored_row_rerun_match",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k06",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "document",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "named_check",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k07",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "config",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "dry_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k08",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "config",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "firing_log",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k09",
+   "human": "not_pass",
+   "note": "executor graded its own work",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "worker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k10",
+   "human": "not_pass",
+   "note": "the requester approved their own request",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "owner",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k11",
+   "human": "not_pass",
+   "note": "presence only",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "file_exists",
+     "ref": "run-1",
+     "outcome_observed": false
+    }
+   }
+  },
+  {
+   "id": "k12",
+   "human": "not_pass",
+   "note": "presence only",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "commit_exists",
+     "ref": "run-1",
+     "outcome_observed": false
+    }
+   }
+  },
+  {
+   "id": "k13",
+   "human": "not_pass",
+   "note": "a pass with nothing behind it",
+   "unit": {
+    "id": "u",
+    "deliverable": "page",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": null
+   }
+  },
+  {
+   "id": "k14",
+   "human": "pass",
+   "note": "KNOWN STRICT MISS: a captured terminal render is fine evidence for a code change; the type table withholds it",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "render_capture",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k15",
+   "human": "not_pass",
+   "note": "verifier failed it",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "fail",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k16",
+   "human": "not_pass",
+   "note": "verifier could not tell",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "inconclusive",
+    "evidence": null
+   }
+  },
+  {
+   "id": "k17",
+   "human": "not_pass",
+   "note": "evidence says the outcome was not observed",
+   "unit": {
+    "id": "u",
+    "deliverable": "data",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "stored_row_rerun_match",
+     "ref": "run-1",
+     "outcome_observed": false
+    }
+   }
+  },
+  {
+   "id": "k18",
+   "human": "not_pass",
+   "note": "KNOWN LENIENT MISS: the test run is typed and independent but the test asserts nothing; rules cannot see that",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k19",
+   "human": "not_pass",
+   "note": "KNOWN LENIENT MISS: the evidence ref points at a different unit's run; rules do not resolve refs",
+   "unit": {
+    "id": "u",
+    "deliverable": "document",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "named_check",
+     "ref": "run-of-another-unit",
+     "outcome_observed": true
+    }
+   }
+  },
+  {
+   "id": "k20",
+   "human": "pass",
+   "note": "",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-2",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "run-1",
+     "outcome_observed": true
+    }
+   }
+  }
+ ]
+}

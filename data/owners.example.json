@@ -1,0 +1,5 @@
+{
+  "web": ["page", "sidebar", "form", "panel", "css"],
+  "data": ["report", "export", "exporter", "import", "csv"],
+  "platform": ["queue", "cache", "worker", "nightly job", "deploy"]
+}

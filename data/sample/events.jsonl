@@ -1,0 +1,1230 @@
+{"ask_id":"a0002","class":"synthetic","label_kind":"manage","text":"tell the maintainer to hold the signup form until i check the numbers","ts":"2025-03-03T08:29:32Z","type":"ask"}
+{"ask_id":"a0007","class":"synthetic","label_kind":"explore","text":"why did the queue worker fail last night","ts":"2025-03-03T10:04:14Z","type":"ask"}
+{"ask_id":"a0001","class":"synthetic","label_kind":"explore","text":"how does the signup form decide when to retry","ts":"2025-03-03T10:52:54Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-03T14:54:00Z","start":"2025-03-03T11:10:00Z","ts":"2025-03-03T11:10:00Z","type":"owner_idle"}
+{"ask_id":"a0006","class":"synthetic","label_kind":"decide","text":"which is better for the settings panel, json or csv","ts":"2025-03-03T16:11:51Z","type":"ask"}
+{"ask_id":"a0008","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-03T16:28:51Z","type":"ask"}
+{"ask_id":"a0004","class":"synthetic","label_kind":"do","text":"ok now deploy the signup form","ts":"2025-03-03T17:12:19Z","type":"ask"}
+{"ask_id":"a0004","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-03T17:18:19Z","type":"unit_created","unit":"u0001"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-03T17:18:19Z","type":"status","unit":"u0001"}
+{"class":"synthetic","tokens":9288,"ts":"2025-03-03T17:20:19Z","type":"usage","unit":"u0001"}
+{"ask_id":"a0009","class":"synthetic","label_kind":"do","text":"write a test for the signup form","ts":"2025-03-03T17:42:31Z","type":"ask"}
+{"ask_id":"a0009","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-03T18:11:31Z","type":"unit_created","unit":"u0003"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-03T18:11:31Z","type":"status","unit":"u0003"}
+{"class":"synthetic","tokens":87996,"ts":"2025-03-03T18:13:31Z","type":"usage","unit":"u0003"}
+{"ask_id":"a0010","class":"synthetic","label_kind":"do","text":"please document the settings panel flags","ts":"2025-03-03T19:17:33Z","type":"ask"}
+{"ask_id":"a0010","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-03T19:20:33Z","type":"unit_created","unit":"u0004"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-03T19:20:33Z","type":"status","unit":"u0004"}
+{"class":"synthetic","tokens":32114,"ts":"2025-03-03T19:22:33Z","type":"usage","unit":"u0004"}
+{"ask_id":"a0003","class":"synthetic","label_kind":"manage","text":"hand off the sidebar cleanup to the maintainer","ts":"2025-03-03T19:40:31Z","type":"ask"}
+{"ask_id":"a0005","class":"synthetic","label_kind":"do","text":"please document the import script flags","ts":"2025-03-03T19:59:29Z","type":"ask"}
+{"ask_id":"a0005","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-03T20:04:29Z","type":"unit_created","unit":"u0002"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-03T20:04:29Z","type":"status","unit":"u0002"}
+{"class":"synthetic","tokens":19697,"ts":"2025-03-03T20:06:29Z","type":"usage","unit":"u0002"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-03T21:18:29Z","type":"status","unit":"u0002"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0002"},"result":"pass","ts":"2025-03-03T21:19:29Z","type":"verify","unit":"u0002","verifier":"worker-3"}
+{"class":"synthetic","end":"2025-03-04T06:44:00Z","start":"2025-03-03T23:28:00Z","ts":"2025-03-03T23:28:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-04T05:02:31Z","type":"status","unit":"u0003"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-04T07:41:33Z","type":"status","unit":"u0004"}
+{"ask_id":"a0014","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-04T08:06:56Z","type":"ask"}
+{"ask_id":"a0012","class":"synthetic","label_kind":"do","text":"fix the nightly job so it handles empty input","ts":"2025-03-04T08:30:37Z","type":"ask"}
+{"ask_id":"a0012","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-04T08:51:37Z","type":"unit_created","unit":"u0005"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-04T08:51:37Z","type":"status","unit":"u0005"}
+{"class":"synthetic","tokens":45239,"ts":"2025-03-04T08:53:37Z","type":"usage","unit":"u0005"}
+{"class":"synthetic","end":"2025-03-04T13:34:00Z","start":"2025-03-04T11:06:00Z","ts":"2025-03-04T11:06:00Z","type":"owner_idle"}
+{"ask_id":"a0011","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-04T12:09:24Z","type":"ask"}
+{"ask_id":"a0017","class":"synthetic","label_kind":"decide","text":"should we use sqlite or postgres for the settings panel","ts":"2025-03-04T12:54:01Z","type":"ask"}
+{"ask_id":"a0018","class":"synthetic","label_kind":"do","text":"can you rename the signup form option in the config","ts":"2025-03-04T12:58:16Z","type":"ask"}
+{"ask_id":"a0018","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-04T13:22:16Z","type":"unit_created","unit":"u0008"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-04T13:22:16Z","type":"status","unit":"u0008"}
+{"class":"synthetic","tokens":26637,"ts":"2025-03-04T13:24:16Z","type":"usage","unit":"u0008"}
+{"ask_id":"a0016","class":"synthetic","label_kind":"do","text":"fix the billing report so it stops timing out under load","ts":"2025-03-04T13:32:21Z","type":"ask"}
+{"ask_id":"a0016","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-04T13:33:21Z","type":"unit_created","unit":"u0007"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-04T13:33:21Z","type":"status","unit":"u0007"}
+{"class":"synthetic","tokens":58450,"ts":"2025-03-04T13:35:21Z","type":"usage","unit":"u0007"}
+{"ask_id":"a0019","class":"synthetic","label_kind":"decide","text":"which is better for the signup form, a queue or a cron job","ts":"2025-03-04T13:43:40Z","type":"ask"}
+{"ask_id":"a0020","class":"synthetic","label_kind":"do","text":"can you rename the cache layer option in the config","ts":"2025-03-04T14:16:56Z","type":"ask"}
+{"ask_id":"a0020","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-04T14:20:56Z","type":"unit_created","unit":"u0009"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-04T14:20:56Z","type":"status","unit":"u0009"}
+{"class":"synthetic","tokens":25993,"ts":"2025-03-04T14:22:56Z","type":"usage","unit":"u0009"}
+{"ask_id":"a0013","class":"synthetic","label_kind":"explore","text":"how does the signup form decide when to retry","ts":"2025-03-04T15:49:04Z","type":"ask"}
+{"ask_id":"a0013","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"explore","requester":"owner","ts":"2025-03-04T15:51:04Z","type":"unit_created","unit":"u0006"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-04T15:51:04Z","type":"status","unit":"u0006"}
+{"class":"synthetic","tokens":42339,"ts":"2025-03-04T15:53:04Z","type":"usage","unit":"u0006"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-04T16:34:37Z","type":"status","unit":"u0005"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-04T16:40:56Z","type":"status","unit":"u0009"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0009"},"result":"pass","ts":"2025-03-04T16:41:56Z","type":"verify","unit":"u0009","verifier":"worker-1"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0005"},"result":"pass","ts":"2025-03-04T16:49:37Z","type":"verify","unit":"u0005","verifier":"checker-1"}
+{"ask_id":"a0015","class":"synthetic","label_kind":"manage","text":"tell the maintainer to hold the signup form until i check the numbers","ts":"2025-03-04T17:02:34Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-04T17:06:16Z","type":"status","unit":"u0008"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-04T18:15:21Z","type":"status","unit":"u0007"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0007"},"result":"pass","ts":"2025-03-04T18:30:21Z","type":"verify","unit":"u0007","verifier":"checker-1"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-04T19:34:04Z","type":"status","unit":"u0006"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0006"},"result":"pass","ts":"2025-03-04T19:49:04Z","type":"verify","unit":"u0006","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-05T06:50:00Z","start":"2025-03-04T22:05:00Z","ts":"2025-03-04T22:05:00Z","type":"owner_idle"}
+{"ask_id":"a0029","class":"synthetic","label_kind":"do","text":"i need the settings panel output split by day","ts":"2025-03-05T09:01:03Z","type":"ask"}
+{"ask_id":"a0029","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-05T09:21:03Z","type":"unit_created","unit":"u0013"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-05T09:21:03Z","type":"status","unit":"u0013"}
+{"class":"synthetic","tokens":68795,"ts":"2025-03-05T09:23:03Z","type":"usage","unit":"u0013"}
+{"class":"synthetic","end":"2025-03-05T13:31:00Z","start":"2025-03-05T11:19:00Z","ts":"2025-03-05T11:19:00Z","type":"owner_idle"}
+{"ask_id":"a0024","class":"synthetic","label_kind":"manage","text":"tell the reviewer to hold the settings panel until i check the numbers","ts":"2025-03-05T11:58:06Z","type":"ask"}
+{"ask_id":"a0024","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"manage","requester":"owner","ts":"2025-03-05T12:21:06Z","type":"unit_created","unit":"u0010"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-05T12:21:06Z","type":"status","unit":"u0010"}
+{"class":"synthetic","tokens":33681,"ts":"2025-03-05T12:23:06Z","type":"usage","unit":"u0010"}
+{"ask_id":"a0030","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the exporter","ts":"2025-03-05T12:39:09Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-05T15:43:06Z","type":"status","unit":"u0010"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0010"},"result":"pass","ts":"2025-03-05T15:44:06Z","type":"verify","unit":"u0010","verifier":"worker-2"}
+{"ask_id":"a0022","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-03-05T16:06:43Z","type":"ask"}
+{"ask_id":"a0027","class":"synthetic","label_kind":"do","text":"please document the billing report flags","ts":"2025-03-05T16:25:59Z","type":"ask"}
+{"ask_id":"a0027","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-05T16:28:59Z","type":"unit_created","unit":"u0012"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-05T16:28:59Z","type":"status","unit":"u0012"}
+{"class":"synthetic","tokens":80847,"ts":"2025-03-05T16:30:59Z","type":"usage","unit":"u0012"}
+{"ask_id":"a0025","class":"synthetic","label_kind":"do","text":"add a retry to the search page","ts":"2025-03-05T16:53:38Z","type":"ask"}
+{"ask_id":"a0026","class":"synthetic","label_kind":"do","text":"please document the exporter flags","ts":"2025-03-05T16:59:18Z","type":"ask"}
+{"ask_id":"a0028","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-03-05T17:03:53Z","type":"ask"}
+{"ask_id":"a0025","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-05T17:07:38Z","type":"unit_created","unit":"u0011"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-05T17:07:38Z","type":"status","unit":"u0011"}
+{"class":"synthetic","tokens":87661,"ts":"2025-03-05T17:09:38Z","type":"usage","unit":"u0011"}
+{"ask_id":"a0021","class":"synthetic","label_kind":"explore","text":"what is the current size of the cache layer output","ts":"2025-03-05T17:54:40Z","type":"ask"}
+{"ask_id":"a0023","class":"synthetic","label_kind":"manage","text":"hand off the cache layer cleanup to the reviewer","ts":"2025-03-05T18:09:54Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-05T18:12:38Z","type":"status","unit":"u0011"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0011"},"result":"pass","ts":"2025-03-05T18:21:38Z","type":"verify","unit":"u0011","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-05T19:43:03Z","type":"status","unit":"u0013"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0013"},"result":"pass","ts":"2025-03-05T19:52:03Z","type":"verify","unit":"u0013","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-06T06:44:00Z","start":"2025-03-05T22:30:00Z","ts":"2025-03-05T22:30:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-05T23:34:59Z","type":"status","unit":"u0012"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0012"},"result":"pass","ts":"2025-03-05T23:35:59Z","type":"verify","unit":"u0012","verifier":"worker-2"}
+{"ask_id":"a0033","class":"synthetic","label_kind":"do","text":"ok now deploy the exporter","ts":"2025-03-06T08:56:03Z","type":"ask"}
+{"ask_id":"a0033","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-06T09:23:03Z","type":"unit_created","unit":"u0014"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-06T09:23:03Z","type":"status","unit":"u0014"}
+{"class":"synthetic","tokens":54037,"ts":"2025-03-06T09:25:03Z","type":"usage","unit":"u0014"}
+{"ask_id":"a0035","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-03-06T10:20:11Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-06T15:00:00Z","start":"2025-03-06T12:17:00Z","ts":"2025-03-06T12:17:00Z","type":"owner_idle"}
+{"ask_id":"a0032","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-06T12:29:34Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-06T13:47:03Z","type":"status","unit":"u0014"}
+{"ask_id":"a0036","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the queue worker","ts":"2025-03-06T14:28:44Z","type":"ask"}
+{"ask_id":"a0031","class":"synthetic","label_kind":"explore","text":"tell me why the queue worker is slow on mondays","ts":"2025-03-06T16:19:59Z","type":"ask"}
+{"ask_id":"a0034","class":"synthetic","label_kind":"do","text":"add a retry to the cache layer","ts":"2025-03-06T16:49:15Z","type":"ask"}
+{"ask_id":"a0038","class":"synthetic","label_kind":"do","text":"refactor the sidebar and add a test","ts":"2025-03-06T17:57:01Z","type":"ask"}
+{"ask_id":"a0038","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-06T18:03:01Z","type":"unit_created","unit":"u0015"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-06T18:03:01Z","type":"status","unit":"u0015"}
+{"class":"synthetic","tokens":7610,"ts":"2025-03-06T18:05:01Z","type":"usage","unit":"u0015"}
+{"class":"synthetic","ts":"2025-03-06T18:17:01Z","type":"intervention","unit":"u0015"}
+{"ask_id":"a0037","class":"synthetic","label_kind":"manage","text":"hand off the billing report cleanup to the operator","ts":"2025-03-06T18:22:40Z","type":"ask"}
+{"ask_id":"a0039","class":"synthetic","label_kind":"do","text":"fix the sidebar so it shows the right count","ts":"2025-03-06T18:29:34Z","type":"ask"}
+{"ask_id":"a0039","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-06T18:40:34Z","type":"unit_created","unit":"u0016"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-06T18:40:34Z","type":"status","unit":"u0016"}
+{"class":"synthetic","tokens":40117,"ts":"2025-03-06T18:42:34Z","type":"usage","unit":"u0016"}
+{"ask_id":"a0040","class":"synthetic","label_kind":"do","text":"update the nightly job to handle very long lines","ts":"2025-03-06T19:29:34Z","type":"ask"}
+{"ask_id":"a0040","class":"synthetic","deliverable":"config","done_when":"outcome observed","executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-06T19:46:34Z","type":"unit_created","unit":"u0017"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-06T19:46:34Z","type":"status","unit":"u0017"}
+{"class":"synthetic","tokens":27494,"ts":"2025-03-06T19:48:34Z","type":"usage","unit":"u0017"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-06T20:28:34Z","type":"status","unit":"u0017"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0017"},"result":"pass","ts":"2025-03-06T20:43:34Z","type":"verify","unit":"u0017","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-07T07:21:00Z","start":"2025-03-06T23:41:00Z","ts":"2025-03-06T23:41:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-06T23:51:34Z","type":"status","unit":"u0016"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0016"},"result":"pass","ts":"2025-03-07T00:00:34Z","type":"verify","unit":"u0016","verifier":"checker-1"}
+{"ask_id":"a0046","class":"synthetic","label_kind":"explore","text":"brainstorm ways the cache layer could run unattended","ts":"2025-03-07T10:44:04Z","type":"ask"}
+{"ask_id":"a0048","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-07T14:19:44Z","type":"ask"}
+{"ask_id":"a0041","class":"synthetic","label_kind":"do","text":"update the import script to handle unicode names","ts":"2025-03-07T14:53:54Z","type":"ask"}
+{"ask_id":"a0041","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-07T15:08:54Z","type":"unit_created","unit":"u0018"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-07T15:08:54Z","type":"status","unit":"u0018"}
+{"class":"synthetic","tokens":60377,"ts":"2025-03-07T15:10:54Z","type":"usage","unit":"u0018"}
+{"ask_id":"a0047","class":"synthetic","label_kind":"do","text":"can you rename the queue worker option in the config","ts":"2025-03-07T15:40:05Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-07T17:13:54Z","type":"status","unit":"u0018"}
+{"ask_id":"a0050","class":"synthetic","label_kind":"explore","text":"tell me why the nightly job is slow on mondays","ts":"2025-03-07T17:18:27Z","type":"ask"}
+{"ask_id":"a0045","class":"synthetic","label_kind":"do","text":"can you rename the settings panel option in the config","ts":"2025-03-07T17:19:04Z","type":"ask"}
+{"ask_id":"a0045","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-07T17:21:04Z","type":"unit_created","unit":"u0020"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-07T17:21:04Z","type":"status","unit":"u0020"}
+{"class":"synthetic","tokens":5125,"ts":"2025-03-07T17:23:04Z","type":"usage","unit":"u0020"}
+{"ask_id":"a0043","class":"synthetic","label_kind":"decide","text":"pick json or csv for the queue worker and tell me why","ts":"2025-03-07T18:53:00Z","type":"ask"}
+{"ask_id":"a0042","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the search page","ts":"2025-03-07T18:54:26Z","type":"ask"}
+{"ask_id":"a0049","class":"synthetic","label_kind":"do","text":"can you rename the cache layer option in the config","ts":"2025-03-07T18:55:46Z","type":"ask"}
+{"ask_id":"a0049","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-07T18:56:46Z","type":"unit_created","unit":"u0021"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-07T18:56:46Z","type":"status","unit":"u0021"}
+{"class":"synthetic","tokens":55733,"ts":"2025-03-07T18:58:46Z","type":"usage","unit":"u0021"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-07T19:36:04Z","type":"status","unit":"u0020"}
+{"ask_id":"a0044","class":"synthetic","label_kind":"decide","text":"which is better for the queue worker, a retry or a circuit breaker","ts":"2025-03-07T19:38:28Z","type":"ask"}
+{"ask_id":"a0044","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"decide","requester":"owner","ts":"2025-03-07T19:46:28Z","type":"unit_created","unit":"u0019"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-07T19:46:28Z","type":"status","unit":"u0019"}
+{"class":"synthetic","tokens":7133,"ts":"2025-03-07T19:48:28Z","type":"usage","unit":"u0019"}
+{"class":"synthetic","evidence":{"kind":"render_capture","outcome_observed":true,"ref":"run-u0020"},"result":"pass","ts":"2025-03-07T19:51:04Z","type":"verify","unit":"u0020","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-07T21:25:28Z","type":"status","unit":"u0019"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0019"},"result":"pass","ts":"2025-03-07T21:26:28Z","type":"verify","unit":"u0019","verifier":"worker-1"}
+{"class":"synthetic","end":"2025-03-08T07:30:00Z","start":"2025-03-07T22:41:00Z","ts":"2025-03-07T22:41:00Z","type":"owner_idle"}
+{"ask_id":"a0057","class":"synthetic","label_kind":"do","text":"can you rename the nightly job option in the config","ts":"2025-03-08T08:35:24Z","type":"ask"}
+{"ask_id":"a0057","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-08T08:36:24Z","type":"unit_created","unit":"u0026"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T08:36:24Z","type":"status","unit":"u0026"}
+{"class":"synthetic","tokens":58185,"ts":"2025-03-08T08:38:24Z","type":"usage","unit":"u0026"}
+{"ask_id":"a0052","class":"synthetic","label_kind":"decide","text":"should we use json or csv for the import script","ts":"2025-03-08T08:48:10Z","type":"ask"}
+{"ask_id":"a0052","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"decide","requester":"owner","ts":"2025-03-08T08:52:10Z","type":"unit_created","unit":"u0023"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T08:52:10Z","type":"status","unit":"u0023"}
+{"class":"synthetic","tokens":41609,"ts":"2025-03-08T08:54:10Z","type":"usage","unit":"u0023"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-08T09:17:24Z","type":"status","unit":"u0026"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0026"},"result":"pass","ts":"2025-03-08T09:32:24Z","type":"verify","unit":"u0026","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-08T10:01:46Z","type":"status","unit":"u0021"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0021"},"result":"pass","ts":"2025-03-08T10:02:46Z","type":"verify","unit":"u0021","verifier":"worker-3"}
+{"ask_id":"a0051","class":"synthetic","label_kind":"do","text":"can you rename the cache layer option in the config","ts":"2025-03-08T10:42:21Z","type":"ask"}
+{"ask_id":"a0051","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-08T11:03:21Z","type":"unit_created","unit":"u0022"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T11:03:21Z","type":"status","unit":"u0022"}
+{"class":"synthetic","tokens":27651,"ts":"2025-03-08T11:05:21Z","type":"usage","unit":"u0022"}
+{"class":"synthetic","end":"2025-03-08T13:38:00Z","start":"2025-03-08T11:32:00Z","ts":"2025-03-08T11:32:00Z","type":"owner_idle"}
+{"ask_id":"a0053","class":"synthetic","label_kind":"do","text":"refactor the import script and add a test","ts":"2025-03-08T11:35:37Z","type":"ask"}
+{"ask_id":"a0053","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-08T11:39:37Z","type":"unit_created","unit":"u0024"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T11:39:37Z","type":"status","unit":"u0024"}
+{"class":"synthetic","tokens":29594,"ts":"2025-03-08T11:41:37Z","type":"usage","unit":"u0024"}
+{"ask_id":"a0059","class":"synthetic","label_kind":"do","text":"write a test for the search page","ts":"2025-03-08T12:50:02Z","type":"ask"}
+{"ask_id":"a0055","class":"synthetic","label_kind":"decide","text":"should we use sqlite or postgres for the exporter","ts":"2025-03-08T12:54:18Z","type":"ask"}
+{"ask_id":"a0059","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-08T13:12:02Z","type":"unit_created","unit":"u0028"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T13:12:02Z","type":"status","unit":"u0028"}
+{"class":"synthetic","tokens":72640,"ts":"2025-03-08T13:14:02Z","type":"usage","unit":"u0028"}
+{"ask_id":"a0054","class":"synthetic","label_kind":"do","text":"ok now deploy the sidebar","ts":"2025-03-08T13:18:37Z","type":"ask"}
+{"ask_id":"a0054","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-08T13:23:37Z","type":"unit_created","unit":"u0025"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T13:23:37Z","type":"status","unit":"u0025"}
+{"class":"synthetic","tokens":68676,"ts":"2025-03-08T13:25:37Z","type":"usage","unit":"u0025"}
+{"ask_id":"a0056","class":"synthetic","label_kind":"do","text":"can you rename the queue worker option in the config","ts":"2025-03-08T15:16:35Z","type":"ask"}
+{"ask_id":"a0058","class":"synthetic","label_kind":"do","text":"can you rename the billing report option in the config","ts":"2025-03-08T15:20:33Z","type":"ask"}
+{"ask_id":"a0058","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-08T15:25:33Z","type":"unit_created","unit":"u0027"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-08T15:25:33Z","type":"status","unit":"u0027"}
+{"class":"synthetic","tokens":77617,"ts":"2025-03-08T15:27:33Z","type":"usage","unit":"u0027"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-08T16:34:10Z","type":"status","unit":"u0023"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0023"},"result":"pass","ts":"2025-03-08T16:49:10Z","type":"verify","unit":"u0023","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-08T18:17:37Z","type":"status","unit":"u0025"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0025"},"result":"pass","ts":"2025-03-08T18:18:37Z","type":"verify","unit":"u0025","verifier":"worker-3"}
+{"ask_id":"a0060","class":"synthetic","label_kind":"manage","text":"hand off the billing report cleanup to the maintainer","ts":"2025-03-08T18:26:40Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-09T08:59:00Z","start":"2025-03-08T23:35:00Z","ts":"2025-03-08T23:35:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-09T00:09:02Z","type":"status","unit":"u0028"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0028"},"result":"pass","ts":"2025-03-09T00:24:02Z","type":"verify","unit":"u0028","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-09T06:11:33Z","type":"status","unit":"u0027"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0027"},"result":"pass","ts":"2025-03-09T06:20:33Z","type":"verify","unit":"u0027","verifier":"checker-1"}
+{"ask_id":"a0062","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-09T08:11:54Z","type":"ask"}
+{"ask_id":"a0068","class":"synthetic","label_kind":"explore","text":"why did the signup form fail last night","ts":"2025-03-09T09:10:16Z","type":"ask"}
+{"ask_id":"a0066","class":"synthetic","label_kind":"do","text":"can you rename the cache layer option in the config","ts":"2025-03-09T10:34:34Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-09T13:06:00Z","start":"2025-03-09T11:01:00Z","ts":"2025-03-09T11:01:00Z","type":"owner_idle"}
+{"ask_id":"a0063","class":"synthetic","label_kind":"explore","text":"what if we cached the import script, just curious what you think","ts":"2025-03-09T11:23:57Z","type":"ask"}
+{"ask_id":"a0061","class":"synthetic","label_kind":"decide","text":"pick a queue or a cron job for the sidebar and tell me why","ts":"2025-03-09T11:26:09Z","type":"ask"}
+{"ask_id":"a0064","class":"synthetic","label_kind":"do","text":"ok now deploy the signup form","ts":"2025-03-09T12:26:51Z","type":"ask"}
+{"ask_id":"a0067","class":"synthetic","label_kind":"do","text":"refactor the nightly job and add a test","ts":"2025-03-09T12:27:48Z","type":"ask"}
+{"ask_id":"a0064","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-09T12:46:51Z","type":"unit_created","unit":"u0029"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-09T12:46:51Z","type":"status","unit":"u0029"}
+{"ask_id":"a0065","class":"synthetic","label_kind":"do","text":"ok now deploy the signup form","ts":"2025-03-09T12:46:58Z","type":"ask"}
+{"class":"synthetic","tokens":46477,"ts":"2025-03-09T12:48:51Z","type":"usage","unit":"u0029"}
+{"ask_id":"a0067","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-09T12:55:48Z","type":"unit_created","unit":"u0031"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-09T12:55:48Z","type":"status","unit":"u0031"}
+{"class":"synthetic","tokens":7885,"ts":"2025-03-09T12:57:48Z","type":"usage","unit":"u0031"}
+{"ask_id":"a0065","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-09T13:08:58Z","type":"unit_created","unit":"u0030"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-09T13:08:58Z","type":"status","unit":"u0030"}
+{"class":"synthetic","tokens":45648,"ts":"2025-03-09T13:10:58Z","type":"usage","unit":"u0030"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-09T13:37:58Z","type":"status","unit":"u0030"}
+{"ask_id":"a0069","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-09T16:48:45Z","type":"ask"}
+{"ask_id":"a0070","class":"synthetic","label_kind":"explore","text":"what if we cached the exporter, just curious what you think","ts":"2025-03-09T19:09:31Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-10T07:12:00Z","start":"2025-03-09T23:48:00Z","ts":"2025-03-09T23:48:00Z","type":"owner_idle"}
+{"ask_id":"a0072","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-03-10T08:01:05Z","type":"ask"}
+{"ask_id":"a0071","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the cache layer until i check the numbers","ts":"2025-03-10T10:03:33Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-10T13:16:00Z","start":"2025-03-10T11:18:00Z","ts":"2025-03-10T11:18:00Z","type":"owner_idle"}
+{"ask_id":"a0079","class":"synthetic","label_kind":"filler","text":"continue","ts":"2025-03-10T11:35:42Z","type":"ask"}
+{"ask_id":"a0077","class":"synthetic","label_kind":"explore","text":"what if we cached the nightly job, just curious what you think","ts":"2025-03-10T13:01:33Z","type":"ask"}
+{"ask_id":"a0076","class":"synthetic","label_kind":"do","text":"refactor the sidebar and add a test","ts":"2025-03-10T13:54:17Z","type":"ask"}
+{"ask_id":"a0076","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-10T14:16:17Z","type":"unit_created","unit":"u0033"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-10T14:16:17Z","type":"status","unit":"u0033"}
+{"class":"synthetic","tokens":37750,"ts":"2025-03-10T14:18:17Z","type":"usage","unit":"u0033"}
+{"ask_id":"a0073","class":"synthetic","label_kind":"manage","text":"tell the reviewer to hold the settings panel until i check the numbers","ts":"2025-03-10T14:28:14Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-10T15:09:17Z","type":"status","unit":"u0033"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0033"},"result":"pass","ts":"2025-03-10T15:18:17Z","type":"verify","unit":"u0033","verifier":"checker-1"}
+{"ask_id":"a0080","class":"synthetic","label_kind":"do","text":"update the search page to handle duplicate keys","ts":"2025-03-10T15:39:22Z","type":"ask"}
+{"ask_id":"a0080","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-10T15:44:22Z","type":"unit_created","unit":"u0035"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-10T15:44:22Z","type":"status","unit":"u0035"}
+{"class":"synthetic","tokens":82281,"ts":"2025-03-10T15:46:22Z","type":"usage","unit":"u0035"}
+{"ask_id":"a0078","class":"synthetic","label_kind":"do","text":"refactor the settings panel and add a test","ts":"2025-03-10T19:23:36Z","type":"ask"}
+{"ask_id":"a0078","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-10T19:26:36Z","type":"unit_created","unit":"u0034"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-10T19:26:36Z","type":"status","unit":"u0034"}
+{"class":"synthetic","tokens":54671,"ts":"2025-03-10T19:28:36Z","type":"usage","unit":"u0034"}
+{"ask_id":"a0075","class":"synthetic","label_kind":"do","text":"update the cache layer to handle duplicate keys","ts":"2025-03-10T19:33:48Z","type":"ask"}
+{"ask_id":"a0074","class":"synthetic","label_kind":"manage","text":"hand off the billing report cleanup to the maintainer","ts":"2025-03-10T19:34:34Z","type":"ask"}
+{"ask_id":"a0075","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-10T19:38:48Z","type":"unit_created","unit":"u0032"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-10T19:38:48Z","type":"status","unit":"u0032"}
+{"class":"synthetic","tokens":34437,"ts":"2025-03-10T19:40:48Z","type":"usage","unit":"u0032"}
+{"class":"synthetic","end":"2025-03-11T05:36:00Z","start":"2025-03-10T23:35:00Z","ts":"2025-03-10T23:35:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-11T07:27:36Z","type":"status","unit":"u0034"}
+{"ask_id":"a0084","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-03-11T10:15:35Z","type":"ask"}
+{"ask_id":"a0085","class":"synthetic","label_kind":"do","text":"add a retry to the sidebar","ts":"2025-03-11T11:02:50Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-11T14:18:00Z","start":"2025-03-11T11:14:00Z","ts":"2025-03-11T11:14:00Z","type":"owner_idle"}
+{"ask_id":"a0085","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-11T11:25:50Z","type":"unit_created","unit":"u0037"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-11T11:25:50Z","type":"status","unit":"u0037"}
+{"class":"synthetic","tokens":34904,"ts":"2025-03-11T11:27:50Z","type":"usage","unit":"u0037"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-11T11:59:48Z","type":"status","unit":"u0032"}
+{"ask_id":"a0087","class":"synthetic","label_kind":"explore","text":"what if we cached the nightly job, just curious what you think","ts":"2025-03-11T13:29:04Z","type":"ask"}
+{"ask_id":"a0090","class":"synthetic","label_kind":"explore","text":"what is the current size of the queue worker output","ts":"2025-03-11T13:45:23Z","type":"ask"}
+{"ask_id":"a0088","class":"synthetic","label_kind":"do","text":"can you rename the import script option in the config","ts":"2025-03-11T14:00:23Z","type":"ask"}
+{"ask_id":"a0089","class":"synthetic","label_kind":"do","text":"add a retry to the exporter","ts":"2025-03-11T14:59:34Z","type":"ask"}
+{"ask_id":"a0086","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the sidebar","ts":"2025-03-11T15:02:20Z","type":"ask"}
+{"ask_id":"a0089","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-11T15:11:34Z","type":"unit_created","unit":"u0038"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-11T15:11:34Z","type":"status","unit":"u0038"}
+{"ask_id":"a0083","class":"synthetic","label_kind":"do","text":"add a retry to the nightly job","ts":"2025-03-11T15:12:27Z","type":"ask"}
+{"class":"synthetic","tokens":45243,"ts":"2025-03-11T15:13:34Z","type":"usage","unit":"u0038"}
+{"ask_id":"a0083","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-11T15:34:27Z","type":"unit_created","unit":"u0036"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-11T15:34:27Z","type":"status","unit":"u0036"}
+{"class":"synthetic","tokens":85548,"ts":"2025-03-11T15:36:27Z","type":"usage","unit":"u0036"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-11T16:21:27Z","type":"status","unit":"u0036"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-03-11T17:13:54Z","type":"status","unit":"u0018"}
+{"ask_id":"a0081","class":"synthetic","label_kind":"explore","text":"what if we cached the signup form, just curious what you think","ts":"2025-03-11T17:23:07Z","type":"ask"}
+{"ask_id":"a0082","class":"synthetic","label_kind":"manage","text":"hand off the queue worker cleanup to the reviewer","ts":"2025-03-11T17:45:02Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-12T04:22:00Z","start":"2025-03-11T22:00:00Z","ts":"2025-03-11T22:00:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"reopened","ts":"2025-03-12T07:27:36Z","type":"status","unit":"u0034"}
+{"ask_id":"a0091","class":"synthetic","label_kind":"explore","text":"why did the cache layer fail last night","ts":"2025-03-12T08:33:18Z","type":"ask"}
+{"ask_id":"a0097","class":"synthetic","label_kind":"do","text":"add a retry to the cache layer","ts":"2025-03-12T09:13:07Z","type":"ask"}
+{"ask_id":"a0097","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-12T09:41:07Z","type":"unit_created","unit":"u0041"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-12T09:41:07Z","type":"status","unit":"u0041"}
+{"class":"synthetic","tokens":84107,"ts":"2025-03-12T09:43:07Z","type":"usage","unit":"u0041"}
+{"ask_id":"a0094","class":"synthetic","label_kind":"do","text":"i need the cache layer output split by day","ts":"2025-03-12T10:22:06Z","type":"ask"}
+{"ask_id":"a0094","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-12T10:37:06Z","type":"unit_created","unit":"u0039"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-12T10:37:06Z","type":"status","unit":"u0039"}
+{"ask_id":"a0096","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the exporter","ts":"2025-03-12T10:37:52Z","type":"ask"}
+{"class":"synthetic","tokens":23297,"ts":"2025-03-12T10:39:06Z","type":"usage","unit":"u0039"}
+{"ask_id":"a0095","class":"synthetic","label_kind":"do","text":"please document the nightly job flags","ts":"2025-03-12T10:44:24Z","type":"ask"}
+{"ask_id":"a0095","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-12T10:51:24Z","type":"unit_created","unit":"u0040"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-12T10:51:24Z","type":"status","unit":"u0040"}
+{"class":"synthetic","tokens":78362,"ts":"2025-03-12T10:53:24Z","type":"usage","unit":"u0040"}
+{"class":"synthetic","end":"2025-03-12T13:51:00Z","start":"2025-03-12T11:42:00Z","ts":"2025-03-12T11:42:00Z","type":"owner_idle"}
+{"ask_id":"a0092","class":"synthetic","label_kind":"do","text":"refactor the cache layer and add a test","ts":"2025-03-12T12:09:57Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-12T13:48:06Z","type":"status","unit":"u0039"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0039"},"result":"pass","ts":"2025-03-12T14:03:06Z","type":"verify","unit":"u0039","verifier":"checker-1"}
+{"ask_id":"a0100","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the queue worker until i check the numbers","ts":"2025-03-12T15:22:11Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-12T15:24:07Z","type":"status","unit":"u0041"}
+{"ask_id":"a0100","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"manage","requester":"owner","ts":"2025-03-12T15:29:11Z","type":"unit_created","unit":"u0042"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-12T15:29:11Z","type":"status","unit":"u0042"}
+{"class":"synthetic","tokens":89081,"ts":"2025-03-12T15:31:11Z","type":"usage","unit":"u0042"}
+{"class":"synthetic","evidence":{"kind":"render_capture","outcome_observed":true,"ref":"run-u0041"},"result":"pass","ts":"2025-03-12T15:39:07Z","type":"verify","unit":"u0041","verifier":"checker-1"}
+{"class":"synthetic","ts":"2025-03-12T16:03:11Z","type":"intervention","unit":"u0042"}
+{"ask_id":"a0099","class":"synthetic","label_kind":"explore","text":"what if we cached the cache layer, just curious what you think","ts":"2025-03-12T18:23:59Z","type":"ask"}
+{"ask_id":"a0093","class":"synthetic","label_kind":"decide","text":"should we use a retry or a circuit breaker for the search page","ts":"2025-03-12T18:59:28Z","type":"ask"}
+{"ask_id":"a0098","class":"synthetic","label_kind":"decide","text":"which is better for the signup form, a retry or a circuit breaker","ts":"2025-03-12T19:24:39Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-13T06:18:00Z","start":"2025-03-12T22:46:00Z","ts":"2025-03-12T22:46:00Z","type":"owner_idle"}
+{"ask_id":"a0110","class":"synthetic","label_kind":"manage","text":"hand off the exporter cleanup to the reviewer","ts":"2025-03-13T08:29:37Z","type":"ask"}
+{"ask_id":"a0108","class":"synthetic","label_kind":"do","text":"refactor the billing report and add a test","ts":"2025-03-13T09:03:15Z","type":"ask"}
+{"ask_id":"a0108","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-13T09:28:15Z","type":"unit_created","unit":"u0047"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-13T09:28:15Z","type":"status","unit":"u0047"}
+{"class":"synthetic","tokens":28665,"ts":"2025-03-13T09:30:15Z","type":"usage","unit":"u0047"}
+{"ask_id":"a0102","class":"synthetic","label_kind":"do","text":"update the sidebar to handle unicode names","ts":"2025-03-13T09:57:56Z","type":"ask"}
+{"ask_id":"a0102","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-13T10:10:56Z","type":"unit_created","unit":"u0044"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-13T10:10:56Z","type":"status","unit":"u0044"}
+{"class":"synthetic","tokens":36894,"ts":"2025-03-13T10:12:56Z","type":"usage","unit":"u0044"}
+{"ask_id":"a0107","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-13T10:46:14Z","type":"ask"}
+{"ask_id":"a0101","class":"synthetic","label_kind":"do","text":"refactor the exporter and add a test","ts":"2025-03-13T11:59:19Z","type":"ask"}
+{"ask_id":"a0104","class":"synthetic","label_kind":"explore","text":"what is the current size of the import script output","ts":"2025-03-13T11:59:53Z","type":"ask"}
+{"ask_id":"a0101","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-13T12:07:19Z","type":"unit_created","unit":"u0043"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-13T12:07:19Z","type":"status","unit":"u0043"}
+{"class":"synthetic","tokens":20907,"ts":"2025-03-13T12:09:19Z","type":"usage","unit":"u0043"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-13T13:03:19Z","type":"status","unit":"u0043"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0043"},"result":"pass","ts":"2025-03-13T13:12:19Z","type":"verify","unit":"u0043","verifier":"checker-1"}
+{"ask_id":"a0105","class":"synthetic","label_kind":"do","text":"refactor the search page and add a test","ts":"2025-03-13T14:15:43Z","type":"ask"}
+{"ask_id":"a0105","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-13T14:34:43Z","type":"unit_created","unit":"u0045"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-13T14:34:43Z","type":"status","unit":"u0045"}
+{"class":"synthetic","tokens":85170,"ts":"2025-03-13T14:36:43Z","type":"usage","unit":"u0045"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-13T14:51:56Z","type":"status","unit":"u0044"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0044"},"result":"pass","ts":"2025-03-13T14:52:56Z","type":"verify","unit":"u0044","verifier":"worker-2"}
+{"class":"synthetic","ts":"2025-03-13T14:57:43Z","type":"intervention","unit":"u0045"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-13T15:13:43Z","type":"status","unit":"u0045"}
+{"ask_id":"a0109","class":"synthetic","label_kind":"explore","text":"what if we cached the sidebar, just curious what you think","ts":"2025-03-13T15:23:14Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-13T15:30:15Z","type":"status","unit":"u0047"}
+{"ask_id":"a0106","class":"synthetic","label_kind":"do","text":"refactor the queue worker and add a test","ts":"2025-03-13T18:09:27Z","type":"ask"}
+{"ask_id":"a0106","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-13T18:29:27Z","type":"unit_created","unit":"u0046"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-13T18:29:27Z","type":"status","unit":"u0046"}
+{"class":"synthetic","tokens":37930,"ts":"2025-03-13T18:31:27Z","type":"usage","unit":"u0046"}
+{"ask_id":"a0103","class":"synthetic","label_kind":"decide","text":"should we use json or csv for the settings panel","ts":"2025-03-13T19:08:08Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-14T05:50:00Z","start":"2025-03-13T23:22:00Z","ts":"2025-03-13T23:22:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-14T03:47:27Z","type":"status","unit":"u0046"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0046"},"result":"pass","ts":"2025-03-14T03:56:27Z","type":"verify","unit":"u0046","verifier":"checker-1"}
+{"ask_id":"a0117","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-14T08:00:07Z","type":"ask"}
+{"ask_id":"a0115","class":"synthetic","label_kind":"manage","text":"ask the operator to send a short status on the sidebar","ts":"2025-03-14T10:11:27Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-14T14:37:00Z","start":"2025-03-14T11:03:00Z","ts":"2025-03-14T11:03:00Z","type":"owner_idle"}
+{"ask_id":"a0116","class":"synthetic","label_kind":"do","text":"fix the signup form so it handles empty input","ts":"2025-03-14T11:10:52Z","type":"ask"}
+{"ask_id":"a0120","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-03-14T11:25:43Z","type":"ask"}
+{"ask_id":"a0116","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-14T11:30:52Z","type":"unit_created","unit":"u0052"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T11:30:52Z","type":"status","unit":"u0052"}
+{"class":"synthetic","tokens":3842,"ts":"2025-03-14T11:32:52Z","type":"usage","unit":"u0052"}
+{"ask_id":"a0119","class":"synthetic","label_kind":"do","text":"refactor the search page and add a test","ts":"2025-03-14T13:32:26Z","type":"ask"}
+{"ask_id":"a0119","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-14T13:41:26Z","type":"unit_created","unit":"u0053"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T13:41:26Z","type":"status","unit":"u0053"}
+{"class":"synthetic","tokens":11209,"ts":"2025-03-14T13:43:26Z","type":"usage","unit":"u0053"}
+{"ask_id":"a0113","class":"synthetic","label_kind":"do","text":"write a test for the exporter","ts":"2025-03-14T15:10:57Z","type":"ask"}
+{"ask_id":"a0113","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-14T15:34:57Z","type":"unit_created","unit":"u0050"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T15:34:57Z","type":"status","unit":"u0050"}
+{"class":"synthetic","tokens":21932,"ts":"2025-03-14T15:36:57Z","type":"usage","unit":"u0050"}
+{"ask_id":"a0112","class":"synthetic","label_kind":"do","text":"i need the billing report output split by day","ts":"2025-03-14T15:54:09Z","type":"ask"}
+{"ask_id":"a0112","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-14T16:11:09Z","type":"unit_created","unit":"u0049"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T16:11:09Z","type":"status","unit":"u0049"}
+{"class":"synthetic","tokens":59758,"ts":"2025-03-14T16:13:09Z","type":"usage","unit":"u0049"}
+{"ask_id":"a0114","class":"synthetic","label_kind":"do","text":"ok now deploy the cache layer","ts":"2025-03-14T16:49:36Z","type":"ask"}
+{"ask_id":"a0114","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-14T16:53:36Z","type":"unit_created","unit":"u0051"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T16:53:36Z","type":"status","unit":"u0051"}
+{"class":"synthetic","tokens":83586,"ts":"2025-03-14T16:55:36Z","type":"usage","unit":"u0051"}
+{"ask_id":"a0111","class":"synthetic","label_kind":"do","text":"please document the sidebar flags","ts":"2025-03-14T19:27:42Z","type":"ask"}
+{"ask_id":"a0111","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-14T19:31:42Z","type":"unit_created","unit":"u0048"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-14T19:31:42Z","type":"status","unit":"u0048"}
+{"class":"synthetic","tokens":45777,"ts":"2025-03-14T19:33:42Z","type":"usage","unit":"u0048"}
+{"ask_id":"a0118","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-14T19:49:52Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-03-14T21:25:28Z","type":"status","unit":"u0019"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-14T22:50:57Z","type":"status","unit":"u0050"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0050"},"result":"pass","ts":"2025-03-14T23:05:57Z","type":"verify","unit":"u0050","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-15T07:53:00Z","start":"2025-03-14T23:07:00Z","ts":"2025-03-14T23:07:00Z","type":"owner_idle"}
+{"ask_id":"a0124","class":"synthetic","label_kind":"explore","text":"why did the search page fail last night","ts":"2025-03-15T08:31:33Z","type":"ask"}
+{"ask_id":"a0124","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"explore","requester":"owner","ts":"2025-03-15T08:41:33Z","type":"unit_created","unit":"u0057"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T08:41:33Z","type":"status","unit":"u0057"}
+{"class":"synthetic","tokens":28117,"ts":"2025-03-15T08:43:33Z","type":"usage","unit":"u0057"}
+{"ask_id":"a0127","class":"synthetic","label_kind":"do","text":"ok now deploy the nightly job","ts":"2025-03-15T09:49:42Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-15T09:55:33Z","type":"status","unit":"u0057"}
+{"ask_id":"a0127","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-15T09:58:42Z","type":"unit_created","unit":"u0058"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T09:58:42Z","type":"status","unit":"u0058"}
+{"class":"synthetic","tokens":86314,"ts":"2025-03-15T10:00:42Z","type":"usage","unit":"u0058"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0057"},"result":"pass","ts":"2025-03-15T10:04:33Z","type":"verify","unit":"u0057","verifier":"checker-1"}
+{"ask_id":"a0128","class":"synthetic","label_kind":"do","text":"refactor the queue worker and add a test","ts":"2025-03-15T10:26:02Z","type":"ask"}
+{"ask_id":"a0128","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-15T10:29:02Z","type":"unit_created","unit":"u0059"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T10:29:02Z","type":"status","unit":"u0059"}
+{"class":"synthetic","tokens":62519,"ts":"2025-03-15T10:31:02Z","type":"usage","unit":"u0059"}
+{"ask_id":"a0126","class":"synthetic","label_kind":"explore","text":"how does the cache layer decide when to retry","ts":"2025-03-15T10:36:39Z","type":"ask"}
+{"ask_id":"a0129","class":"synthetic","label_kind":"explore","text":"what if we cached the billing report, just curious what you think","ts":"2025-03-15T10:44:32Z","type":"ask"}
+{"class":"synthetic","ts":"2025-03-15T10:51:02Z","type":"intervention","unit":"u0059"}
+{"class":"synthetic","end":"2025-03-15T12:39:00Z","start":"2025-03-15T11:14:00Z","ts":"2025-03-15T11:14:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-15T12:26:02Z","type":"status","unit":"u0059"}
+{"ask_id":"a0125","class":"synthetic","label_kind":"explore","text":"tell me why the billing report is slow on mondays","ts":"2025-03-15T12:26:22Z","type":"ask"}
+{"ask_id":"a0121","class":"synthetic","label_kind":"do","text":"ok now deploy the sidebar","ts":"2025-03-15T16:20:22Z","type":"ask"}
+{"ask_id":"a0121","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-15T16:34:22Z","type":"unit_created","unit":"u0054"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T16:34:22Z","type":"status","unit":"u0054"}
+{"class":"synthetic","tokens":85138,"ts":"2025-03-15T16:36:22Z","type":"usage","unit":"u0054"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-15T17:23:26Z","type":"status","unit":"u0053"}
+{"ask_id":"a0122","class":"synthetic","label_kind":"do","text":"add a retry to the settings panel","ts":"2025-03-15T17:24:28Z","type":"ask"}
+{"ask_id":"a0122","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-15T17:51:28Z","type":"unit_created","unit":"u0055"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T17:51:28Z","type":"status","unit":"u0055"}
+{"class":"synthetic","tokens":5591,"ts":"2025-03-15T17:53:28Z","type":"usage","unit":"u0055"}
+{"ask_id":"a0123","class":"synthetic","label_kind":"do","text":"refactor the cache layer and add a test","ts":"2025-03-15T18:13:42Z","type":"ask"}
+{"ask_id":"a0123","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-15T18:41:42Z","type":"unit_created","unit":"u0056"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T18:41:42Z","type":"status","unit":"u0056"}
+{"class":"synthetic","tokens":59438,"ts":"2025-03-15T18:43:42Z","type":"usage","unit":"u0056"}
+{"class":"synthetic","ts":"2025-03-15T18:54:42Z","type":"intervention","unit":"u0056"}
+{"ask_id":"a0130","class":"synthetic","label_kind":"decide","text":"should we use sqlite or postgres for the sidebar","ts":"2025-03-15T19:19:05Z","type":"ask"}
+{"ask_id":"a0130","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"decide","requester":"owner","ts":"2025-03-15T19:43:05Z","type":"unit_created","unit":"u0060"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-15T19:43:05Z","type":"status","unit":"u0060"}
+{"class":"synthetic","tokens":55707,"ts":"2025-03-15T19:45:05Z","type":"usage","unit":"u0060"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-15T20:13:42Z","type":"status","unit":"u0056"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0056"},"result":"pass","ts":"2025-03-15T20:22:42Z","type":"verify","unit":"u0056","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-16T06:51:00Z","start":"2025-03-15T22:18:00Z","ts":"2025-03-15T22:18:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-16T00:34:05Z","type":"status","unit":"u0060"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0060"},"result":"pass","ts":"2025-03-16T00:49:05Z","type":"verify","unit":"u0060","verifier":"checker-1"}
+{"ask_id":"a0140","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-03-16T08:11:51Z","type":"ask"}
+{"ask_id":"a0132","class":"synthetic","label_kind":"do","text":"refactor the billing report and add a test","ts":"2025-03-16T08:34:16Z","type":"ask"}
+{"ask_id":"a0132","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-16T08:47:16Z","type":"unit_created","unit":"u0061"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-16T08:47:16Z","type":"status","unit":"u0061"}
+{"class":"synthetic","tokens":69250,"ts":"2025-03-16T08:49:16Z","type":"usage","unit":"u0061"}
+{"ask_id":"a0137","class":"synthetic","label_kind":"do","text":"refactor the cache layer and add a test","ts":"2025-03-16T08:57:38Z","type":"ask"}
+{"ask_id":"a0137","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-16T09:26:38Z","type":"unit_created","unit":"u0063"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-16T09:26:38Z","type":"status","unit":"u0063"}
+{"class":"synthetic","tokens":3024,"ts":"2025-03-16T09:28:38Z","type":"usage","unit":"u0063"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-16T09:31:38Z","type":"status","unit":"u0063"}
+{"ask_id":"a0134","class":"synthetic","label_kind":"do","text":"refactor the exporter and add a test","ts":"2025-03-16T10:00:04Z","type":"ask"}
+{"ask_id":"a0134","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-16T10:18:04Z","type":"unit_created","unit":"u0062"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-16T10:18:04Z","type":"status","unit":"u0062"}
+{"class":"synthetic","tokens":57188,"ts":"2025-03-16T10:20:04Z","type":"usage","unit":"u0062"}
+{"class":"synthetic","end":"2025-03-16T15:47:00Z","start":"2025-03-16T12:01:00Z","ts":"2025-03-16T12:01:00Z","type":"owner_idle"}
+{"ask_id":"a0135","class":"synthetic","label_kind":"explore","text":"why did the nightly job fail last night","ts":"2025-03-16T12:08:21Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-16T12:10:16Z","type":"status","unit":"u0061"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-16T12:14:04Z","type":"status","unit":"u0062"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0062"},"result":"pass","ts":"2025-03-16T12:15:04Z","type":"verify","unit":"u0062","verifier":"worker-2"}
+{"ask_id":"a0133","class":"synthetic","label_kind":"explore","text":"brainstorm ways the cache layer could run unattended","ts":"2025-03-16T12:16:43Z","type":"ask"}
+{"ask_id":"a0138","class":"synthetic","label_kind":"manage","text":"tell the maintainer to hold the search page until i check the numbers","ts":"2025-03-16T12:50:01Z","type":"ask"}
+{"ask_id":"a0139","class":"synthetic","label_kind":"do","text":"update the cache layer to handle very long lines","ts":"2025-03-16T14:01:48Z","type":"ask"}
+{"ask_id":"a0131","class":"synthetic","label_kind":"do","text":"write a test for the exporter","ts":"2025-03-16T17:01:54Z","type":"ask"}
+{"ask_id":"a0136","class":"synthetic","label_kind":"explore","text":"what if we cached the cache layer, just curious what you think","ts":"2025-03-16T18:32:46Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-17T05:35:00Z","start":"2025-03-16T23:00:00Z","ts":"2025-03-16T23:00:00Z","type":"owner_idle"}
+{"ask_id":"a0147","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the cache layer until i check the numbers","ts":"2025-03-17T08:39:06Z","type":"ask"}
+{"ask_id":"a0142","class":"synthetic","label_kind":"do","text":"refactor the exporter and add a test","ts":"2025-03-17T09:08:39Z","type":"ask"}
+{"ask_id":"a0142","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-17T09:22:39Z","type":"unit_created","unit":"u0064"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T09:22:39Z","type":"status","unit":"u0064"}
+{"class":"synthetic","tokens":68918,"ts":"2025-03-17T09:24:39Z","type":"usage","unit":"u0064"}
+{"class":"synthetic","ts":"2025-03-17T09:36:39Z","type":"intervention","unit":"u0064"}
+{"class":"synthetic","end":"2025-03-17T13:54:00Z","start":"2025-03-17T11:03:00Z","ts":"2025-03-17T11:03:00Z","type":"owner_idle"}
+{"ask_id":"a0146","class":"synthetic","label_kind":"do","text":"fix the signup form so it stops timing out under load","ts":"2025-03-17T12:33:53Z","type":"ask"}
+{"ask_id":"a0146","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-17T13:00:53Z","type":"unit_created","unit":"u0068"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T13:00:53Z","type":"status","unit":"u0068"}
+{"class":"synthetic","tokens":35156,"ts":"2025-03-17T13:02:53Z","type":"usage","unit":"u0068"}
+{"ask_id":"a0149","class":"synthetic","label_kind":"decide","text":"should we use json or csv for the billing report","ts":"2025-03-17T13:10:00Z","type":"ask"}
+{"ask_id":"a0150","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-17T15:14:26Z","type":"ask"}
+{"ask_id":"a0145","class":"synthetic","label_kind":"do","text":"i need the nightly job output split by day","ts":"2025-03-17T15:49:41Z","type":"ask"}
+{"ask_id":"a0145","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-17T15:55:41Z","type":"unit_created","unit":"u0067"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T15:55:41Z","type":"status","unit":"u0067"}
+{"class":"synthetic","tokens":84262,"ts":"2025-03-17T15:57:41Z","type":"usage","unit":"u0067"}
+{"ask_id":"a0143","class":"synthetic","label_kind":"do","text":"add a retry to the import script","ts":"2025-03-17T16:05:24Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reopened","ts":"2025-03-17T16:21:27Z","type":"status","unit":"u0036"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-17T16:24:53Z","type":"status","unit":"u0068"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0068"},"result":"pass","ts":"2025-03-17T16:25:53Z","type":"verify","unit":"u0068","verifier":"worker-3"}
+{"ask_id":"a0143","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-17T16:32:24Z","type":"unit_created","unit":"u0065"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T16:32:24Z","type":"status","unit":"u0065"}
+{"class":"synthetic","tokens":86965,"ts":"2025-03-17T16:34:24Z","type":"usage","unit":"u0065"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-17T17:04:24Z","type":"status","unit":"u0065"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0065"},"result":"pass","ts":"2025-03-17T17:13:24Z","type":"verify","unit":"u0065","verifier":"checker-1"}
+{"ask_id":"a0148","class":"synthetic","label_kind":"do","text":"please document the import script flags","ts":"2025-03-17T17:29:43Z","type":"ask"}
+{"ask_id":"a0148","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-17T17:31:43Z","type":"unit_created","unit":"u0069"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T17:31:43Z","type":"status","unit":"u0069"}
+{"class":"synthetic","tokens":81994,"ts":"2025-03-17T17:33:43Z","type":"usage","unit":"u0069"}
+{"ask_id":"a0144","class":"synthetic","label_kind":"do","text":"fix the cache layer so it shows the right count","ts":"2025-03-17T17:52:28Z","type":"ask"}
+{"ask_id":"a0144","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-17T17:56:28Z","type":"unit_created","unit":"u0066"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-17T17:56:28Z","type":"status","unit":"u0066"}
+{"class":"synthetic","tokens":52561,"ts":"2025-03-17T17:58:28Z","type":"usage","unit":"u0066"}
+{"ask_id":"a0141","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-17T18:57:08Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-17T20:23:43Z","type":"status","unit":"u0069"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-17T20:35:28Z","type":"status","unit":"u0066"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0069"},"result":"pass","ts":"2025-03-17T20:38:43Z","type":"verify","unit":"u0069","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-18T07:47:00Z","start":"2025-03-17T23:37:00Z","ts":"2025-03-17T23:37:00Z","type":"owner_idle"}
+{"ask_id":"a0152","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-18T08:05:35Z","type":"ask"}
+{"ask_id":"a0151","class":"synthetic","label_kind":"explore","text":"brainstorm ways the exporter could run unattended","ts":"2025-03-18T09:14:49Z","type":"ask"}
+{"ask_id":"a0160","class":"synthetic","label_kind":"decide","text":"pick sqlite or postgres for the sidebar and tell me why","ts":"2025-03-18T10:50:00Z","type":"ask"}
+{"ask_id":"a0156","class":"synthetic","label_kind":"do","text":"ok now deploy the search page","ts":"2025-03-18T10:55:23Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-18T12:26:00Z","start":"2025-03-18T11:09:00Z","ts":"2025-03-18T11:09:00Z","type":"owner_idle"}
+{"ask_id":"a0156","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-18T11:17:23Z","type":"unit_created","unit":"u0073"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-18T11:17:23Z","type":"status","unit":"u0073"}
+{"class":"synthetic","tokens":42617,"ts":"2025-03-18T11:19:23Z","type":"usage","unit":"u0073"}
+{"ask_id":"a0157","class":"synthetic","label_kind":"decide","text":"pick json or csv for the signup form and tell me why","ts":"2025-03-18T12:40:12Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-18T13:04:23Z","type":"status","unit":"u0073"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0073"},"result":"pass","ts":"2025-03-18T13:05:23Z","type":"verify","unit":"u0073","verifier":"worker-1"}
+{"ask_id":"a0154","class":"synthetic","label_kind":"decide","text":"should we use a retry or a circuit breaker for the queue worker","ts":"2025-03-18T14:21:45Z","type":"ask"}
+{"ask_id":"a0154","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"decide","requester":"owner","ts":"2025-03-18T14:51:45Z","type":"unit_created","unit":"u0071"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-18T14:51:45Z","type":"status","unit":"u0071"}
+{"class":"synthetic","tokens":71067,"ts":"2025-03-18T14:53:45Z","type":"usage","unit":"u0071"}
+{"ask_id":"a0159","class":"synthetic","label_kind":"do","text":"write a test for the import script","ts":"2025-03-18T15:33:25Z","type":"ask"}
+{"ask_id":"a0159","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-18T15:46:25Z","type":"unit_created","unit":"u0074"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-18T15:46:25Z","type":"status","unit":"u0074"}
+{"class":"synthetic","tokens":14328,"ts":"2025-03-18T15:48:25Z","type":"usage","unit":"u0074"}
+{"ask_id":"a0153","class":"synthetic","label_kind":"do","text":"i need the queue worker output split by day","ts":"2025-03-18T17:30:06Z","type":"ask"}
+{"ask_id":"a0153","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-18T17:40:06Z","type":"unit_created","unit":"u0070"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-18T17:40:06Z","type":"status","unit":"u0070"}
+{"class":"synthetic","tokens":52648,"ts":"2025-03-18T17:42:06Z","type":"usage","unit":"u0070"}
+{"ask_id":"a0155","class":"synthetic","label_kind":"do","text":"i need the signup form output split by day","ts":"2025-03-18T18:52:10Z","type":"ask"}
+{"ask_id":"a0155","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-18T19:18:10Z","type":"unit_created","unit":"u0072"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-18T19:18:10Z","type":"status","unit":"u0072"}
+{"class":"synthetic","tokens":72485,"ts":"2025-03-18T19:20:10Z","type":"usage","unit":"u0072"}
+{"ask_id":"a0158","class":"synthetic","label_kind":"decide","text":"should we use json or csv for the search page","ts":"2025-03-18T19:23:23Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-18T19:57:10Z","type":"status","unit":"u0072"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0072"},"result":"pass","ts":"2025-03-18T20:06:10Z","type":"verify","unit":"u0072","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-18T20:33:45Z","type":"status","unit":"u0071"}
+{"class":"synthetic","end":"2025-03-19T07:27:00Z","start":"2025-03-18T22:47:00Z","ts":"2025-03-18T22:47:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-18T23:07:06Z","type":"status","unit":"u0070"}
+{"ask_id":"a0168","class":"synthetic","label_kind":"explore","text":"how does the sidebar decide when to retry","ts":"2025-03-19T09:45:09Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-19T14:06:00Z","start":"2025-03-19T12:17:00Z","ts":"2025-03-19T12:17:00Z","type":"owner_idle"}
+{"ask_id":"a0166","class":"synthetic","label_kind":"do","text":"i need the cache layer output split by day","ts":"2025-03-19T12:45:12Z","type":"ask"}
+{"ask_id":"a0166","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-19T13:01:12Z","type":"unit_created","unit":"u0078"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-19T13:01:12Z","type":"status","unit":"u0078"}
+{"class":"synthetic","tokens":55938,"ts":"2025-03-19T13:03:12Z","type":"usage","unit":"u0078"}
+{"ask_id":"a0170","class":"synthetic","label_kind":"do","text":"can you rename the import script option in the config","ts":"2025-03-19T13:20:39Z","type":"ask"}
+{"ask_id":"a0164","class":"synthetic","label_kind":"do","text":"update the signup form to handle duplicate keys","ts":"2025-03-19T15:30:49Z","type":"ask"}
+{"ask_id":"a0167","class":"synthetic","label_kind":"do","text":"please document the queue worker flags","ts":"2025-03-19T15:47:57Z","type":"ask"}
+{"ask_id":"a0164","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-19T15:49:49Z","type":"unit_created","unit":"u0076"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-19T15:49:49Z","type":"status","unit":"u0076"}
+{"class":"synthetic","tokens":60601,"ts":"2025-03-19T15:51:49Z","type":"usage","unit":"u0076"}
+{"ask_id":"a0167","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-19T16:05:57Z","type":"unit_created","unit":"u0079"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-19T16:05:57Z","type":"status","unit":"u0079"}
+{"class":"synthetic","tokens":79962,"ts":"2025-03-19T16:07:57Z","type":"usage","unit":"u0079"}
+{"ask_id":"a0165","class":"synthetic","label_kind":"do","text":"fix the import script so it stops clipping on narrow screens","ts":"2025-03-19T16:32:48Z","type":"ask"}
+{"ask_id":"a0165","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-19T16:46:48Z","type":"unit_created","unit":"u0077"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-19T16:46:48Z","type":"status","unit":"u0077"}
+{"class":"synthetic","tokens":38593,"ts":"2025-03-19T16:48:48Z","type":"usage","unit":"u0077"}
+{"ask_id":"a0163","class":"synthetic","label_kind":"do","text":"refactor the sidebar and add a test","ts":"2025-03-19T16:49:30Z","type":"ask"}
+{"ask_id":"a0163","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-19T16:59:30Z","type":"unit_created","unit":"u0075"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-19T16:59:30Z","type":"status","unit":"u0075"}
+{"class":"synthetic","tokens":20264,"ts":"2025-03-19T17:01:30Z","type":"usage","unit":"u0075"}
+{"ask_id":"a0161","class":"synthetic","label_kind":"explore","text":"what if we cached the billing report, just curious what you think","ts":"2025-03-19T17:11:44Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-19T18:23:57Z","type":"status","unit":"u0079"}
+{"ask_id":"a0169","class":"synthetic","label_kind":"manage","text":"hand off the import script cleanup to the operator","ts":"2025-03-19T19:13:55Z","type":"ask"}
+{"ask_id":"a0162","class":"synthetic","label_kind":"explore","text":"what is the current size of the import script output","ts":"2025-03-19T19:19:59Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-19T19:44:48Z","type":"status","unit":"u0077"}
+{"class":"synthetic","evidence":{"kind":"render_capture","outcome_observed":true,"ref":"run-u0077"},"result":"pass","ts":"2025-03-19T19:59:48Z","type":"verify","unit":"u0077","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-20T07:26:00Z","start":"2025-03-19T23:06:00Z","ts":"2025-03-19T23:06:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-19T23:50:49Z","type":"status","unit":"u0076"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-20T01:00:30Z","type":"status","unit":"u0075"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-20T04:18:12Z","type":"status","unit":"u0078"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0078"},"result":"pass","ts":"2025-03-20T04:27:12Z","type":"verify","unit":"u0078","verifier":"checker-1"}
+{"ask_id":"a0175","class":"synthetic","label_kind":"do","text":"i need the cache layer output split by day","ts":"2025-03-20T09:38:26Z","type":"ask"}
+{"ask_id":"a0173","class":"synthetic","label_kind":"do","text":"update the exporter to handle very long lines","ts":"2025-03-20T09:42:33Z","type":"ask"}
+{"ask_id":"a0173","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-20T09:43:33Z","type":"unit_created","unit":"u0080"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-20T09:43:33Z","type":"status","unit":"u0080"}
+{"class":"synthetic","tokens":57620,"ts":"2025-03-20T09:45:33Z","type":"usage","unit":"u0080"}
+{"ask_id":"a0177","class":"synthetic","label_kind":"decide","text":"should we use json or csv for the cache layer","ts":"2025-03-20T10:05:55Z","type":"ask"}
+{"ask_id":"a0175","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-20T10:08:26Z","type":"unit_created","unit":"u0082"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-20T10:08:26Z","type":"status","unit":"u0082"}
+{"class":"synthetic","tokens":6235,"ts":"2025-03-20T10:10:26Z","type":"usage","unit":"u0082"}
+{"ask_id":"a0179","class":"synthetic","label_kind":"do","text":"ok now deploy the cache layer","ts":"2025-03-20T10:15:52Z","type":"ask"}
+{"ask_id":"a0179","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-20T10:44:52Z","type":"unit_created","unit":"u0084"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-20T10:44:52Z","type":"status","unit":"u0084"}
+{"class":"synthetic","tokens":75229,"ts":"2025-03-20T10:46:52Z","type":"usage","unit":"u0084"}
+{"class":"synthetic","end":"2025-03-20T13:58:00Z","start":"2025-03-20T12:07:00Z","ts":"2025-03-20T12:07:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-20T12:46:26Z","type":"status","unit":"u0082"}
+{"ask_id":"a0172","class":"synthetic","label_kind":"do","text":"write a test for the exporter","ts":"2025-03-20T12:48:54Z","type":"ask"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0082"},"result":"pass","ts":"2025-03-20T12:55:26Z","type":"verify","unit":"u0082","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-20T13:39:33Z","type":"status","unit":"u0080"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0080"},"result":"pass","ts":"2025-03-20T13:48:33Z","type":"verify","unit":"u0080","verifier":"checker-1"}
+{"ask_id":"a0178","class":"synthetic","label_kind":"do","text":"update the nightly job to handle unicode names","ts":"2025-03-20T14:07:37Z","type":"ask"}
+{"ask_id":"a0178","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-20T14:28:37Z","type":"unit_created","unit":"u0083"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-20T14:28:37Z","type":"status","unit":"u0083"}
+{"class":"synthetic","tokens":41464,"ts":"2025-03-20T14:30:37Z","type":"usage","unit":"u0083"}
+{"ask_id":"a0174","class":"synthetic","label_kind":"do","text":"i need the signup form output split by day","ts":"2025-03-20T14:37:47Z","type":"ask"}
+{"ask_id":"a0174","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-20T14:57:47Z","type":"unit_created","unit":"u0081"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-20T14:57:47Z","type":"status","unit":"u0081"}
+{"class":"synthetic","tokens":8266,"ts":"2025-03-20T14:59:47Z","type":"usage","unit":"u0081"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-20T15:05:37Z","type":"status","unit":"u0083"}
+{"ask_id":"a0171","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-20T16:57:37Z","type":"ask"}
+{"ask_id":"a0176","class":"synthetic","label_kind":"explore","text":"tell me why the sidebar is slow on mondays","ts":"2025-03-20T18:30:25Z","type":"ask"}
+{"ask_id":"a0180","class":"synthetic","label_kind":"decide","text":"which is better for the exporter, a retry or a circuit breaker","ts":"2025-03-20T19:19:32Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-21T05:31:00Z","start":"2025-03-20T22:52:00Z","ts":"2025-03-20T22:52:00Z","type":"owner_idle"}
+{"ask_id":"a0184","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-21T08:48:40Z","type":"ask"}
+{"ask_id":"a0186","class":"synthetic","label_kind":"explore","text":"brainstorm ways the nightly job could run unattended","ts":"2025-03-21T10:19:46Z","type":"ask"}
+{"ask_id":"a0190","class":"synthetic","label_kind":"do","text":"write a test for the import script","ts":"2025-03-21T10:44:48Z","type":"ask"}
+{"ask_id":"a0190","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-21T11:08:48Z","type":"unit_created","unit":"u0087"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-21T11:08:48Z","type":"status","unit":"u0087"}
+{"class":"synthetic","tokens":24608,"ts":"2025-03-21T11:10:48Z","type":"usage","unit":"u0087"}
+{"ask_id":"a0189","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-03-21T11:40:38Z","type":"ask"}
+{"ask_id":"a0188","class":"synthetic","label_kind":"do","text":"add a retry to the exporter","ts":"2025-03-21T11:55:37Z","type":"ask"}
+{"ask_id":"a0188","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-21T12:03:37Z","type":"unit_created","unit":"u0086"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-21T12:03:37Z","type":"status","unit":"u0086"}
+{"class":"synthetic","tokens":61155,"ts":"2025-03-21T12:05:37Z","type":"usage","unit":"u0086"}
+{"ask_id":"a0187","class":"synthetic","label_kind":"explore","text":"how does the queue worker decide when to retry","ts":"2025-03-21T12:14:13Z","type":"ask"}
+{"ask_id":"a0182","class":"synthetic","label_kind":"do","text":"ok now deploy the exporter","ts":"2025-03-21T15:24:17Z","type":"ask"}
+{"ask_id":"a0183","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-21T16:06:16Z","type":"ask"}
+{"ask_id":"a0181","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the nightly job","ts":"2025-03-21T16:33:33Z","type":"ask"}
+{"ask_id":"a0185","class":"synthetic","label_kind":"do","text":"ok now deploy the cache layer","ts":"2025-03-21T17:43:44Z","type":"ask"}
+{"ask_id":"a0185","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-21T17:57:44Z","type":"unit_created","unit":"u0085"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-21T17:57:44Z","type":"status","unit":"u0085"}
+{"class":"synthetic","tokens":55734,"ts":"2025-03-21T17:59:44Z","type":"usage","unit":"u0085"}
+{"class":"synthetic","end":"2025-03-22T07:25:00Z","start":"2025-03-21T23:02:00Z","ts":"2025-03-21T23:02:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T02:26:37Z","type":"status","unit":"u0086"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T07:43:44Z","type":"status","unit":"u0085"}
+{"ask_id":"a0194","class":"synthetic","label_kind":"do","text":"ok now deploy the import script","ts":"2025-03-22T08:02:14Z","type":"ask"}
+{"ask_id":"a0198","class":"synthetic","label_kind":"do","text":"refactor the cache layer and add a test","ts":"2025-03-22T08:11:07Z","type":"ask"}
+{"ask_id":"a0194","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-22T08:13:14Z","type":"unit_created","unit":"u0089"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-22T08:13:14Z","type":"status","unit":"u0089"}
+{"class":"synthetic","tokens":41527,"ts":"2025-03-22T08:15:14Z","type":"usage","unit":"u0089"}
+{"ask_id":"a0198","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-22T08:28:07Z","type":"unit_created","unit":"u0091"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-22T08:28:07Z","type":"status","unit":"u0091"}
+{"class":"synthetic","tokens":49487,"ts":"2025-03-22T08:30:07Z","type":"usage","unit":"u0091"}
+{"ask_id":"a0191","class":"synthetic","label_kind":"do","text":"update the exporter to handle duplicate keys","ts":"2025-03-22T08:34:27Z","type":"ask"}
+{"ask_id":"a0191","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-22T08:38:27Z","type":"unit_created","unit":"u0088"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-22T08:38:27Z","type":"status","unit":"u0088"}
+{"class":"synthetic","tokens":22182,"ts":"2025-03-22T08:40:27Z","type":"usage","unit":"u0088"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-22T09:34:14Z","type":"status","unit":"u0089"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0089"},"result":"pass","ts":"2025-03-22T09:35:14Z","type":"verify","unit":"u0089","verifier":"worker-3"}
+{"class":"synthetic","end":"2025-03-22T15:58:00Z","start":"2025-03-22T12:25:00Z","ts":"2025-03-22T12:25:00Z","type":"owner_idle"}
+{"ask_id":"a0199","class":"synthetic","label_kind":"do","text":"update the sidebar to handle very long lines","ts":"2025-03-22T13:47:39Z","type":"ask"}
+{"ask_id":"a0195","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the import script","ts":"2025-03-22T14:01:08Z","type":"ask"}
+{"ask_id":"a0193","class":"synthetic","label_kind":"explore","text":"tell me why the signup form is slow on mondays","ts":"2025-03-22T14:38:33Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T14:46:07Z","type":"status","unit":"u0091"}
+{"ask_id":"a0196","class":"synthetic","label_kind":"do","text":"update the queue worker to handle unicode names","ts":"2025-03-22T14:55:13Z","type":"ask"}
+{"ask_id":"a0196","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-22T15:15:13Z","type":"unit_created","unit":"u0090"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-22T15:15:13Z","type":"status","unit":"u0090"}
+{"class":"synthetic","tokens":37062,"ts":"2025-03-22T15:17:13Z","type":"usage","unit":"u0090"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T15:22:27Z","type":"status","unit":"u0088"}
+{"ask_id":"a0192","class":"synthetic","label_kind":"explore","text":"tell me why the search page is slow on mondays","ts":"2025-03-22T16:06:47Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T16:18:13Z","type":"status","unit":"u0090"}
+{"class":"synthetic","evidence":{"kind":"render_capture","outcome_observed":true,"ref":"run-u0090"},"result":"pass","ts":"2025-03-22T16:33:13Z","type":"verify","unit":"u0090","verifier":"checker-1"}
+{"ask_id":"a0197","class":"synthetic","label_kind":"explore","text":"tell me why the billing report is slow on mondays","ts":"2025-03-22T17:06:45Z","type":"ask"}
+{"ask_id":"a0200","class":"synthetic","label_kind":"explore","text":"brainstorm ways the sidebar could run unattended","ts":"2025-03-22T18:31:45Z","type":"ask"}
+{"ask_id":"a0200","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"explore","requester":"owner","ts":"2025-03-22T18:46:45Z","type":"unit_created","unit":"u0092"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-22T18:46:45Z","type":"status","unit":"u0092"}
+{"class":"synthetic","tokens":56464,"ts":"2025-03-22T18:48:45Z","type":"usage","unit":"u0092"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-22T19:36:45Z","type":"status","unit":"u0092"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0092"},"result":"pass","ts":"2025-03-22T19:45:45Z","type":"verify","unit":"u0092","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-23T07:49:00Z","start":"2025-03-22T23:43:00Z","ts":"2025-03-22T23:43:00Z","type":"owner_idle"}
+{"ask_id":"a0206","class":"synthetic","label_kind":"explore","text":"brainstorm ways the settings panel could run unattended","ts":"2025-03-23T09:00:02Z","type":"ask"}
+{"ask_id":"a0203","class":"synthetic","label_kind":"do","text":"update the signup form to handle empty files","ts":"2025-03-23T10:48:00Z","type":"ask"}
+{"ask_id":"a0203","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-23T11:05:00Z","type":"unit_created","unit":"u0093"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-23T11:05:00Z","type":"status","unit":"u0093"}
+{"class":"synthetic","tokens":3038,"ts":"2025-03-23T11:07:00Z","type":"usage","unit":"u0093"}
+{"ask_id":"a0208","class":"synthetic","label_kind":"explore","text":"tell me why the import script is slow on mondays","ts":"2025-03-23T11:08:59Z","type":"ask"}
+{"ask_id":"a0204","class":"synthetic","label_kind":"do","text":"update the settings panel to handle unicode names","ts":"2025-03-23T12:50:06Z","type":"ask"}
+{"ask_id":"a0210","class":"synthetic","label_kind":"do","text":"i need the search page output split by day","ts":"2025-03-23T14:52:21Z","type":"ask"}
+{"ask_id":"a0201","class":"synthetic","label_kind":"do","text":"can you rename the sidebar option in the config","ts":"2025-03-23T15:09:58Z","type":"ask"}
+{"ask_id":"a0210","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-23T15:22:21Z","type":"unit_created","unit":"u0095"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-23T15:22:21Z","type":"status","unit":"u0095"}
+{"class":"synthetic","tokens":53736,"ts":"2025-03-23T15:24:21Z","type":"usage","unit":"u0095"}
+{"ask_id":"a0202","class":"synthetic","label_kind":"decide","text":"should we use a queue or a cron job for the nightly job","ts":"2025-03-23T16:25:48Z","type":"ask"}
+{"ask_id":"a0205","class":"synthetic","label_kind":"decide","text":"pick a queue or a cron job for the sidebar and tell me why","ts":"2025-03-23T16:38:58Z","type":"ask"}
+{"ask_id":"a0209","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-03-23T19:15:31Z","type":"ask"}
+{"ask_id":"a0207","class":"synthetic","label_kind":"do","text":"ok now deploy the exporter","ts":"2025-03-23T19:47:00Z","type":"ask"}
+{"ask_id":"a0207","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-23T19:59:00Z","type":"unit_created","unit":"u0094"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-23T19:59:00Z","type":"status","unit":"u0094"}
+{"class":"synthetic","tokens":74213,"ts":"2025-03-23T20:01:00Z","type":"usage","unit":"u0094"}
+{"class":"synthetic","end":"2025-03-24T08:24:00Z","start":"2025-03-23T23:04:00Z","ts":"2025-03-23T23:04:00Z","type":"owner_idle"}
+{"ask_id":"a0219","class":"synthetic","label_kind":"do","text":"add a retry to the queue worker","ts":"2025-03-24T10:59:32Z","type":"ask"}
+{"ask_id":"a0219","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-24T11:04:32Z","type":"unit_created","unit":"u0098"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-24T11:04:32Z","type":"status","unit":"u0098"}
+{"class":"synthetic","tokens":39079,"ts":"2025-03-24T11:06:32Z","type":"usage","unit":"u0098"}
+{"ask_id":"a0213","class":"synthetic","label_kind":"manage","text":"tell the analyst to hold the cache layer until i check the numbers","ts":"2025-03-24T11:22:17Z","type":"ask"}
+{"ask_id":"a0215","class":"synthetic","label_kind":"manage","text":"ask the operator to send a short status on the exporter","ts":"2025-03-24T12:21:34Z","type":"ask"}
+{"ask_id":"a0220","class":"synthetic","label_kind":"do","text":"write a test for the exporter","ts":"2025-03-24T14:05:56Z","type":"ask"}
+{"ask_id":"a0220","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-24T14:10:56Z","type":"unit_created","unit":"u0099"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-24T14:10:56Z","type":"status","unit":"u0099"}
+{"class":"synthetic","tokens":69807,"ts":"2025-03-24T14:12:56Z","type":"usage","unit":"u0099"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-24T15:11:56Z","type":"status","unit":"u0099"}
+{"ask_id":"a0216","class":"synthetic","label_kind":"do","text":"can you rename the exporter option in the config","ts":"2025-03-24T16:17:34Z","type":"ask"}
+{"ask_id":"a0218","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-24T16:25:57Z","type":"ask"}
+{"ask_id":"a0216","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-24T16:26:34Z","type":"unit_created","unit":"u0097"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-24T16:26:34Z","type":"status","unit":"u0097"}
+{"class":"synthetic","tokens":11261,"ts":"2025-03-24T16:28:34Z","type":"usage","unit":"u0097"}
+{"ask_id":"a0212","class":"synthetic","label_kind":"explore","text":"tell me why the settings panel is slow on mondays","ts":"2025-03-24T16:53:24Z","type":"ask"}
+{"ask_id":"a0217","class":"synthetic","label_kind":"explore","text":"why did the nightly job fail last night","ts":"2025-03-24T16:56:55Z","type":"ask"}
+{"ask_id":"a0214","class":"synthetic","label_kind":"do","text":"fix the sidebar so it handles empty input","ts":"2025-03-24T19:12:06Z","type":"ask"}
+{"ask_id":"a0214","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-24T19:16:06Z","type":"unit_created","unit":"u0096"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-24T19:16:06Z","type":"status","unit":"u0096"}
+{"class":"synthetic","tokens":53731,"ts":"2025-03-24T19:18:06Z","type":"usage","unit":"u0096"}
+{"ask_id":"a0211","class":"synthetic","label_kind":"do","text":"add a retry to the cache layer","ts":"2025-03-24T19:25:09Z","type":"ask"}
+{"class":"synthetic","ts":"2025-03-24T19:28:06Z","type":"intervention","unit":"u0096"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-24T19:47:06Z","type":"status","unit":"u0096"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0096"},"result":"pass","ts":"2025-03-24T19:48:06Z","type":"verify","unit":"u0096","verifier":"worker-3"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-24T21:34:34Z","type":"status","unit":"u0097"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0097"},"result":"pass","ts":"2025-03-24T21:35:34Z","type":"verify","unit":"u0097","verifier":"worker-3"}
+{"class":"synthetic","end":"2025-03-25T06:42:00Z","start":"2025-03-24T22:03:00Z","ts":"2025-03-24T22:03:00Z","type":"owner_idle"}
+{"ask_id":"a0222","class":"synthetic","label_kind":"do","text":"please document the signup form flags","ts":"2025-03-25T08:08:14Z","type":"ask"}
+{"ask_id":"a0222","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-25T08:13:14Z","type":"unit_created","unit":"u0100"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-25T08:13:14Z","type":"status","unit":"u0100"}
+{"class":"synthetic","tokens":34429,"ts":"2025-03-25T08:15:14Z","type":"usage","unit":"u0100"}
+{"ask_id":"a0228","class":"synthetic","label_kind":"do","text":"refactor the exporter and add a test","ts":"2025-03-25T09:08:41Z","type":"ask"}
+{"ask_id":"a0229","class":"synthetic","label_kind":"do","text":"ok now deploy the billing report","ts":"2025-03-25T09:17:08Z","type":"ask"}
+{"ask_id":"a0229","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-25T09:23:08Z","type":"unit_created","unit":"u0104"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-25T09:23:08Z","type":"status","unit":"u0104"}
+{"class":"synthetic","tokens":65153,"ts":"2025-03-25T09:25:08Z","type":"usage","unit":"u0104"}
+{"ask_id":"a0228","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-25T09:26:41Z","type":"unit_created","unit":"u0103"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-25T09:26:41Z","type":"status","unit":"u0103"}
+{"class":"synthetic","tokens":3940,"ts":"2025-03-25T09:28:41Z","type":"usage","unit":"u0103"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-25T09:46:08Z","type":"status","unit":"u0104"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-25T10:08:41Z","type":"status","unit":"u0103"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0103"},"result":"pass","ts":"2025-03-25T10:09:41Z","type":"verify","unit":"u0103","verifier":"worker-3"}
+{"ask_id":"a0221","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-25T10:32:22Z","type":"ask"}
+{"ask_id":"a0227","class":"synthetic","label_kind":"do","text":"can you rename the import script option in the config","ts":"2025-03-25T11:03:47Z","type":"ask"}
+{"ask_id":"a0227","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-25T11:11:47Z","type":"unit_created","unit":"u0102"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-25T11:11:47Z","type":"status","unit":"u0102"}
+{"class":"synthetic","tokens":7043,"ts":"2025-03-25T11:13:47Z","type":"usage","unit":"u0102"}
+{"class":"synthetic","ts":"2025-03-25T11:41:47Z","type":"intervention","unit":"u0102"}
+{"ask_id":"a0225","class":"synthetic","label_kind":"do","text":"please document the nightly job flags","ts":"2025-03-25T12:37:48Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-25T13:16:00Z","type":"status","unit":"u0094"}
+{"ask_id":"a0223","class":"synthetic","label_kind":"explore","text":"brainstorm ways the import script could run unattended","ts":"2025-03-25T14:18:54Z","type":"ask"}
+{"ask_id":"a0226","class":"synthetic","label_kind":"decide","text":"which is better for the settings panel, json or csv","ts":"2025-03-25T15:30:47Z","type":"ask"}
+{"ask_id":"a0230","class":"synthetic","label_kind":"manage","text":"tell the maintainer to hold the cache layer until i check the numbers","ts":"2025-03-25T16:45:22Z","type":"ask"}
+{"ask_id":"a0224","class":"synthetic","label_kind":"do","text":"fix the import script so it stops clipping on narrow screens","ts":"2025-03-25T19:04:10Z","type":"ask"}
+{"ask_id":"a0224","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-25T19:26:10Z","type":"unit_created","unit":"u0101"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-25T19:26:10Z","type":"status","unit":"u0101"}
+{"class":"synthetic","tokens":84679,"ts":"2025-03-25T19:28:10Z","type":"usage","unit":"u0101"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-25T19:32:10Z","type":"status","unit":"u0101"}
+{"class":"synthetic","end":"2025-03-26T05:53:00Z","start":"2025-03-25T22:57:00Z","ts":"2025-03-25T22:57:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-26T03:50:14Z","type":"status","unit":"u0100"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0100"},"result":"pass","ts":"2025-03-26T04:05:14Z","type":"verify","unit":"u0100","verifier":"checker-1"}
+{"ask_id":"a0237","class":"synthetic","label_kind":"decide","text":"pick sqlite or postgres for the settings panel and tell me why","ts":"2025-03-26T09:32:58Z","type":"ask"}
+{"ask_id":"a0234","class":"synthetic","label_kind":"do","text":"please document the sidebar flags","ts":"2025-03-26T09:59:42Z","type":"ask"}
+{"ask_id":"a0233","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-26T10:33:00Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-26T15:35:00Z","start":"2025-03-26T12:12:00Z","ts":"2025-03-26T12:12:00Z","type":"owner_idle"}
+{"ask_id":"a0236","class":"synthetic","label_kind":"explore","text":"what is the current size of the signup form output","ts":"2025-03-26T13:37:46Z","type":"ask"}
+{"ask_id":"a0231","class":"synthetic","label_kind":"do","text":"add a retry to the exporter","ts":"2025-03-26T13:40:44Z","type":"ask"}
+{"ask_id":"a0231","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-26T13:42:44Z","type":"unit_created","unit":"u0105"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-26T13:42:44Z","type":"status","unit":"u0105"}
+{"class":"synthetic","tokens":41095,"ts":"2025-03-26T13:44:44Z","type":"usage","unit":"u0105"}
+{"ask_id":"a0240","class":"synthetic","label_kind":"do","text":"fix the exporter so it shows the right count","ts":"2025-03-26T14:02:41Z","type":"ask"}
+{"ask_id":"a0239","class":"synthetic","label_kind":"do","text":"update the cache layer to handle very long lines","ts":"2025-03-26T14:11:25Z","type":"ask"}
+{"ask_id":"a0239","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-26T14:16:25Z","type":"unit_created","unit":"u0106"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-26T14:16:25Z","type":"status","unit":"u0106"}
+{"class":"synthetic","tokens":4606,"ts":"2025-03-26T14:18:25Z","type":"usage","unit":"u0106"}
+{"ask_id":"a0240","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-26T14:24:41Z","type":"unit_created","unit":"u0107"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-26T14:24:41Z","type":"status","unit":"u0107"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-26T14:24:44Z","type":"status","unit":"u0105"}
+{"class":"synthetic","tokens":63267,"ts":"2025-03-26T14:26:41Z","type":"usage","unit":"u0107"}
+{"class":"synthetic","evidence":{"kind":"stored_row_rerun_match","outcome_observed":true,"ref":"run-u0105"},"result":"pass","ts":"2025-03-26T14:39:44Z","type":"verify","unit":"u0105","verifier":"checker-1"}
+{"ask_id":"a0232","class":"synthetic","label_kind":"explore","text":"what if we cached the exporter, just curious what you think","ts":"2025-03-26T17:15:10Z","type":"ask"}
+{"ask_id":"a0238","class":"synthetic","label_kind":"explore","text":"why did the cache layer fail last night","ts":"2025-03-26T19:00:04Z","type":"ask"}
+{"ask_id":"a0235","class":"synthetic","label_kind":"explore","text":"why did the billing report fail last night","ts":"2025-03-26T19:43:28Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-27T05:35:00Z","start":"2025-03-26T22:06:00Z","ts":"2025-03-26T22:06:00Z","type":"owner_idle"}
+{"ask_id":"a0246","class":"synthetic","label_kind":"explore","text":"tell me why the signup form is slow on mondays","ts":"2025-03-27T08:01:06Z","type":"ask"}
+{"ask_id":"a0245","class":"synthetic","label_kind":"do","text":"ok now deploy the sidebar","ts":"2025-03-27T08:09:40Z","type":"ask"}
+{"ask_id":"a0242","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-27T09:31:57Z","type":"ask"}
+{"ask_id":"a0250","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-03-27T10:54:13Z","type":"ask"}
+{"ask_id":"a0247","class":"synthetic","label_kind":"decide","text":"should we use sqlite or postgres for the settings panel","ts":"2025-03-27T10:56:24Z","type":"ask"}
+{"ask_id":"a0248","class":"synthetic","label_kind":"manage","text":"tell the maintainer to hold the nightly job until i check the numbers","ts":"2025-03-27T11:19:58Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-27T14:34:00Z","start":"2025-03-27T11:31:00Z","ts":"2025-03-27T11:31:00Z","type":"owner_idle"}
+{"ask_id":"a0243","class":"synthetic","label_kind":"explore","text":"brainstorm ways the exporter could run unattended","ts":"2025-03-27T11:55:31Z","type":"ask"}
+{"ask_id":"a0244","class":"synthetic","label_kind":"explore","text":"how does the nightly job decide when to retry","ts":"2025-03-27T12:10:54Z","type":"ask"}
+{"ask_id":"a0244","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"explore","requester":"owner","ts":"2025-03-27T12:16:54Z","type":"unit_created","unit":"u0108"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-27T12:16:54Z","type":"status","unit":"u0108"}
+{"class":"synthetic","tokens":4005,"ts":"2025-03-27T12:18:54Z","type":"usage","unit":"u0108"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-27T14:42:54Z","type":"status","unit":"u0108"}
+{"ask_id":"a0249","class":"synthetic","label_kind":"do","text":"i need the import script output split by day","ts":"2025-03-27T15:14:48Z","type":"ask"}
+{"ask_id":"a0249","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-27T15:30:48Z","type":"unit_created","unit":"u0109"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-27T15:30:48Z","type":"status","unit":"u0109"}
+{"class":"synthetic","tokens":29019,"ts":"2025-03-27T15:32:48Z","type":"usage","unit":"u0109"}
+{"class":"synthetic","ts":"2025-03-27T15:56:48Z","type":"intervention","unit":"u0109"}
+{"ask_id":"a0241","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the cache layer","ts":"2025-03-27T18:27:08Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-27T18:31:48Z","type":"status","unit":"u0109"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0109"},"result":"pass","ts":"2025-03-27T18:40:48Z","type":"verify","unit":"u0109","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-28T05:51:00Z","start":"2025-03-27T22:48:00Z","ts":"2025-03-27T22:48:00Z","type":"owner_idle"}
+{"ask_id":"a0253","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-28T08:01:17Z","type":"ask"}
+{"ask_id":"a0256","class":"synthetic","label_kind":"do","text":"please document the settings panel flags","ts":"2025-03-28T10:02:51Z","type":"ask"}
+{"ask_id":"a0255","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-03-28T10:10:01Z","type":"ask"}
+{"ask_id":"a0257","class":"synthetic","label_kind":"explore","text":"what if we cached the import script, just curious what you think","ts":"2025-03-28T10:29:47Z","type":"ask"}
+{"ask_id":"a0251","class":"synthetic","label_kind":"do","text":"can you rename the search page option in the config","ts":"2025-03-28T10:42:53Z","type":"ask"}
+{"ask_id":"a0251","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-28T11:00:53Z","type":"unit_created","unit":"u0110"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-28T11:00:53Z","type":"status","unit":"u0110"}
+{"class":"synthetic","tokens":75777,"ts":"2025-03-28T11:02:53Z","type":"usage","unit":"u0110"}
+{"ask_id":"a0258","class":"synthetic","label_kind":"do","text":"refactor the nightly job and add a test","ts":"2025-03-28T13:57:38Z","type":"ask"}
+{"ask_id":"a0258","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-28T14:14:38Z","type":"unit_created","unit":"u0111"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-28T14:14:38Z","type":"status","unit":"u0111"}
+{"class":"synthetic","tokens":85737,"ts":"2025-03-28T14:16:38Z","type":"usage","unit":"u0111"}
+{"ask_id":"a0260","class":"synthetic","label_kind":"do","text":"i need the billing report output split by day","ts":"2025-03-28T14:34:03Z","type":"ask"}
+{"ask_id":"a0260","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-28T14:52:03Z","type":"unit_created","unit":"u0112"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-28T14:52:03Z","type":"status","unit":"u0112"}
+{"class":"synthetic","tokens":65817,"ts":"2025-03-28T14:54:03Z","type":"usage","unit":"u0112"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-28T17:19:38Z","type":"status","unit":"u0111"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0111"},"result":"pass","ts":"2025-03-28T17:20:38Z","type":"verify","unit":"u0111","verifier":"worker-3"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-28T18:05:53Z","type":"status","unit":"u0110"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0110"},"result":"pass","ts":"2025-03-28T18:20:53Z","type":"verify","unit":"u0110","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-28T18:39:03Z","type":"status","unit":"u0112"}
+{"ask_id":"a0259","class":"synthetic","label_kind":"decide","text":"which is better for the sidebar, a queue or a cron job","ts":"2025-03-28T18:42:38Z","type":"ask"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0112"},"result":"pass","ts":"2025-03-28T18:54:03Z","type":"verify","unit":"u0112","verifier":"checker-1"}
+{"ask_id":"a0252","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-03-28T19:40:43Z","type":"ask"}
+{"ask_id":"a0254","class":"synthetic","label_kind":"decide","text":"pick a queue or a cron job for the nightly job and tell me why","ts":"2025-03-28T19:52:51Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-29T08:22:00Z","start":"2025-03-28T23:13:00Z","ts":"2025-03-28T23:13:00Z","type":"owner_idle"}
+{"ask_id":"a0268","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-03-29T08:20:36Z","type":"ask"}
+{"ask_id":"a0263","class":"synthetic","label_kind":"explore","text":"how does the settings panel decide when to retry","ts":"2025-03-29T09:22:36Z","type":"ask"}
+{"class":"synthetic","end":"2025-03-29T13:08:00Z","start":"2025-03-29T11:32:00Z","ts":"2025-03-29T11:32:00Z","type":"owner_idle"}
+{"ask_id":"a0266","class":"synthetic","label_kind":"manage","text":"tell the reviewer to hold the exporter until i check the numbers","ts":"2025-03-29T12:59:15Z","type":"ask"}
+{"ask_id":"a0267","class":"synthetic","label_kind":"do","text":"update the billing report to handle duplicate keys","ts":"2025-03-29T13:53:55Z","type":"ask"}
+{"ask_id":"a0261","class":"synthetic","label_kind":"do","text":"please document the import script flags","ts":"2025-03-29T14:05:01Z","type":"ask"}
+{"ask_id":"a0267","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-29T14:05:55Z","type":"unit_created","unit":"u0114"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-29T14:05:55Z","type":"status","unit":"u0114"}
+{"class":"synthetic","tokens":25964,"ts":"2025-03-29T14:07:55Z","type":"usage","unit":"u0114"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-29T14:38:55Z","type":"status","unit":"u0114"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0114"},"result":"pass","ts":"2025-03-29T14:47:55Z","type":"verify","unit":"u0114","verifier":"checker-1"}
+{"ask_id":"a0264","class":"synthetic","label_kind":"explore","text":"why did the exporter fail last night","ts":"2025-03-29T15:16:07Z","type":"ask"}
+{"ask_id":"a0265","class":"synthetic","label_kind":"do","text":"please document the cache layer flags","ts":"2025-03-29T16:03:48Z","type":"ask"}
+{"ask_id":"a0265","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-29T16:32:48Z","type":"unit_created","unit":"u0113"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-29T16:32:48Z","type":"status","unit":"u0113"}
+{"class":"synthetic","tokens":5190,"ts":"2025-03-29T16:34:48Z","type":"usage","unit":"u0113"}
+{"ask_id":"a0269","class":"synthetic","label_kind":"do","text":"write a test for the import script","ts":"2025-03-29T17:42:36Z","type":"ask"}
+{"ask_id":"a0269","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-29T17:54:36Z","type":"unit_created","unit":"u0115"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-29T17:54:36Z","type":"status","unit":"u0115"}
+{"class":"synthetic","tokens":61814,"ts":"2025-03-29T17:56:36Z","type":"usage","unit":"u0115"}
+{"ask_id":"a0262","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-03-29T18:16:03Z","type":"ask"}
+{"ask_id":"a0270","class":"synthetic","label_kind":"do","text":"add a retry to the signup form","ts":"2025-03-29T19:56:54Z","type":"ask"}
+{"ask_id":"a0270","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-29T20:18:54Z","type":"unit_created","unit":"u0116"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-29T20:18:54Z","type":"status","unit":"u0116"}
+{"class":"synthetic","tokens":56846,"ts":"2025-03-29T20:20:54Z","type":"usage","unit":"u0116"}
+{"class":"synthetic","ts":"2025-03-29T20:45:54Z","type":"intervention","unit":"u0116"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-29T21:40:48Z","type":"status","unit":"u0113"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0113"},"result":"pass","ts":"2025-03-29T21:49:48Z","type":"verify","unit":"u0113","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-03-30T07:33:00Z","start":"2025-03-29T22:34:00Z","ts":"2025-03-29T22:34:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-29T22:59:54Z","type":"status","unit":"u0116"}
+{"ask_id":"a0276","class":"synthetic","label_kind":"do","text":"i need the queue worker output split by day","ts":"2025-03-30T08:08:43Z","type":"ask"}
+{"ask_id":"a0276","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-30T08:19:43Z","type":"unit_created","unit":"u0120"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T08:19:43Z","type":"status","unit":"u0120"}
+{"class":"synthetic","tokens":15011,"ts":"2025-03-30T08:21:43Z","type":"usage","unit":"u0120"}
+{"ask_id":"a0277","class":"synthetic","label_kind":"do","text":"refactor the sidebar and add a test","ts":"2025-03-30T08:27:19Z","type":"ask"}
+{"ask_id":"a0277","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-30T08:28:19Z","type":"unit_created","unit":"u0121"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T08:28:19Z","type":"status","unit":"u0121"}
+{"class":"synthetic","tokens":24381,"ts":"2025-03-30T08:30:19Z","type":"usage","unit":"u0121"}
+{"ask_id":"a0279","class":"synthetic","label_kind":"do","text":"update the settings panel to handle empty files","ts":"2025-03-30T08:55:23Z","type":"ask"}
+{"ask_id":"a0279","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-30T09:07:23Z","type":"unit_created","unit":"u0123"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T09:07:23Z","type":"status","unit":"u0123"}
+{"class":"synthetic","tokens":70144,"ts":"2025-03-30T09:09:23Z","type":"usage","unit":"u0123"}
+{"class":"synthetic","end":"2025-03-30T14:37:00Z","start":"2025-03-30T11:27:00Z","ts":"2025-03-30T11:27:00Z","type":"owner_idle"}
+{"ask_id":"a0271","class":"synthetic","label_kind":"do","text":"please document the queue worker flags","ts":"2025-03-30T11:28:10Z","type":"ask"}
+{"ask_id":"a0271","class":"synthetic","deliverable":"config","done_when":"outcome observed","executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-30T11:30:10Z","type":"unit_created","unit":"u0117"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T11:30:10Z","type":"status","unit":"u0117"}
+{"class":"synthetic","tokens":84820,"ts":"2025-03-30T11:32:10Z","type":"usage","unit":"u0117"}
+{"ask_id":"a0273","class":"synthetic","label_kind":"do","text":"write a test for the nightly job","ts":"2025-03-30T12:22:03Z","type":"ask"}
+{"ask_id":"a0275","class":"synthetic","label_kind":"do","text":"refactor the cache layer and add a test","ts":"2025-03-30T12:25:02Z","type":"ask"}
+{"ask_id":"a0273","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-03-30T12:30:03Z","type":"unit_created","unit":"u0118"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T12:30:03Z","type":"status","unit":"u0118"}
+{"class":"synthetic","tokens":36460,"ts":"2025-03-30T12:32:03Z","type":"usage","unit":"u0118"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-30T12:32:43Z","type":"status","unit":"u0120"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0120"},"result":"pass","ts":"2025-03-30T12:33:43Z","type":"verify","unit":"u0120","verifier":"worker-1"}
+{"ask_id":"a0275","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-30T12:38:02Z","type":"unit_created","unit":"u0119"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T12:38:02Z","type":"status","unit":"u0119"}
+{"class":"synthetic","tokens":24964,"ts":"2025-03-30T12:40:02Z","type":"usage","unit":"u0119"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-30T14:58:03Z","type":"status","unit":"u0118"}
+{"class":"synthetic","evidence":{"kind":"render_capture","outcome_observed":true,"ref":"run-u0118"},"result":"pass","ts":"2025-03-30T15:13:03Z","type":"verify","unit":"u0118","verifier":"checker-1"}
+{"ask_id":"a0280","class":"synthetic","label_kind":"decide","text":"should we use a queue or a cron job for the cache layer","ts":"2025-03-30T15:25:14Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-03-30T16:18:02Z","type":"status","unit":"u0119"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0119"},"result":"pass","ts":"2025-03-30T16:27:02Z","type":"verify","unit":"u0119","verifier":"checker-1"}
+{"ask_id":"a0272","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-30T17:03:03Z","type":"ask"}
+{"ask_id":"a0274","class":"synthetic","label_kind":"explore","text":"tell me why the exporter is slow on mondays","ts":"2025-03-30T17:45:20Z","type":"ask"}
+{"ask_id":"a0278","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the exporter until i check the numbers","ts":"2025-03-30T19:32:08Z","type":"ask"}
+{"ask_id":"a0278","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"manage","requester":"owner","ts":"2025-03-30T19:39:08Z","type":"unit_created","unit":"u0122"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-30T19:39:08Z","type":"status","unit":"u0122"}
+{"class":"synthetic","tokens":14182,"ts":"2025-03-30T19:41:08Z","type":"usage","unit":"u0122"}
+{"class":"synthetic","end":"2025-03-31T08:03:00Z","start":"2025-03-30T23:16:00Z","ts":"2025-03-30T23:16:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-03-31T00:07:10Z","type":"status","unit":"u0117"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0117"},"result":"pass","ts":"2025-03-31T00:22:10Z","type":"verify","unit":"u0117","verifier":"checker-1"}
+{"ask_id":"a0285","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-31T09:04:50Z","type":"ask"}
+{"ask_id":"a0283","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-03-31T09:38:53Z","type":"ask"}
+{"ask_id":"a0284","class":"synthetic","label_kind":"do","text":"i need the signup form output split by day","ts":"2025-03-31T09:59:57Z","type":"ask"}
+{"ask_id":"a0286","class":"synthetic","label_kind":"explore","text":"what is the current size of the import script output","ts":"2025-03-31T10:03:35Z","type":"ask"}
+{"ask_id":"a0284","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-03-31T10:26:57Z","type":"unit_created","unit":"u0124"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-31T10:26:57Z","type":"status","unit":"u0124"}
+{"ask_id":"a0281","class":"synthetic","label_kind":"filler","text":"continue","ts":"2025-03-31T10:27:15Z","type":"ask"}
+{"class":"synthetic","tokens":79570,"ts":"2025-03-31T10:28:57Z","type":"usage","unit":"u0124"}
+{"class":"synthetic","ts":"2025-03-31T10:49:57Z","type":"intervention","unit":"u0124"}
+{"ask_id":"a0289","class":"synthetic","label_kind":"do","text":"can you rename the search page option in the config","ts":"2025-03-31T17:47:20Z","type":"ask"}
+{"ask_id":"a0289","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-31T18:04:20Z","type":"unit_created","unit":"u0125"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-31T18:04:20Z","type":"status","unit":"u0125"}
+{"class":"synthetic","tokens":73126,"ts":"2025-03-31T18:06:20Z","type":"usage","unit":"u0125"}
+{"ask_id":"a0287","class":"synthetic","label_kind":"decide","text":"pick json or csv for the signup form and tell me why","ts":"2025-03-31T18:14:42Z","type":"ask"}
+{"ask_id":"a0288","class":"synthetic","label_kind":"do","text":"add a retry to the search page","ts":"2025-03-31T18:18:48Z","type":"ask"}
+{"ask_id":"a0282","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-03-31T19:31:46Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-03-31T19:44:48Z","type":"status","unit":"u0077"}
+{"ask_id":"a0290","class":"synthetic","label_kind":"do","text":"write a test for the nightly job","ts":"2025-03-31T19:46:41Z","type":"ask"}
+{"ask_id":"a0290","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-03-31T20:00:41Z","type":"unit_created","unit":"u0126"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-03-31T20:00:41Z","type":"status","unit":"u0126"}
+{"class":"synthetic","tokens":10048,"ts":"2025-03-31T20:02:41Z","type":"usage","unit":"u0126"}
+{"class":"synthetic","end":"2025-04-01T07:00:00Z","start":"2025-03-31T22:27:00Z","ts":"2025-03-31T22:27:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-04-01T02:21:57Z","type":"status","unit":"u0124"}
+{"ask_id":"a0295","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-04-01T08:46:49Z","type":"ask"}
+{"ask_id":"a0297","class":"synthetic","label_kind":"do","text":"add a retry to the search page","ts":"2025-04-01T14:20:46Z","type":"ask"}
+{"ask_id":"a0300","class":"synthetic","label_kind":"explore","text":"what is the current size of the nightly job output","ts":"2025-04-01T14:23:52Z","type":"ask"}
+{"ask_id":"a0291","class":"synthetic","label_kind":"explore","text":"what if we cached the cache layer, just curious what you think","ts":"2025-04-01T14:26:36Z","type":"ask"}
+{"ask_id":"a0296","class":"synthetic","label_kind":"do","text":"add a retry to the settings panel","ts":"2025-04-01T14:36:41Z","type":"ask"}
+{"ask_id":"a0296","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-01T14:48:41Z","type":"unit_created","unit":"u0128"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-01T14:48:41Z","type":"status","unit":"u0128"}
+{"class":"synthetic","tokens":63227,"ts":"2025-04-01T14:50:41Z","type":"usage","unit":"u0128"}
+{"ask_id":"a0297","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-01T14:50:46Z","type":"unit_created","unit":"u0129"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-01T14:50:46Z","type":"status","unit":"u0129"}
+{"class":"synthetic","tokens":21453,"ts":"2025-04-01T14:52:46Z","type":"usage","unit":"u0129"}
+{"class":"synthetic","ts":"2025-04-01T15:12:46Z","type":"intervention","unit":"u0129"}
+{"ask_id":"a0298","class":"synthetic","label_kind":"do","text":"can you rename the import script option in the config","ts":"2025-04-01T15:40:14Z","type":"ask"}
+{"ask_id":"a0298","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-01T15:42:14Z","type":"unit_created","unit":"u0130"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-01T15:42:14Z","type":"status","unit":"u0130"}
+{"class":"synthetic","tokens":43559,"ts":"2025-04-01T15:44:14Z","type":"usage","unit":"u0130"}
+{"ask_id":"a0293","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-04-01T15:46:05Z","type":"ask"}
+{"ask_id":"a0294","class":"synthetic","label_kind":"do","text":"refactor the settings panel and add a test","ts":"2025-04-01T16:03:10Z","type":"ask"}
+{"ask_id":"a0294","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-01T16:24:10Z","type":"unit_created","unit":"u0127"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-01T16:24:10Z","type":"status","unit":"u0127"}
+{"class":"synthetic","tokens":79370,"ts":"2025-04-01T16:26:10Z","type":"usage","unit":"u0127"}
+{"ask_id":"a0292","class":"synthetic","label_kind":"decide","text":"pick sqlite or postgres for the signup form and tell me why","ts":"2025-04-01T18:16:41Z","type":"ask"}
+{"ask_id":"a0299","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-04-01T19:04:53Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-01T21:35:10Z","type":"status","unit":"u0127"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0127"},"result":"pass","ts":"2025-04-01T21:44:10Z","type":"verify","unit":"u0127","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-02T05:23:00Z","start":"2025-04-01T22:16:00Z","ts":"2025-04-01T22:16:00Z","type":"owner_idle"}
+{"ask_id":"a0310","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the billing report until i check the numbers","ts":"2025-04-02T08:26:29Z","type":"ask"}
+{"ask_id":"a0308","class":"synthetic","label_kind":"do","text":"can you rename the nightly job option in the config","ts":"2025-04-02T09:48:25Z","type":"ask"}
+{"ask_id":"a0305","class":"synthetic","label_kind":"explore","text":"brainstorm ways the cache layer could run unattended","ts":"2025-04-02T10:10:07Z","type":"ask"}
+{"ask_id":"a0308","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-02T10:10:25Z","type":"unit_created","unit":"u0133"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-02T10:10:25Z","type":"status","unit":"u0133"}
+{"class":"synthetic","tokens":83041,"ts":"2025-04-02T10:12:25Z","type":"usage","unit":"u0133"}
+{"ask_id":"a0305","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"explore","requester":"owner","ts":"2025-04-02T10:24:07Z","type":"unit_created","unit":"u0132"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-02T10:24:07Z","type":"status","unit":"u0132"}
+{"ask_id":"a0303","class":"synthetic","label_kind":"decide","text":"pick a queue or a cron job for the search page and tell me why","ts":"2025-04-02T10:25:33Z","type":"ask"}
+{"class":"synthetic","tokens":23698,"ts":"2025-04-02T10:26:07Z","type":"usage","unit":"u0132"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-02T10:31:25Z","type":"status","unit":"u0133"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0133"},"result":"pass","ts":"2025-04-02T10:32:25Z","type":"verify","unit":"u0133","verifier":"worker-3"}
+{"class":"synthetic","ts":"2025-04-02T10:34:25Z","type":"intervention","unit":"u0133"}
+{"ask_id":"a0309","class":"synthetic","label_kind":"do","text":"i need the import script output split by day","ts":"2025-04-02T11:04:36Z","type":"ask"}
+{"ask_id":"a0304","class":"synthetic","label_kind":"explore","text":"what is the current size of the sidebar output","ts":"2025-04-02T11:24:25Z","type":"ask"}
+{"ask_id":"a0309","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-02T11:27:36Z","type":"unit_created","unit":"u0134"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-02T11:27:36Z","type":"status","unit":"u0134"}
+{"class":"synthetic","tokens":83030,"ts":"2025-04-02T11:29:36Z","type":"usage","unit":"u0134"}
+{"ask_id":"a0302","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-04-02T12:01:46Z","type":"ask"}
+{"ask_id":"a0301","class":"synthetic","label_kind":"do","text":"update the nightly job to handle empty files","ts":"2025-04-02T12:03:43Z","type":"ask"}
+{"ask_id":"a0301","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-02T12:19:43Z","type":"unit_created","unit":"u0131"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-02T12:19:43Z","type":"status","unit":"u0131"}
+{"class":"synthetic","tokens":15570,"ts":"2025-04-02T12:21:43Z","type":"usage","unit":"u0131"}
+{"ask_id":"a0306","class":"synthetic","label_kind":"decide","text":"pick a retry or a circuit breaker for the queue worker and tell me why","ts":"2025-04-02T13:27:20Z","type":"ask"}
+{"ask_id":"a0307","class":"synthetic","label_kind":"decide","text":"should we use sqlite or postgres for the exporter","ts":"2025-04-02T16:02:04Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-02T18:41:07Z","type":"status","unit":"u0132"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0132"},"result":"pass","ts":"2025-04-02T18:50:07Z","type":"verify","unit":"u0132","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-03T05:08:00Z","start":"2025-04-02T22:09:00Z","ts":"2025-04-02T22:09:00Z","type":"owner_idle"}
+{"ask_id":"a0320","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-04-03T08:31:04Z","type":"ask"}
+{"ask_id":"a0311","class":"synthetic","label_kind":"do","text":"fix the signup form so it stops timing out under load","ts":"2025-04-03T08:38:08Z","type":"ask"}
+{"ask_id":"a0311","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-03T08:40:08Z","type":"unit_created","unit":"u0135"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-03T08:40:08Z","type":"status","unit":"u0135"}
+{"class":"synthetic","tokens":81042,"ts":"2025-04-03T08:42:08Z","type":"usage","unit":"u0135"}
+{"ask_id":"a0316","class":"synthetic","label_kind":"decide","text":"pick json or csv for the queue worker and tell me why","ts":"2025-04-03T10:34:11Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-03T12:35:00Z","start":"2025-04-03T11:18:00Z","ts":"2025-04-03T11:18:00Z","type":"owner_idle"}
+{"ask_id":"a0315","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-04-03T12:07:20Z","type":"ask"}
+{"ask_id":"a0319","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-04-03T13:25:52Z","type":"ask"}
+{"ask_id":"a0318","class":"synthetic","label_kind":"explore","text":"tell me why the import script is slow on mondays","ts":"2025-04-03T13:36:57Z","type":"ask"}
+{"ask_id":"a0314","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-04-03T16:32:43Z","type":"ask"}
+{"ask_id":"a0317","class":"synthetic","label_kind":"explore","text":"how does the settings panel decide when to retry","ts":"2025-04-03T17:21:24Z","type":"ask"}
+{"ask_id":"a0313","class":"synthetic","label_kind":"do","text":"refactor the import script and add a test","ts":"2025-04-03T18:20:07Z","type":"ask"}
+{"ask_id":"a0313","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-03T18:50:07Z","type":"unit_created","unit":"u0136"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-03T18:50:07Z","type":"status","unit":"u0136"}
+{"class":"synthetic","tokens":31316,"ts":"2025-04-03T18:52:07Z","type":"usage","unit":"u0136"}
+{"ask_id":"a0312","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-04-03T19:23:08Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-04-03T21:35:10Z","type":"status","unit":"u0127"}
+{"class":"synthetic","end":"2025-04-04T07:33:00Z","start":"2025-04-03T23:57:00Z","ts":"2025-04-03T23:57:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-04T04:08:07Z","type":"status","unit":"u0136"}
+{"ask_id":"a0325","class":"synthetic","label_kind":"explore","text":"brainstorm ways the nightly job could run unattended","ts":"2025-04-04T09:04:24Z","type":"ask"}
+{"ask_id":"a0321","class":"synthetic","label_kind":"decide","text":"which is better for the import script, a queue or a cron job","ts":"2025-04-04T11:38:33Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-04T16:06:00Z","start":"2025-04-04T12:22:00Z","ts":"2025-04-04T12:22:00Z","type":"owner_idle"}
+{"ask_id":"a0328","class":"synthetic","label_kind":"do","text":"fix the nightly job so it stops clipping on narrow screens","ts":"2025-04-04T12:28:07Z","type":"ask"}
+{"ask_id":"a0328","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-04T12:29:07Z","type":"unit_created","unit":"u0138"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-04T12:29:07Z","type":"status","unit":"u0138"}
+{"class":"synthetic","tokens":68657,"ts":"2025-04-04T12:31:07Z","type":"usage","unit":"u0138"}
+{"ask_id":"a0327","class":"synthetic","label_kind":"do","text":"ok now deploy the signup form","ts":"2025-04-04T13:21:10Z","type":"ask"}
+{"ask_id":"a0329","class":"synthetic","label_kind":"explore","text":"what if we cached the import script, just curious what you think","ts":"2025-04-04T13:44:47Z","type":"ask"}
+{"ask_id":"a0330","class":"synthetic","label_kind":"filler","text":"yes","ts":"2025-04-04T16:15:09Z","type":"ask"}
+{"ask_id":"a0322","class":"synthetic","label_kind":"do","text":"ok now deploy the settings panel","ts":"2025-04-04T17:23:31Z","type":"ask"}
+{"ask_id":"a0322","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-04T17:41:31Z","type":"unit_created","unit":"u0137"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-04T17:41:31Z","type":"status","unit":"u0137"}
+{"class":"synthetic","tokens":63255,"ts":"2025-04-04T17:43:31Z","type":"usage","unit":"u0137"}
+{"ask_id":"a0326","class":"synthetic","label_kind":"do","text":"refactor the billing report and add a test","ts":"2025-04-04T18:11:56Z","type":"ask"}
+{"ask_id":"a0324","class":"synthetic","label_kind":"filler","text":"continue","ts":"2025-04-04T18:32:26Z","type":"ask"}
+{"ask_id":"a0323","class":"synthetic","label_kind":"do","text":"refactor the billing report and add a test","ts":"2025-04-04T19:03:31Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reopened","ts":"2025-04-04T21:40:48Z","type":"status","unit":"u0113"}
+{"class":"synthetic","end":"2025-04-05T05:27:00Z","start":"2025-04-04T23:24:00Z","ts":"2025-04-04T23:24:00Z","type":"owner_idle"}
+{"ask_id":"a0339","class":"synthetic","label_kind":"explore","text":"tell me why the queue worker is slow on mondays","ts":"2025-04-05T08:22:43Z","type":"ask"}
+{"ask_id":"a0339","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"explore","requester":"owner","ts":"2025-04-05T08:32:43Z","type":"unit_created","unit":"u0144"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T08:32:43Z","type":"status","unit":"u0144"}
+{"class":"synthetic","tokens":74483,"ts":"2025-04-05T08:34:43Z","type":"usage","unit":"u0144"}
+{"ask_id":"a0336","class":"synthetic","label_kind":"do","text":"please document the nightly job flags","ts":"2025-04-05T10:07:36Z","type":"ask"}
+{"ask_id":"a0336","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-05T10:13:36Z","type":"unit_created","unit":"u0142"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T10:13:36Z","type":"status","unit":"u0142"}
+{"class":"synthetic","tokens":83469,"ts":"2025-04-05T10:15:36Z","type":"usage","unit":"u0142"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-05T10:48:36Z","type":"status","unit":"u0142"}
+{"class":"synthetic","evidence":{"kind":"stored_row_rerun_match","outcome_observed":true,"ref":"run-u0142"},"result":"pass","ts":"2025-04-05T11:03:36Z","type":"verify","unit":"u0142","verifier":"checker-1"}
+{"ask_id":"a0337","class":"synthetic","label_kind":"do","text":"i need the import script output split by day","ts":"2025-04-05T11:25:36Z","type":"ask"}
+{"ask_id":"a0337","class":"synthetic","deliverable":"code","done_when":"outcome observed","executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-05T11:32:36Z","type":"unit_created","unit":"u0143"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T11:32:36Z","type":"status","unit":"u0143"}
+{"class":"synthetic","tokens":37476,"ts":"2025-04-05T11:34:36Z","type":"usage","unit":"u0143"}
+{"class":"synthetic","end":"2025-04-05T13:49:00Z","start":"2025-04-05T11:44:00Z","ts":"2025-04-05T11:44:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-05T12:27:43Z","type":"status","unit":"u0144"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0144"},"result":"pass","ts":"2025-04-05T12:36:43Z","type":"verify","unit":"u0144","verifier":"checker-1"}
+{"ask_id":"a0331","class":"synthetic","label_kind":"do","text":"update the import script to handle unicode names","ts":"2025-04-05T13:46:56Z","type":"ask"}
+{"ask_id":"a0331","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-05T13:50:56Z","type":"unit_created","unit":"u0139"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T13:50:56Z","type":"status","unit":"u0139"}
+{"class":"synthetic","tokens":4145,"ts":"2025-04-05T13:52:56Z","type":"usage","unit":"u0139"}
+{"ask_id":"a0334","class":"synthetic","label_kind":"decide","text":"should we use a retry or a circuit breaker for the sidebar","ts":"2025-04-05T14:08:13Z","type":"ask"}
+{"ask_id":"a0338","class":"synthetic","label_kind":"do","text":"write a test for the queue worker","ts":"2025-04-05T14:40:20Z","type":"ask"}
+{"ask_id":"a0333","class":"synthetic","label_kind":"do","text":"please document the cache layer flags","ts":"2025-04-05T15:16:04Z","type":"ask"}
+{"ask_id":"a0333","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-05T15:20:04Z","type":"unit_created","unit":"u0141"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T15:20:04Z","type":"status","unit":"u0141"}
+{"class":"synthetic","tokens":13253,"ts":"2025-04-05T15:22:04Z","type":"usage","unit":"u0141"}
+{"ask_id":"a0340","class":"synthetic","label_kind":"do","text":"i need the settings panel output split by day","ts":"2025-04-05T16:14:47Z","type":"ask"}
+{"ask_id":"a0340","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-05T16:29:47Z","type":"unit_created","unit":"u0145"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T16:29:47Z","type":"status","unit":"u0145"}
+{"class":"synthetic","tokens":73803,"ts":"2025-04-05T16:31:47Z","type":"usage","unit":"u0145"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-05T16:40:47Z","type":"status","unit":"u0145"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0145"},"result":"pass","ts":"2025-04-05T16:41:47Z","type":"verify","unit":"u0145","verifier":"worker-2"}
+{"class":"synthetic","ts":"2025-04-05T16:49:47Z","type":"intervention","unit":"u0145"}
+{"ask_id":"a0335","class":"synthetic","label_kind":"manage","text":"hand off the exporter cleanup to the operator","ts":"2025-04-05T19:17:56Z","type":"ask"}
+{"ask_id":"a0332","class":"synthetic","label_kind":"do","text":"fix the exporter so it stops timing out under load","ts":"2025-04-05T19:48:26Z","type":"ask"}
+{"ask_id":"a0332","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-05T20:08:26Z","type":"unit_created","unit":"u0140"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-05T20:08:26Z","type":"status","unit":"u0140"}
+{"class":"synthetic","tokens":16944,"ts":"2025-04-05T20:10:26Z","type":"usage","unit":"u0140"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-05T21:22:04Z","type":"status","unit":"u0141"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0141"},"result":"pass","ts":"2025-04-05T21:37:04Z","type":"verify","unit":"u0141","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-06T07:11:00Z","start":"2025-04-05T23:09:00Z","ts":"2025-04-05T23:09:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-06T02:19:36Z","type":"status","unit":"u0143"}
+{"ask_id":"a0341","class":"synthetic","label_kind":"filler","text":"ok","ts":"2025-04-06T08:08:34Z","type":"ask"}
+{"ask_id":"a0343","class":"synthetic","label_kind":"manage","text":"tell the analyst to hold the exporter until i check the numbers","ts":"2025-04-06T08:14:46Z","type":"ask"}
+{"ask_id":"a0344","class":"synthetic","label_kind":"do","text":"add a retry to the search page","ts":"2025-04-06T08:43:03Z","type":"ask"}
+{"ask_id":"a0344","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-06T09:09:03Z","type":"unit_created","unit":"u0146"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-06T09:09:03Z","type":"status","unit":"u0146"}
+{"class":"synthetic","tokens":10617,"ts":"2025-04-06T09:11:03Z","type":"usage","unit":"u0146"}
+{"ask_id":"a0348","class":"synthetic","label_kind":"decide","text":"which is better for the sidebar, sqlite or postgres","ts":"2025-04-06T09:47:41Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-06T09:48:03Z","type":"status","unit":"u0146"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0146"},"result":"pass","ts":"2025-04-06T09:49:03Z","type":"verify","unit":"u0146","verifier":"worker-3"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-06T09:54:26Z","type":"status","unit":"u0140"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0140"},"result":"pass","ts":"2025-04-06T10:09:26Z","type":"verify","unit":"u0140","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-06T13:10:00Z","start":"2025-04-06T11:39:00Z","ts":"2025-04-06T11:39:00Z","type":"owner_idle"}
+{"ask_id":"a0349","class":"synthetic","label_kind":"do","text":"add a retry to the cache layer","ts":"2025-04-06T12:05:18Z","type":"ask"}
+{"ask_id":"a0346","class":"synthetic","label_kind":"manage","text":"hand off the queue worker cleanup to the reviewer","ts":"2025-04-06T12:19:06Z","type":"ask"}
+{"ask_id":"a0345","class":"synthetic","label_kind":"decide","text":"should we use a retry or a circuit breaker for the billing report","ts":"2025-04-06T13:05:21Z","type":"ask"}
+{"ask_id":"a0350","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the billing report until i check the numbers","ts":"2025-04-06T17:24:19Z","type":"ask"}
+{"ask_id":"a0350","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"manage","requester":"owner","ts":"2025-04-06T17:42:19Z","type":"unit_created","unit":"u0147"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-06T17:42:19Z","type":"status","unit":"u0147"}
+{"class":"synthetic","tokens":75383,"ts":"2025-04-06T17:44:19Z","type":"usage","unit":"u0147"}
+{"ask_id":"a0347","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the nightly job until i check the numbers","ts":"2025-04-06T17:49:08Z","type":"ask"}
+{"ask_id":"a0342","class":"synthetic","label_kind":"manage","text":"ask the maintainer to send a short status on the sidebar","ts":"2025-04-06T19:54:29Z","type":"ask"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-04-06T22:35:19Z","type":"status","unit":"u0147"}
+{"class":"synthetic","end":"2025-04-07T08:11:00Z","start":"2025-04-06T23:21:00Z","ts":"2025-04-06T23:21:00Z","type":"owner_idle"}
+{"ask_id":"a0357","class":"synthetic","label_kind":"decide","text":"pick sqlite or postgres for the search page and tell me why","ts":"2025-04-07T08:23:08Z","type":"ask"}
+{"ask_id":"a0360","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-04-07T11:42:52Z","type":"ask"}
+{"ask_id":"a0358","class":"synthetic","label_kind":"decide","text":"which is better for the import script, a queue or a cron job","ts":"2025-04-07T11:49:24Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-07T15:31:00Z","start":"2025-04-07T12:07:00Z","ts":"2025-04-07T12:07:00Z","type":"owner_idle"}
+{"ask_id":"a0356","class":"synthetic","label_kind":"explore","text":"what is the current size of the settings panel output","ts":"2025-04-07T12:14:16Z","type":"ask"}
+{"ask_id":"a0352","class":"synthetic","label_kind":"explore","text":"what if we cached the signup form, just curious what you think","ts":"2025-04-07T14:41:43Z","type":"ask"}
+{"ask_id":"a0351","class":"synthetic","label_kind":"explore","text":"brainstorm ways the import script could run unattended","ts":"2025-04-07T14:54:29Z","type":"ask"}
+{"ask_id":"a0355","class":"synthetic","label_kind":"decide","text":"should we use a queue or a cron job for the billing report","ts":"2025-04-07T15:25:35Z","type":"ask"}
+{"ask_id":"a0354","class":"synthetic","label_kind":"decide","text":"which is better for the queue worker, a retry or a circuit breaker","ts":"2025-04-07T17:42:17Z","type":"ask"}
+{"ask_id":"a0353","class":"synthetic","label_kind":"explore","text":"why did the import script fail last night","ts":"2025-04-07T18:02:14Z","type":"ask"}
+{"ask_id":"a0354","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"decide","requester":"owner","ts":"2025-04-07T18:10:17Z","type":"unit_created","unit":"u0148"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-07T18:10:17Z","type":"status","unit":"u0148"}
+{"class":"synthetic","tokens":22398,"ts":"2025-04-07T18:12:17Z","type":"usage","unit":"u0148"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-07T18:32:17Z","type":"status","unit":"u0148"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0148"},"result":"pass","ts":"2025-04-07T18:33:17Z","type":"verify","unit":"u0148","verifier":"worker-3"}
+{"ask_id":"a0359","class":"synthetic","label_kind":"explore","text":"brainstorm ways the cache layer could run unattended","ts":"2025-04-07T19:52:34Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-08T07:06:00Z","start":"2025-04-07T22:50:00Z","ts":"2025-04-07T22:50:00Z","type":"owner_idle"}
+{"ask_id":"a0365","class":"synthetic","label_kind":"do","text":"i need the import script output split by day","ts":"2025-04-08T09:13:21Z","type":"ask"}
+{"ask_id":"a0365","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-08T09:40:21Z","type":"unit_created","unit":"u0151"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-08T09:40:21Z","type":"status","unit":"u0151"}
+{"class":"synthetic","tokens":4721,"ts":"2025-04-08T09:42:21Z","type":"usage","unit":"u0151"}
+{"ask_id":"a0362","class":"synthetic","label_kind":"do","text":"please document the signup form flags","ts":"2025-04-08T09:54:29Z","type":"ask"}
+{"ask_id":"a0362","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-08T10:19:29Z","type":"unit_created","unit":"u0149"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-08T10:19:29Z","type":"status","unit":"u0149"}
+{"class":"synthetic","tokens":88568,"ts":"2025-04-08T10:21:29Z","type":"usage","unit":"u0149"}
+{"class":"synthetic","ts":"2025-04-08T10:32:29Z","type":"intervention","unit":"u0149"}
+{"ask_id":"a0364","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-04-08T12:09:43Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-08T12:10:29Z","type":"status","unit":"u0149"}
+{"class":"synthetic","evidence":{"kind":"test_run","outcome_observed":true,"ref":"run-u0149"},"result":"pass","ts":"2025-04-08T12:25:29Z","type":"verify","unit":"u0149","verifier":"checker-1"}
+{"ask_id":"a0370","class":"synthetic","label_kind":"decide","text":"which is better for the sidebar, json or csv","ts":"2025-04-08T13:50:33Z","type":"ask"}
+{"ask_id":"a0363","class":"synthetic","label_kind":"do","text":"fix the exporter so it stops dropping the last row","ts":"2025-04-08T14:10:51Z","type":"ask"}
+{"ask_id":"a0363","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-08T14:29:51Z","type":"unit_created","unit":"u0150"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-08T14:29:51Z","type":"status","unit":"u0150"}
+{"class":"synthetic","tokens":50803,"ts":"2025-04-08T14:31:51Z","type":"usage","unit":"u0150"}
+{"ask_id":"a0367","class":"synthetic","label_kind":"do","text":"write a test for the import script","ts":"2025-04-08T15:20:01Z","type":"ask"}
+{"ask_id":"a0361","class":"synthetic","label_kind":"decide","text":"which is better for the import script, a queue or a cron job","ts":"2025-04-08T15:50:59Z","type":"ask"}
+{"ask_id":"a0366","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-04-08T15:53:11Z","type":"ask"}
+{"ask_id":"a0369","class":"synthetic","label_kind":"do","text":"refactor the nightly job and add a test","ts":"2025-04-08T18:45:00Z","type":"ask"}
+{"ask_id":"a0369","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-08T18:47:00Z","type":"unit_created","unit":"u0153"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-08T18:47:00Z","type":"status","unit":"u0153"}
+{"class":"synthetic","tokens":48970,"ts":"2025-04-08T18:49:00Z","type":"usage","unit":"u0153"}
+{"ask_id":"a0368","class":"synthetic","label_kind":"do","text":"write a test for the sidebar","ts":"2025-04-08T19:09:09Z","type":"ask"}
+{"ask_id":"a0368","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-08T19:28:09Z","type":"unit_created","unit":"u0152"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-08T19:28:09Z","type":"status","unit":"u0152"}
+{"class":"synthetic","tokens":68460,"ts":"2025-04-08T19:30:09Z","type":"usage","unit":"u0152"}
+{"class":"synthetic","ts":"2025-04-08T19:53:09Z","type":"intervention","unit":"u0152"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-08T20:53:00Z","type":"status","unit":"u0153"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0153"},"result":"pass","ts":"2025-04-08T20:54:00Z","type":"verify","unit":"u0153","verifier":"worker-3"}
+{"class":"synthetic","end":"2025-04-09T09:05:00Z","start":"2025-04-08T23:48:00Z","ts":"2025-04-08T23:48:00Z","type":"owner_idle"}
+{"ask_id":"a0379","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-04-09T08:23:11Z","type":"ask"}
+{"ask_id":"a0371","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-04-09T10:24:07Z","type":"ask"}
+{"ask_id":"a0372","class":"synthetic","label_kind":"do","text":"fix the nightly job so it stops timing out under load","ts":"2025-04-09T10:27:11Z","type":"ask"}
+{"ask_id":"a0374","class":"synthetic","label_kind":"do","text":"please document the search page flags","ts":"2025-04-09T10:35:39Z","type":"ask"}
+{"ask_id":"a0372","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-09T10:55:11Z","type":"unit_created","unit":"u0154"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-09T10:55:11Z","type":"status","unit":"u0154"}
+{"class":"synthetic","tokens":2607,"ts":"2025-04-09T10:57:11Z","type":"usage","unit":"u0154"}
+{"ask_id":"a0374","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-09T10:58:39Z","type":"unit_created","unit":"u0156"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-09T10:58:39Z","type":"status","unit":"u0156"}
+{"class":"synthetic","tokens":14715,"ts":"2025-04-09T11:00:39Z","type":"usage","unit":"u0156"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T11:40:11Z","type":"status","unit":"u0154"}
+{"class":"synthetic","evidence":{"kind":"dry_run","outcome_observed":true,"ref":"run-u0154"},"result":"pass","ts":"2025-04-09T11:55:11Z","type":"verify","unit":"u0154","verifier":"checker-1"}
+{"ask_id":"a0375","class":"synthetic","label_kind":"explore","text":"what is the current size of the queue worker output","ts":"2025-04-09T12:06:36Z","type":"ask"}
+{"ask_id":"a0373","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the settings panel","ts":"2025-04-09T12:19:23Z","type":"ask"}
+{"ask_id":"a0373","class":"synthetic","deliverable":"config","done_when":null,"executor":"worker-3","kind":"manage","requester":"owner","ts":"2025-04-09T12:32:23Z","type":"unit_created","unit":"u0155"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-09T12:32:23Z","type":"status","unit":"u0155"}
+{"ask_id":"a0375","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-2","kind":"explore","requester":"owner","ts":"2025-04-09T12:32:36Z","type":"unit_created","unit":"u0157"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-09T12:32:36Z","type":"status","unit":"u0157"}
+{"class":"synthetic","tokens":46691,"ts":"2025-04-09T12:34:23Z","type":"usage","unit":"u0155"}
+{"class":"synthetic","tokens":82540,"ts":"2025-04-09T12:34:36Z","type":"usage","unit":"u0157"}
+{"ask_id":"a0376","class":"synthetic","label_kind":"manage","text":"hand off the billing report cleanup to the analyst","ts":"2025-04-09T12:45:05Z","type":"ask"}
+{"ask_id":"a0380","class":"synthetic","label_kind":"probe","text":"reply only with the word ready","ts":"2025-04-09T12:46:39Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T13:00:21Z","type":"status","unit":"u0151"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T14:17:36Z","type":"status","unit":"u0157"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0157"},"result":"pass","ts":"2025-04-09T14:18:36Z","type":"verify","unit":"u0157","verifier":"worker-2"}
+{"ask_id":"a0378","class":"synthetic","label_kind":"do","text":"please document the search page flags","ts":"2025-04-09T14:53:36Z","type":"ask"}
+{"ask_id":"a0378","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-09T15:13:36Z","type":"unit_created","unit":"u0158"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-09T15:13:36Z","type":"status","unit":"u0158"}
+{"class":"synthetic","tokens":22934,"ts":"2025-04-09T15:15:36Z","type":"usage","unit":"u0158"}
+{"ask_id":"a0377","class":"synthetic","label_kind":"manage","text":"tell the operator to hold the sidebar until i check the numbers","ts":"2025-04-09T15:44:33Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T16:42:23Z","type":"status","unit":"u0155"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0155"},"result":"pass","ts":"2025-04-09T16:51:23Z","type":"verify","unit":"u0155","verifier":"checker-1"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T17:12:39Z","type":"status","unit":"u0156"}
+{"class":"synthetic","evidence":{"kind":"file_exists","outcome_observed":false,"ref":"artifact-u0156"},"result":"pass","ts":"2025-04-09T17:13:39Z","type":"verify","unit":"u0156","verifier":"worker-3"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-09T19:29:36Z","type":"status","unit":"u0158"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0158"},"result":"pass","ts":"2025-04-09T19:38:36Z","type":"verify","unit":"u0158","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-10T07:41:00Z","start":"2025-04-09T22:53:00Z","ts":"2025-04-09T22:53:00Z","type":"owner_idle"}
+{"ask_id":"a0387","class":"synthetic","label_kind":"do","text":"ok now deploy the signup form","ts":"2025-04-10T10:20:11Z","type":"ask"}
+{"ask_id":"a0387","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-10T10:45:11Z","type":"unit_created","unit":"u0161"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-10T10:45:11Z","type":"status","unit":"u0161"}
+{"class":"synthetic","tokens":5801,"ts":"2025-04-10T10:47:11Z","type":"usage","unit":"u0161"}
+{"ask_id":"a0382","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-04-10T10:58:30Z","type":"ask"}
+{"ask_id":"a0384","class":"synthetic","label_kind":"decide","text":"which is better for the queue worker, a queue or a cron job","ts":"2025-04-10T12:48:18Z","type":"ask"}
+{"ask_id":"a0386","class":"synthetic","label_kind":"manage","text":"tell the reviewer to hold the billing report until i check the numbers","ts":"2025-04-10T12:52:49Z","type":"ask"}
+{"ask_id":"a0385","class":"synthetic","label_kind":"do","text":"update the billing report to handle duplicate keys","ts":"2025-04-10T13:37:58Z","type":"ask"}
+{"ask_id":"a0385","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-10T13:55:58Z","type":"unit_created","unit":"u0160"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-10T13:55:58Z","type":"status","unit":"u0160"}
+{"class":"synthetic","tokens":24206,"ts":"2025-04-10T13:57:58Z","type":"usage","unit":"u0160"}
+{"ask_id":"a0381","class":"synthetic","label_kind":"explore","text":"why did the queue worker fail last night","ts":"2025-04-10T15:06:31Z","type":"ask"}
+{"ask_id":"a0390","class":"synthetic","label_kind":"decide","text":"pick a retry or a circuit breaker for the import script and tell me why","ts":"2025-04-10T15:48:38Z","type":"ask"}
+{"ask_id":"a0389","class":"synthetic","label_kind":"do","text":"add a retry to the import script","ts":"2025-04-10T18:59:14Z","type":"ask"}
+{"ask_id":"a0389","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-10T19:08:14Z","type":"unit_created","unit":"u0162"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-10T19:08:14Z","type":"status","unit":"u0162"}
+{"class":"synthetic","tokens":28164,"ts":"2025-04-10T19:10:14Z","type":"usage","unit":"u0162"}
+{"ask_id":"a0383","class":"synthetic","label_kind":"do","text":"add a retry to the billing report","ts":"2025-04-10T19:15:51Z","type":"ask"}
+{"ask_id":"a0388","class":"synthetic","label_kind":"explore","text":"what is the current size of the queue worker output","ts":"2025-04-10T19:19:14Z","type":"ask"}
+{"class":"synthetic","ts":"2025-04-10T19:19:14Z","type":"intervention","unit":"u0162"}
+{"ask_id":"a0383","class":"synthetic","deliverable":"code","done_when":null,"executor":"worker-2","kind":"do","requester":"owner","ts":"2025-04-10T19:30:51Z","type":"unit_created","unit":"u0159"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-10T19:30:51Z","type":"status","unit":"u0159"}
+{"class":"synthetic","tokens":65504,"ts":"2025-04-10T19:32:51Z","type":"usage","unit":"u0159"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-10T20:08:14Z","type":"status","unit":"u0162"}
+{"class":"synthetic","evidence":{"kind":"stored_row_rerun_match","outcome_observed":true,"ref":"run-u0162"},"result":"pass","ts":"2025-04-10T20:23:14Z","type":"verify","unit":"u0162","verifier":"checker-1"}
+{"class":"synthetic","forced":true,"status":"done","ts":"2025-04-10T20:52:51Z","type":"status","unit":"u0159"}
+{"class":"synthetic","evidence":{"kind":"commit_exists","outcome_observed":false,"ref":"change-u0159"},"result":"pass","ts":"2025-04-10T21:01:51Z","type":"verify","unit":"u0159","verifier":"checker-1"}
+{"class":"synthetic","end":"2025-04-11T07:20:00Z","start":"2025-04-10T23:36:00Z","ts":"2025-04-10T23:36:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-11T06:11:11Z","type":"status","unit":"u0161"}
+{"ask_id":"a0398","class":"synthetic","label_kind":"explore","text":"tell me why the cache layer is slow on mondays","ts":"2025-04-11T08:40:14Z","type":"ask"}
+{"ask_id":"a0393","class":"synthetic","label_kind":"explore","text":"brainstorm ways the billing report could run unattended","ts":"2025-04-11T09:31:33Z","type":"ask"}
+{"ask_id":"a0399","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-04-11T10:21:50Z","type":"ask"}
+{"ask_id":"a0395","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the nightly job","ts":"2025-04-11T11:26:29Z","type":"ask"}
+{"ask_id":"a0391","class":"synthetic","label_kind":"decide","text":"which is better for the sidebar, sqlite or postgres","ts":"2025-04-11T11:39:47Z","type":"ask"}
+{"ask_id":"a0392","class":"synthetic","label_kind":"explore","text":"brainstorm ways the sidebar could run unattended","ts":"2025-04-11T12:07:40Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-11T14:01:00Z","start":"2025-04-11T12:08:00Z","ts":"2025-04-11T12:08:00Z","type":"owner_idle"}
+{"ask_id":"a0394","class":"synthetic","label_kind":"manage","text":"ask the analyst to send a short status on the search page","ts":"2025-04-11T14:17:18Z","type":"ask"}
+{"ask_id":"a0394","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-2","kind":"manage","requester":"owner","ts":"2025-04-11T14:27:18Z","type":"unit_created","unit":"u0163"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-11T14:27:18Z","type":"status","unit":"u0163"}
+{"class":"synthetic","tokens":13764,"ts":"2025-04-11T14:29:18Z","type":"usage","unit":"u0163"}
+{"ask_id":"a0397","class":"synthetic","label_kind":"filler","text":"sounds good","ts":"2025-04-11T17:09:40Z","type":"ask"}
+{"ask_id":"a0396","class":"synthetic","label_kind":"explore","text":"brainstorm ways the cache layer could run unattended","ts":"2025-04-11T17:37:11Z","type":"ask"}
+{"ask_id":"a0396","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"explore","requester":"owner","ts":"2025-04-11T17:56:11Z","type":"unit_created","unit":"u0164"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-11T17:56:11Z","type":"status","unit":"u0164"}
+{"class":"synthetic","tokens":58208,"ts":"2025-04-11T17:58:11Z","type":"usage","unit":"u0164"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-11T18:12:18Z","type":"status","unit":"u0163"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0163"},"result":"pass","ts":"2025-04-11T18:27:18Z","type":"verify","unit":"u0163","verifier":"checker-1"}
+{"ask_id":"a0400","class":"synthetic","label_kind":"do","text":"write a test for the nightly job","ts":"2025-04-11T18:39:14Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-12T05:36:00Z","start":"2025-04-11T22:01:00Z","ts":"2025-04-11T22:01:00Z","type":"owner_idle"}
+{"ask_id":"a0408","class":"synthetic","label_kind":"explore","text":"what is the current size of the cache layer output","ts":"2025-04-12T08:30:23Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-12T08:40:11Z","type":"status","unit":"u0164"}
+{"ask_id":"a0408","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"explore","requester":"owner","ts":"2025-04-12T08:40:23Z","type":"unit_created","unit":"u0166"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-12T08:40:23Z","type":"status","unit":"u0166"}
+{"class":"synthetic","tokens":62689,"ts":"2025-04-12T08:42:23Z","type":"usage","unit":"u0166"}
+{"ask_id":"a0404","class":"synthetic","label_kind":"manage","text":"ask the reviewer to send a short status on the queue worker","ts":"2025-04-12T09:40:40Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-04-12T09:48:03Z","type":"status","unit":"u0146"}
+{"ask_id":"a0403","class":"synthetic","label_kind":"do","text":"please document the cache layer flags","ts":"2025-04-12T10:28:06Z","type":"ask"}
+{"ask_id":"a0403","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-12T10:54:06Z","type":"unit_created","unit":"u0165"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-12T10:54:06Z","type":"status","unit":"u0165"}
+{"class":"synthetic","tokens":48433,"ts":"2025-04-12T10:56:06Z","type":"usage","unit":"u0165"}
+{"class":"synthetic","end":"2025-04-12T13:39:00Z","start":"2025-04-12T11:31:00Z","ts":"2025-04-12T11:31:00Z","type":"owner_idle"}
+{"ask_id":"a0406","class":"synthetic","label_kind":"filler","text":"thanks","ts":"2025-04-12T12:19:05Z","type":"ask"}
+{"ask_id":"a0410","class":"synthetic","label_kind":"filler","text":"continue","ts":"2025-04-12T12:53:29Z","type":"ask"}
+{"ask_id":"a0409","class":"synthetic","label_kind":"explore","text":"why did the cache layer fail last night","ts":"2025-04-12T16:13:40Z","type":"ask"}
+{"ask_id":"a0402","class":"synthetic","label_kind":"decide","text":"should we use a queue or a cron job for the search page","ts":"2025-04-12T18:10:51Z","type":"ask"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-04-12T18:12:18Z","type":"status","unit":"u0163"}
+{"ask_id":"a0401","class":"synthetic","label_kind":"explore","text":"how does the queue worker decide when to retry","ts":"2025-04-12T18:53:57Z","type":"ask"}
+{"ask_id":"a0407","class":"synthetic","label_kind":"filler","text":"go ahead","ts":"2025-04-12T19:25:28Z","type":"ask"}
+{"ask_id":"a0405","class":"synthetic","label_kind":"do","text":"i need the search page output split by day","ts":"2025-04-12T19:52:48Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-13T07:35:00Z","start":"2025-04-12T22:27:00Z","ts":"2025-04-12T22:27:00Z","type":"owner_idle"}
+{"ask_id":"a0411","class":"synthetic","label_kind":"explore","text":"what is the current size of the exporter output","ts":"2025-04-13T10:16:33Z","type":"ask"}
+{"class":"synthetic","end":"2025-04-13T12:59:00Z","start":"2025-04-13T11:09:00Z","ts":"2025-04-13T11:09:00Z","type":"owner_idle"}
+{"ask_id":"a0417","class":"synthetic","label_kind":"manage","text":"tell the reviewer to hold the import script until i check the numbers","ts":"2025-04-13T12:39:28Z","type":"ask"}
+{"ask_id":"a0419","class":"synthetic","label_kind":"decide","text":"should we use a retry or a circuit breaker for the search page","ts":"2025-04-13T13:24:27Z","type":"ask"}
+{"ask_id":"a0419","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-3","kind":"decide","requester":"owner","ts":"2025-04-13T13:51:27Z","type":"unit_created","unit":"u0171"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-13T13:51:27Z","type":"status","unit":"u0171"}
+{"class":"synthetic","tokens":78203,"ts":"2025-04-13T13:53:27Z","type":"usage","unit":"u0171"}
+{"ask_id":"a0420","class":"synthetic","label_kind":"explore","text":"tell me why the nightly job is slow on mondays","ts":"2025-04-13T14:03:36Z","type":"ask"}
+{"ask_id":"a0412","class":"synthetic","label_kind":"explore","text":"what if we cached the search page, just curious what you think","ts":"2025-04-13T14:40:29Z","type":"ask"}
+{"ask_id":"a0416","class":"synthetic","label_kind":"do","text":"add a retry to the signup form","ts":"2025-04-13T15:30:10Z","type":"ask"}
+{"ask_id":"a0413","class":"synthetic","label_kind":"do","text":"can you rename the cache layer option in the config","ts":"2025-04-13T15:58:10Z","type":"ask"}
+{"ask_id":"a0416","class":"synthetic","deliverable":"page","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-13T15:58:10Z","type":"unit_created","unit":"u0169"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-13T15:58:10Z","type":"status","unit":"u0169"}
+{"class":"synthetic","tokens":55998,"ts":"2025-04-13T16:00:10Z","type":"usage","unit":"u0169"}
+{"ask_id":"a0413","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-1","kind":"do","requester":"owner","ts":"2025-04-13T16:05:10Z","type":"unit_created","unit":"u0167"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-13T16:05:10Z","type":"status","unit":"u0167"}
+{"class":"synthetic","tokens":54088,"ts":"2025-04-13T16:07:10Z","type":"usage","unit":"u0167"}
+{"ask_id":"a0415","class":"synthetic","label_kind":"probe","text":"reply with exactly OK","ts":"2025-04-13T16:08:32Z","type":"ask"}
+{"ask_id":"a0414","class":"synthetic","label_kind":"decide","text":"which is better for the settings panel, a retry or a circuit breaker","ts":"2025-04-13T16:26:36Z","type":"ask"}
+{"ask_id":"a0414","class":"synthetic","deliverable":"document","done_when":null,"executor":"worker-1","kind":"decide","requester":"owner","ts":"2025-04-13T16:30:36Z","type":"unit_created","unit":"u0168"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-13T16:30:36Z","type":"status","unit":"u0168"}
+{"class":"synthetic","tokens":64421,"ts":"2025-04-13T16:32:36Z","type":"usage","unit":"u0168"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-13T18:20:27Z","type":"status","unit":"u0171"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-13T18:32:36Z","type":"status","unit":"u0168"}
+{"ask_id":"a0418","class":"synthetic","label_kind":"do","text":"update the billing report to handle unicode names","ts":"2025-04-13T18:44:41Z","type":"ask"}
+{"class":"synthetic","evidence":{"kind":"named_check","outcome_observed":true,"ref":"run-u0168"},"result":"pass","ts":"2025-04-13T18:47:36Z","type":"verify","unit":"u0168","verifier":"checker-1"}
+{"ask_id":"a0418","class":"synthetic","deliverable":"data","done_when":null,"executor":"worker-3","kind":"do","requester":"owner","ts":"2025-04-13T19:05:41Z","type":"unit_created","unit":"u0170"}
+{"class":"synthetic","forced":false,"status":"open","ts":"2025-04-13T19:05:41Z","type":"status","unit":"u0170"}
+{"class":"synthetic","tokens":88212,"ts":"2025-04-13T19:07:41Z","type":"usage","unit":"u0170"}
+{"class":"synthetic","forced":false,"status":"done","ts":"2025-04-13T21:26:41Z","type":"status","unit":"u0170"}
+{"class":"synthetic","end":"2025-04-14T06:13:00Z","start":"2025-04-13T23:08:00Z","ts":"2025-04-13T23:08:00Z","type":"owner_idle"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-04-14T10:48:36Z","type":"status","unit":"u0142"}
+{"class":"synthetic","forced":false,"status":"reopened","ts":"2025-04-17T09:54:26Z","type":"status","unit":"u0140"}
+{"class":"synthetic","forced":false,"status":"reverted","ts":"2025-04-21T18:32:36Z","type":"status","unit":"u0168"}

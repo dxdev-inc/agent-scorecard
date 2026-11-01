@@ -1,0 +1,645 @@
+{
+ "note": "30 scenarios. Authored from the failure classes of the method; run with python -m factory_kit roleplay.",
+ "scenarios": [
+  {
+   "id": "c01",
+   "type": "capture",
+   "group": "tell-me is a question, not a relay",
+   "text": "tell me why the nightly job failed yesterday",
+   "expect": {
+    "keep": true,
+    "kind": "explore",
+    "done_kind": "finding_stored"
+   }
+  },
+  {
+   "id": "c02",
+   "type": "capture",
+   "group": "relay to a third party",
+   "text": "tell the reviewer to hold the exporter until i look at the numbers",
+   "expect": {
+    "keep": true,
+    "kind": "manage",
+    "done_kind": "relay_delivered_and_acted"
+   }
+  },
+  {
+   "id": "c03",
+   "type": "capture",
+   "group": "action plus a tell-me tail",
+   "text": "deploy the exporter and tell me when it is live",
+   "expect": {
+    "keep": true,
+    "kind": "do",
+    "done_kind": "outcome_verified"
+   }
+  },
+  {
+   "id": "c04",
+   "type": "capture",
+   "group": "decision with a request to explain",
+   "text": "i cannot decide between sqlite and postgres, pick one for me and tell me why",
+   "expect": {
+    "keep": true,
+    "kind": "decide",
+    "done_kind": "decision_recorded"
+   }
+  },
+  {
+   "id": "c05",
+   "type": "capture",
+   "group": "thinking out loud gets no fake gate",
+   "text": "what if the queue worker ran unattended overnight, just curious what you think",
+   "expect": {
+    "keep": true,
+    "kind": "explore",
+    "done_kind": "open_discussion"
+   }
+  },
+  {
+   "id": "c06",
+   "type": "capture",
+   "group": "bare acknowledgement",
+   "text": "ok",
+   "expect": {
+    "keep": false
+   }
+  },
+  {
+   "id": "c07",
+   "type": "capture",
+   "group": "probe prompt",
+   "text": "reply with exactly OK",
+   "expect": {
+    "keep": false
+   }
+  },
+  {
+   "id": "c08",
+   "type": "capture",
+   "group": "machine relay",
+   "text": "[relay from reviewer] the gate is green and the change landed",
+   "expect": {
+    "keep": false
+   }
+  },
+  {
+   "id": "c09",
+   "type": "capture",
+   "group": "acknowledgement that carries an instruction",
+   "text": "ok now add a retry to the exporter and write a test for it",
+   "expect": {
+    "keep": true,
+    "kind": "do"
+   }
+  },
+  {
+   "id": "c10",
+   "type": "capture",
+   "group": "ordinals split into three",
+   "text": "first add a retry to the exporter, second write a test for it, third show me the diff before anything goes out",
+   "expect": {
+    "keep": true,
+    "kind": "do",
+    "parts": 3
+   }
+  },
+  {
+   "id": "c11",
+   "type": "capture",
+   "group": "counted lead splits into two",
+   "text": "two things, fix the footer so it stops clipping, and also tell me which jobs are idle right now",
+   "expect": {
+    "keep": true,
+    "kind": "do",
+    "parts": 2
+   }
+  },
+  {
+   "id": "c12",
+   "type": "capture",
+   "group": "a plain and never splits",
+   "text": "fix the footer and add a test",
+   "expect": {
+    "keep": true,
+    "kind": "do",
+    "parts": 1
+   }
+  },
+  {
+   "id": "c13",
+   "type": "capture",
+   "group": "a concrete need without an action verb",
+   "text": "i need the usage report split by region for last week",
+   "expect": {
+    "keep": true,
+    "kind": "do"
+   }
+  },
+  {
+   "id": "c14",
+   "type": "capture",
+   "group": "i need plus brainstorm stays a brainstorm",
+   "text": "i need to think about how this could run overnight, just brainstorming",
+   "expect": {
+    "keep": true,
+    "kind": "explore",
+    "done_kind": "open_discussion"
+   }
+  },
+  {
+   "id": "c15",
+   "type": "capture",
+   "group": "plain decision",
+   "text": "should we ship the fix now or wait for the review",
+   "expect": {
+    "keep": true,
+    "kind": "decide"
+   }
+  },
+  {
+   "id": "c16",
+   "type": "capture",
+   "group": "ask a third party",
+   "text": "ask the maintainer to send me a short status when they get a chance",
+   "expect": {
+    "keep": true,
+    "kind": "manage"
+   }
+  },
+  {
+   "id": "c17",
+   "type": "capture",
+   "group": "polite acknowledgement",
+   "text": "yes please go ahead",
+   "expect": {
+    "keep": false
+   }
+  },
+  {
+   "id": "c18",
+   "type": "capture",
+   "group": "modal request",
+   "text": "can you rename the verbose flag",
+   "expect": {
+    "keep": true,
+    "kind": "do"
+   }
+  },
+  {
+   "id": "c19",
+   "type": "capture",
+   "group": "one word is not an ask",
+   "text": "why",
+   "expect": {
+    "keep": false
+   }
+  },
+  {
+   "id": "v01",
+   "type": "verify",
+   "group": "executor grades own work",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "worker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "r",
+     "outcome_observed": true
+    }
+   },
+   "expect": "inconclusive"
+  },
+  {
+   "id": "v02",
+   "type": "verify",
+   "group": "requester approves own request",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "owner",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "r",
+     "outcome_observed": true
+    }
+   },
+   "expect": "inconclusive"
+  },
+  {
+   "id": "v03",
+   "type": "verify",
+   "group": "presence is not an outcome",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "file_exists",
+     "ref": "r",
+     "outcome_observed": false
+    }
+   },
+   "expect": "inconclusive"
+  },
+  {
+   "id": "v04",
+   "type": "verify",
+   "group": "the honest pass",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "test_run",
+     "ref": "r",
+     "outcome_observed": true
+    }
+   },
+   "expect": "pass"
+  },
+  {
+   "id": "v05",
+   "type": "verify",
+   "group": "evidence of the wrong type",
+   "unit": {
+    "id": "u",
+    "deliverable": "code",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": {
+     "kind": "render_capture",
+     "ref": "r",
+     "outcome_observed": true
+    }
+   },
+   "expect": "inconclusive"
+  },
+  {
+   "id": "v06",
+   "type": "verify",
+   "group": "a pass with nothing behind it",
+   "unit": {
+    "id": "u",
+    "deliverable": "page",
+    "executor": "worker-1",
+    "requester": "owner"
+   },
+   "event": {
+    "verifier": "checker-1",
+    "result": "pass",
+    "evidence": null
+   },
+   "expect": "inconclusive"
+  },
+  {
+   "id": "l01",
+   "type": "loop",
+   "group": "two units, both independently verified",
+   "units": [
+    {
+     "id": "a",
+     "status": "open",
+     "priority": 2,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    },
+    {
+     "id": "b",
+     "status": "open",
+     "priority": 1,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    }
+   ],
+   "executor": {
+    "a": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ],
+    "b": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ]
+   },
+   "checks": {
+    "a": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    },
+    "b": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    }
+   },
+   "pool": 5,
+   "config": {},
+   "ideas": [],
+   "expect": {
+    "stop_reason": "done",
+    "shipped": [
+     "a",
+     "b"
+    ],
+    "failure": false
+   }
+  },
+  {
+   "id": "l02",
+   "type": "loop",
+   "group": "executor edits its own done test",
+   "units": [
+    {
+     "id": "a",
+     "status": "open",
+     "priority": 0,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    }
+   ],
+   "executor": {
+    "a": [
+     {
+      "claim": "done",
+      "seconds": 60,
+      "edits_done_when": "file exists"
+     }
+    ]
+   },
+   "checks": {
+    "a": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    }
+   },
+   "pool": 5,
+   "config": {
+    "max_retries": 1,
+    "no_progress_limit": 9
+   },
+   "ideas": [],
+   "expect": {
+    "shipped": [],
+    "escalated": [
+     "a"
+    ],
+    "refused": [
+     "a",
+     "a"
+    ]
+   }
+  },
+  {
+   "id": "l03",
+   "type": "loop",
+   "group": "no new verified evidence for two rounds",
+   "units": [
+    {
+     "id": "a",
+     "status": "open",
+     "priority": 2,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    },
+    {
+     "id": "b",
+     "status": "open",
+     "priority": 1,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    }
+   ],
+   "executor": {
+    "a": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ],
+    "b": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ]
+   },
+   "checks": {
+    "a": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "file_exists",
+      "ref": "r",
+      "outcome_observed": false
+     }
+    },
+    "b": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "file_exists",
+      "ref": "r",
+      "outcome_observed": false
+     }
+    }
+   },
+   "pool": 5,
+   "config": {
+    "no_progress_limit": 2
+   },
+   "ideas": [],
+   "expect": {
+    "stop_reason": "no_progress",
+    "shipped": [],
+    "failure": true
+   }
+  },
+  {
+   "id": "l04",
+   "type": "loop",
+   "group": "pool runs out: pause, not failure",
+   "units": [
+    {
+     "id": "a",
+     "status": "open",
+     "priority": 2,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    },
+    {
+     "id": "b",
+     "status": "open",
+     "priority": 1,
+     "retries": 0,
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    }
+   ],
+   "executor": {
+    "a": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ],
+    "b": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ]
+   },
+   "checks": {
+    "a": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    },
+    "b": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    }
+   },
+   "pool": 1,
+   "pool_reset_s": 1800,
+   "config": {},
+   "ideas": [],
+   "expect": {
+    "stop_reason": "paused_pool_exhausted",
+    "shipped": [
+     "a"
+    ],
+    "failure": false,
+    "resume_in_s": 1800
+   }
+  },
+  {
+   "id": "l05",
+   "type": "loop",
+   "group": "idle: start the overdue idea, drop the one with no done test",
+   "units": [],
+   "executor": {
+    "i1": [
+     {
+      "claim": "done",
+      "seconds": 600
+     }
+    ]
+   },
+   "checks": {
+    "i1": {
+     "verifier": "checker-1",
+     "result": "pass",
+     "evidence": {
+      "kind": "test_run",
+      "ref": "r",
+      "outcome_observed": true
+     }
+    }
+   },
+   "pool": 5,
+   "config": {},
+   "today": "2025-03-10",
+   "ideas": [
+    {
+     "id": "i1",
+     "review_by": "2025-03-01",
+     "done_when": "outcome observed",
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    },
+    {
+     "id": "i2",
+     "review_by": "2025-03-02",
+     "done_when": null,
+     "deliverable": "code",
+     "executor": "worker-1",
+     "requester": "owner"
+    }
+   ],
+   "expect": {
+    "stop_reason": "done",
+    "shipped": [
+     "i1"
+    ],
+    "dropped": [
+     "i2"
+    ]
+   }
+  }
+ ]
+}
