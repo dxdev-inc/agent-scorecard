@@ -1,0 +1,11 @@
+{
+ "class": "synthetic",
+ "generator": "factory_kit.synth.generate",
+ "params": {
+  "asks_per_day": 10,
+  "days": 42
+ },
+ "schema_version": 1,
+ "seed": 20250303,
+ "sha256": "5aec23670e5cd0b70956218835e44e8647f19bcb5d3a14b318d537a226c1a8a3"
+}
