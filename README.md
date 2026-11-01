@@ -28,7 +28,7 @@ The method in plain words is in [docs/METHOD.md](docs/METHOD.md). The log format
 
 **What this repo is and is not.** It is a synthetic, illustrative implementation of the method. It does not reproduce the audit in the post: that used my private log and a separate script, and none of its data is here. What the repo does carry is the sampling and interval code (`sample.py`), so you can run the same kind of check on your own log. Evidence here comes in three separate classes: synthetic regression results (the tests and quickstart), hypotheses (the stated rules until someone tests them on a real log), and, when anyone publishes them, real-log findings, which will be labelled as such in the changelog.
 
-**Status.** Now: the kit runs and its tests pass on synthetic data. Next: a first run on a real log, and a second reader on the verifier labels. Not claiming: that any number here describes a real factory, or that the rules are accurate on your data. The "strict" share that `sample --score` prints means a finish backed by something other than the agent's own report. It is not a verified outcome.
+**Status.** Now: the kit runs and its tests pass on synthetic data. Next: a first run on a real log, and a person to check the AI-drafted verifier labels. Not claiming: that any number here describes a real factory, or that the rules are accurate on your data. The "strict" share that `sample --score` prints means a finish backed by something other than the agent's own report. It is not a verified outcome.
 
 ## Five-minute quickstart
 
@@ -118,8 +118,8 @@ reported beside the finish rate because a higher finish rate could be a worse fa
 - **Capture is heuristic.** It is keyword and shape rules in English, no model call. The label agreement line is
   100 percent only because the synthetic asks come from my own templates; it is a regression check, not an accuracy
   claim. It already found two real defects while I built it (see METHOD.md).
-- **The verification rules are checked against 20 cases I labelled myself.** I wrote the labels before running the rules, and kept
-  three of the 20 on purpose where I knew the rules disagree with a sensible human label: two lenient misses (a test that asserts nothing; an evidence reference that points at
+- **The verification rules are checked against 20 cases drafted by an AI, and no person has checked them yet.** The labels were written before running the rules, and
+  three of the 20 were kept on purpose where the rules are known to disagree with a sensible human label: two lenient misses (a test that asserts nothing; an evidence reference that points at
   a different unit's run) and one strict miss. The rules cannot see inside evidence. Real use needs your labelled set,
   and expect the first verifier to be too lenient.
 - **The loop is a harness.** The executor and checker are functions you pass in; the clock is simulated; nothing here

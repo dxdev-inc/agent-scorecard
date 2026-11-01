@@ -1,4 +1,4 @@
-"""Regenerates verifier_cases.json. The labels are the author's judgment, written BEFORE running the rules, and two
+"""Regenerates verifier_cases.json. The labels were drafted by an AI, not by a person, and have not been checked by a person. They were written BEFORE running the rules, and three
 cases are kept on purpose where the rules are known to disagree (see `note`). Replace this set with your own."""
 import json
 from pathlib import Path
@@ -37,6 +37,6 @@ cases = [
     case("k20", "code", "checker-2", "pass", "test_run", True, "pass"),
 ]
 Path(__file__).with_name("verifier_cases.json").write_text(
-    json.dumps({"note": "20 labelled cases. Labels are the author's. Use your own.", "cases": cases}, indent=1) + "\n",
+    json.dumps({"note": "20 cases drafted by an AI; no person has checked them. Use your own.", "cases": cases}, indent=1) + "\n",
     encoding="utf-8")
 print("wrote", len(cases))
