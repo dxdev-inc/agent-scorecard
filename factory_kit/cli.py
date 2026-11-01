@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from . import capture, loop, measure, roleplay, scorecard, synth, verify
+from . import capture, loop, measure, roleplay, sample, scorecard, synth, verify
 
 ROOT = Path(__file__).resolve().parent.parent
 SAMPLE = ROOT / "data" / "sample" / "events.jsonl"
@@ -98,6 +98,12 @@ def main(argv=None) -> int:
     sub.add_parser("verify", help="check the verification rules against data/verifier_cases.json")
     sub.add_parser("loop", help="run the simulated loop demo")
     sub.add_parser("roleplay", help="run the 30 scenarios")
+    sm = sub.add_parser("sample", help="draw a seeded sample of asks to label by hand, or score a filled-in table")
+    sm.add_argument("--log", help="event log to draw ask rows from")
+    sm.add_argument("--k", type=int, default=80)
+    sm.add_argument("--seed", type=int, default=7)
+    sm.add_argument("--out", default="out/sample.csv")
+    sm.add_argument("--score", help="a filled-in table from an earlier draw; prints both finish shares with 95 percent intervals")
     a = p.parse_args(argv)
     if a.cmd == "quickstart":
         return cmd_quickstart(a)
@@ -126,6 +132,18 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "loop":
         print(json.dumps(demo_loop(), indent=1))
+        return 0
+    if a.cmd == "sample":
+        if a.score:
+            print(json.dumps(sample.score(a.score), indent=1))
+            return 0
+        if not a.log:
+            print("give --log to draw a sample, or --score to score a filled-in table")
+            return 2
+        Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+        drawn = sample.draw(sample.ask_rows(a.log), a.k, a.seed)
+        sample.write_template(drawn, a.out)
+        print(f"wrote {len(drawn)} rows to {a.out}; fill label, evidence_kind, evidence_ref, then run with --score")
         return 0
     rep = roleplay.run_all()
     print(roleplay.render(rep))
