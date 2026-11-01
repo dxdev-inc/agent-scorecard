@@ -45,3 +45,15 @@ def test_quickstart_runs_clean(tmp_path):
                        cwd=ROOT, capture_output=True, text=True)
     assert p.returncode == 0, p.stderr
     assert "30/30 scenarios passed" in p.stdout and "NO DATA (source:" in p.stdout
+
+
+def test_as_of_is_parsed_as_an_instant_not_compared_as_text():
+    # Regression (review finding 4): the scorecard cut compared strings, measure parsed timestamps. 05:00+05:00 is
+    # the same instant as 00:00Z, so an ask at 02:00Z is after the cut under both spellings.
+    def row(ts, ask_id, text):
+        return {"ts": ts, "type": "ask", "class": "synthetic", "ask_id": ask_id, "text": text}
+    ev = [row("2025-03-19T10:00:00Z", "a1", "fix the exporter"), row("2025-03-20T02:00:00Z", "a2", "add a test")]
+    z = scorecard.build(ev, as_of="2025-03-20T00:00:00Z")
+    offset = scorecard.build(ev, as_of="2025-03-20T05:00:00+05:00")
+    assert z == offset
+    assert z != scorecard.build(ev, as_of="2025-03-20T05:00:00Z")
