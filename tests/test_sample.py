@@ -2,8 +2,8 @@ import csv
 
 import pytest
 
-from factory_kit import sample
-from factory_kit.cli import main
+from agent_scorecard import sample
+from agent_scorecard.cli import main
 
 
 def test_draw_is_reproducible_and_bounded():

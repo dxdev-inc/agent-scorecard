@@ -20,17 +20,17 @@ Words used here are defined once in [GLOSSARY.md](GLOSSARY.md).
 ## Definitions the measures use
 
 - **Finished**: the unit's last status row at the measurement date is `done`.
-- **Trusted**: finished, not forced, and at least one `verify` row that `factory_kit.verify.judge` credits as a
+- **Trusted**: finished, not forced, and at least one `verify` row that `agent_scorecard.verify.judge` credits as a
   pass (independent of the executor and the requester, typed evidence that fits the deliverable, outcome observed).
 - **Reopened within 14 days**: a `done` row followed by `reopened` or `reverted` inside 14 days. Only done rows whose
   14 day window has closed, or that were already reopened, count in the denominator.
 - **Autonomous trusted unit**: trusted, and its done time falls inside an `owner_idle` episode of 2 hours or more.
 - **`--as-of`**: rows after that timestamp are ignored. Same log and same date give identical output.
 
-`factory_kit/schema.py` holds the same schema as code, with `validate(row)`.
+`agent_scorecard/schema.py` holds the same schema as code, with `validate(row)`.
 
 ## Mapping your own log
 
 Write one adapter that emits these rows from whatever you have (a ticket export, a chat log, a run ledger). Keep it
-out of this repo. The only hard part is `ask`: deciding which messages count. `factory_kit.capture` is one answer
+out of this repo. The only hard part is `ask`: deciding which messages count. `agent_scorecard.capture` is one answer
 and a replaceable one.

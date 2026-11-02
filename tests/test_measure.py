@@ -1,5 +1,5 @@
-from factory_kit import measure
-from factory_kit.schema import validate
+from agent_scorecard import measure
+from agent_scorecard.schema import validate
 
 
 def ev(ts, type_, **kw):
@@ -76,7 +76,7 @@ def test_every_number_is_labelled_measured():
 
 
 def test_sample_log_loads():
-    from factory_kit.cli import SAMPLE
+    from agent_scorecard.cli import SAMPLE
     rows = measure.load(SAMPLE)
     assert rows and all(r["class"] == "synthetic" for r in rows)
     assert measure.compute(rows)["trust"]["value"] is not None

@@ -1,9 +1,9 @@
 import hashlib
 import json
 
-from factory_kit import synth
-from factory_kit.cli import SAMPLE
-from factory_kit.schema import validate
+from agent_scorecard import synth
+from agent_scorecard.cli import SAMPLE
+from agent_scorecard.schema import validate
 
 
 def test_same_seed_same_bytes():

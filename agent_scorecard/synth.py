@@ -3,7 +3,7 @@
 Nothing here is real. The generator is shaped like a plausible messy setup on purpose: a narrow old capture that
 only files obvious "do" asks, finished work with weak verification, a few reopened units, some forced closes, and
 overnight stretches where the person is away. The rates are knobs in RATES, chosen by the author, not measured
-anywhere. `python -m factory_kit generate --seed N` is reproducible: same seed, same bytes.
+anywhere. `python -m agent_scorecard generate --seed N` is reproducible: same seed, same bytes.
 """
 from __future__ import annotations
 
@@ -141,4 +141,4 @@ def write(path: str | Path, seed: int = DEFAULT_SEED, **kw) -> str:
 
 def manifest(seed: int, sha: str, **kw) -> dict:
     return {"schema_version": SCHEMA_VERSION, "class": CLASS_SYNTHETIC, "seed": seed, "sha256": sha,
-            "generator": "factory_kit.synth.generate", "params": kw or {"days": 42, "asks_per_day": 10}}
+            "generator": "agent_scorecard.synth.generate", "params": kw or {"days": 42, "asks_per_day": 10}}

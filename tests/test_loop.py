@@ -1,4 +1,4 @@
-from factory_kit import loop
+from agent_scorecard import loop
 
 GOOD = {"verifier": "checker-1", "result": "pass", "evidence": {"kind": "test_run", "ref": "r", "outcome_observed": True}}
 

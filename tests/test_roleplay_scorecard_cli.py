@@ -2,8 +2,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from factory_kit import measure, roleplay, scorecard
-from factory_kit.cli import SAMPLE
+from agent_scorecard import measure, roleplay, scorecard
+from agent_scorecard.cli import SAMPLE
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -41,7 +41,7 @@ def test_scorecard_is_reproducible_at_an_as_of_date():
 
 
 def test_quickstart_runs_clean(tmp_path):
-    p = subprocess.run([sys.executable, "-m", "factory_kit", "quickstart", "--out", str(tmp_path / "o")],
+    p = subprocess.run([sys.executable, "-m", "agent_scorecard", "quickstart", "--out", str(tmp_path / "o")],
                        cwd=ROOT, capture_output=True, text=True)
     assert p.returncode == 0, p.stderr
     assert "30/30 scenarios passed" in p.stdout and "NO DATA (source:" in p.stdout

@@ -1,5 +1,5 @@
-from factory_kit import verify
-from factory_kit.cli import CASES
+from agent_scorecard import verify
+from agent_scorecard.cli import CASES
 
 
 def u(deliv="code", executor="worker-1", requester="owner"):
@@ -27,7 +27,7 @@ def test_a_claimed_fail_stays_a_fail_and_inconclusive_is_not_fail():
 
 
 def test_every_deliverable_type_has_a_table_row():
-    from factory_kit.schema import DELIVERABLES
+    from agent_scorecard.schema import DELIVERABLES
     assert set(verify.REQUIRED_EVIDENCE) == set(DELIVERABLES)
 
 
