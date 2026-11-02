@@ -1,4 +1,5 @@
 import csv
+from pathlib import Path
 
 import pytest
 
@@ -38,9 +39,30 @@ def test_draw_template_fill_and_score_roundtrip(tmp_path, capsys):
     for i, r in enumerate(rows):
         r["label"] = "not_a_request" if i == 0 else "finished"
         r["evidence_kind"] = "agent_report" if i == 1 else "git"
+        r["evidence_ref"] = "abc123"
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
     s = sample.score(out)
     assert s["real_requests"] == 9 and s["finished_all"] == 9 and s["finished_strict"] == 8
+
+
+def test_strict_share_needs_an_evidence_ref(tmp_path):
+    out = tmp_path / "s.csv"
+    rows = [{"ask_id": f"a{i}", "text": "t", "label": "finished", "evidence_kind": "git",
+             "evidence_ref": ref} for i, ref in enumerate(["abc123", "", "   "])]
+    with open(out, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    s = sample.score(out)
+    assert s["finished_all"] == 3 and s["finished_strict"] == 1
+
+
+def test_docs_show_sample_with_a_log_or_score():
+    root = Path(__file__).resolve().parent.parent
+    for rel in ("README.md", "docs/FIRST_PILOT.md"):
+        for line in (root / rel).read_text(encoding="utf-8").splitlines():
+            if "python -m agent_scorecard sample" in line:
+                assert "--log" in line or "--score" in line, f"{rel}: {line.strip()[:80]}"

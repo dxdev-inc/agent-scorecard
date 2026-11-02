@@ -30,6 +30,10 @@ import os
 ALLOWED_IDENTITIES = {"DXdev <noreply@dxdev.com>"}
 ALLOWED_EMAIL = re.compile(r"^(?:noreply@dxdev\.com|[\w.+-]+@example\.(?:com|org))$", re.I)
 TICKET_PREFIX_OK = {"ISO", "SHA", "RFC", "PEP"}
+# The one extra address allowed anywhere in HISTORY, and only as the whole of a Co-Authored-By trailer that names
+# nobody else: the public vendor no-reply address that coding assistants add to commit messages. It is not
+# allowed in the tree, in a normal message line, or next to any other address.
+COAUTHOR_TRAILER = re.compile(r"^\s*Co-Authored-By:\s+[\w .'-]{1,60}<noreply@anthropic\.com>\s*$", re.I)
 
 GENERIC = [
     ("email", re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")),
@@ -64,16 +68,19 @@ def load_deny(path=None) -> list[re.Pattern]:
     return [re.compile(t.strip(), re.I) for t in lines if t.strip() and not t.lstrip().startswith("#")]
 
 
-def scan_text(text: str, where: str, deny=None) -> list[Hit]:
+def scan_text(text: str, where: str, deny=None, trailers: bool = False) -> list[Hit]:
+    """`trailers=True` (history only) lets a line that is exactly an assistant Co-Authored-By trailer through the
+    email rule. Every other rule, and every other address, still applies."""
     deny = deny if deny is not None else load_deny()
     hits = []
     for n, line in enumerate(text.splitlines(), 1):
+        trailer_ok = trailers and COAUTHOR_TRAILER.match(line) is not None
         for i, rx in enumerate(deny):
             if rx.search(line):
                 hits.append(Hit(where, n, f"deny#{i}"))
         for name, rx in GENERIC:
             for m in rx.finditer(line):
-                if name == "email" and ALLOWED_EMAIL.match(m.group(0)):
+                if name == "email" and (ALLOWED_EMAIL.match(m.group(0)) or trailer_ok):
                     continue
                 if name == "ticket-key" and m.group(1) in TICKET_PREFIX_OK:
                     continue
@@ -81,8 +88,18 @@ def scan_text(text: str, where: str, deny=None) -> list[Hit]:
     return hits
 
 
+class GitError(RuntimeError):
+    """A git command failed. A scan that cannot read the repo must fail, never report it clean."""
+
+
 def _git(root: Path, *args: str) -> str:
-    p = subprocess.run(["git", "-C", str(root), *args], capture_output=True, check=False)
+    try:
+        p = subprocess.run(["git", "-C", str(root), *args], capture_output=True, check=False)
+    except OSError as e:
+        raise GitError(f"could not run git {args[0]}: {e}") from e
+    if p.returncode != 0:
+        detail = p.stderr.decode("utf-8", errors="replace").strip().splitlines()
+        raise GitError(f"git {args[0]} failed (exit {p.returncode}): {detail[0] if detail else 'no message'}")
     return p.stdout.decode("utf-8", errors="replace")
 
 
@@ -120,7 +137,7 @@ def scan_history(root: Path, deny=None) -> list[Hit]:
     log = _git(root, "log", "--all", "-p", "--no-color", "--format=fuller", "--no-renames")
     # Drop the diff marker so "+@decorator" is not read as an email local part. Line numbers are unchanged.
     body = "\n".join(ln[1:] if ln[:1] in ("+", "-") else ln for ln in log.splitlines())
-    hits = scan_text(body, "history", deny)
+    hits = scan_text(body, "history", deny, trailers=True)
     for n, line in enumerate(log.splitlines(), 1):
         m = IDENT.match(line)
         if m and m.group(1).strip() not in ALLOWED_IDENTITIES:
@@ -146,10 +163,14 @@ def main(argv=None) -> int:
     print(mode)
     root = Path(__file__).resolve().parent.parent
     hits: list[Hit] = []
-    if "--history-only" not in args:
-        hits += scan_tree(root, deny)
-    if "--tree-only" not in args:
-        hits += scan_history(root, deny)
+    try:
+        if "--history-only" not in args:
+            hits += scan_tree(root, deny)
+        if "--tree-only" not in args:
+            hits += scan_history(root, deny)
+    except GitError as e:
+        print(f"PRIVACY SCAN COULD NOT RUN: {e}\nThis is a failure, not a clean result.")
+        return 1
     if hits:
         bar = "!" * 72
         print(bar + "\nPRIVACY SCAN FAILED: %d hit(s). Nothing below is the matched text.\n" % len(hits) + bar)

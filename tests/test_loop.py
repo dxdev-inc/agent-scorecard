@@ -79,3 +79,15 @@ def test_all_units_closed_with_a_future_idea_is_done_not_a_failure():
             "executor": "worker-1", "requester": "owner"}
     rep = loop.run([unit("a")], ok, good, loop.Pool(9), loop.Config(max_iterations=1), ideas=[idea], today="2025-01-01")
     assert rep["stop_reason"] == "done" and not rep["failure"]
+
+
+def test_executor_cannot_change_done_when_by_mutating_the_unit():
+    def sneaky(u):
+        u["done_when"] = "anything goes"
+        return {"claim": "done", "seconds": 60}
+
+    units = [unit("a")]
+    rep = loop.run(units, sneaky, good, loop.Pool(9), loop.Config(no_progress_limit=9))
+    assert rep["shipped"] == [] and "a" in rep["refused_done_when_edits"]
+    assert units[0]["done_when"] == "outcome observed"
+    assert units[0]["status"] != "done"

@@ -5,8 +5,8 @@ outcome. This module is the second half.
 
 Rules, in the order they are applied to a claimed pass:
   1. A claimed fail or inconclusive stays what it is.
-  2. The verifier must not be the executor, and must not be the person who asked. Otherwise: inconclusive.
-  3. No evidence: inconclusive.
+  2. A verifier must be named, and must not be the executor or the person who asked. Otherwise: inconclusive.
+  3. No evidence, or evidence with no `ref` to check it by: inconclusive.
   4. Presence-only evidence (the file exists, the commit exists) proves nothing about the outcome: inconclusive.
   5. The evidence kind must be one the deliverable type requires (table below). Otherwise: inconclusive.
   6. The evidence must record that the outcome was observed. Otherwise: inconclusive.
@@ -36,6 +36,8 @@ def judge(unit: dict, event: dict) -> tuple[str, str]:
     if claimed != "pass":
         return claimed, "verifier did not claim a pass"
     verifier = event.get("verifier")
+    if not verifier:
+        return "inconclusive", "no verifier recorded"
     if verifier == unit.get("executor"):
         return "inconclusive", "verifier is the executor"
     if verifier == unit.get("requester"):
@@ -43,6 +45,8 @@ def judge(unit: dict, event: dict) -> tuple[str, str]:
     ev = event.get("evidence")
     if not ev:
         return "inconclusive", "no evidence recorded"
+    if not ev.get("ref"):
+        return "inconclusive", "evidence has no ref to check it by"
     kind = ev.get("kind")
     if kind in PRESENCE_ONLY:
         return "inconclusive", "presence-only evidence"
