@@ -18,6 +18,7 @@ All figures in this repo are synthetic. A learning below is about the tools, not
 - Verification: executor, requester and verifier are compared after trimming whitespace on all three.
 - Event logs: `forced` and `outcome_observed` must be real JSON booleans (the string "false" is an error), and `measure.load` now validates every row and raises a ValueError naming the line, so `measure` and `scorecard` refuse a bad log instead of computing from it.
 - `sample --k` below 1 is rejected.
+- `sample --log` refuses (exit 2) to overwrite an existing output table, which may hold hand labels, unless `--force` is given. Scoring an unlabelled table prints a clean message and exits 2 instead of a traceback.
 - Privacy scan: annotated tag messages and tagger lines are scanned, `.idea` and `.vscode` are no longer skipped, and PDFs, archives, images and other known binary types are rejected by extension or file signature even when they contain no NUL byte.
 - Docs: added docs/GLOSSARY.md and docs/FIRST_PILOT.md; fixed the commands in the README and pilot guide to the full literal form; said plainly that the loose finished share does not check evidence.
 

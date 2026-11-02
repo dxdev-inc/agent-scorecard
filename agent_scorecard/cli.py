@@ -110,6 +110,7 @@ def main(argv=None) -> int:
     sm.add_argument("--k", type=_positive_int, default=80)
     sm.add_argument("--seed", type=int, default=7)
     sm.add_argument("--out", default="out/sample.csv")
+    sm.add_argument("--force", action="store_true", help="overwrite --out if it already exists (it may hold your hand labels)")
     sm.add_argument("--score", help="a filled-in table from an earlier draw; prints both finish shares with 95 percent intervals")
     a = p.parse_args(argv)
     if a.cmd == "quickstart":
@@ -142,10 +143,17 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "sample":
         if a.score:
-            print(json.dumps(sample.score(a.score), indent=1))
+            try:
+                print(json.dumps(sample.score(a.score), indent=1))
+            except (ValueError, OSError, KeyError) as e:
+                print(f"cannot score {a.score}: {e}")
+                return 2
             return 0
         if not a.log:
             print("give --log to draw a sample, or --score to score a filled-in table")
+            return 2
+        if Path(a.out).exists() and not a.force:
+            print(f"refusing to overwrite {a.out}: it may hold your hand labels. Choose another --out, or pass --force.")
             return 2
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         rows = sample.ask_rows(a.log)
