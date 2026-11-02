@@ -30,18 +30,22 @@ REQUIRED_EVIDENCE = {
 PRESENCE_ONLY = {"file_exists", "presence", "commit_exists"}
 
 
+def _ident(x):
+    """An identity compared by its trimmed text, so padding cannot make one person look like two."""
+    return x.strip() if isinstance(x, str) else x
+
+
 def judge(unit: dict, event: dict) -> tuple[str, str]:
     """(credited result, reason) for one verify event against the unit it is about."""
     claimed = event.get("result")
     if claimed != "pass":
         return claimed, "verifier did not claim a pass"
-    verifier = event.get("verifier")
-    verifier = verifier.strip() if isinstance(verifier, str) else verifier
+    verifier = _ident(event.get("verifier"))
     if not verifier:
         return "inconclusive", "no verifier recorded"
-    if verifier == unit.get("executor"):
+    if verifier == _ident(unit.get("executor")):
         return "inconclusive", "verifier is the executor"
-    if verifier == unit.get("requester"):
+    if verifier == _ident(unit.get("requester")):
         return "inconclusive", "verifier is the requester"
     ev = event.get("evidence")
     if not ev:

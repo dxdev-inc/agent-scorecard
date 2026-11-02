@@ -19,17 +19,31 @@ from datetime import timedelta
 from pathlib import Path
 
 from . import capture, verify
-from .schema import parse_ts
+from .schema import parse_ts, validate
 
 STABILITY_WINDOW_DAYS = 14
 IDLE_EPISODE_MIN_HOURS = 2
 
 
 def load(path: str | Path) -> list[dict]:
-    rows = []
-    for line in Path(path).read_text(encoding="utf-8").splitlines():
-        if line.strip():
-            rows.append(json.loads(line))
+    """Read an event log and reject a malformed one loudly (ValueError naming the line) instead of measuring it."""
+    rows, problems = [], []
+    for n, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as e:
+            problems.append(f"line {n}: not JSON ({e.msg})")
+            continue
+        if not isinstance(row, dict):
+            problems.append(f"line {n}: row is not an object")
+            continue
+        problems += [f"line {n}: {p}" for p in validate(row)]
+        rows.append(row)
+    if problems:
+        more = f" (and {len(problems) - 5} more)" if len(problems) > 5 else ""
+        raise ValueError(f"{path}: {len(problems)} problem(s) in the event log: " + "; ".join(problems[:5]) + more)
     return rows
 
 

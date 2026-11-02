@@ -151,3 +151,99 @@ def test_version_matches_pyproject_and_changelog():
     assert agent_scorecard.__version__ == v
     heads = re.findall(r"^## (\d+\.\d+\.\d+)", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"), re.M)
     assert heads[0] == v
+
+
+# --- second review ------------------------------------------------------------------------------------------
+def test_padded_executor_or_requester_cannot_verify_their_own_work():
+    padded = {**UNIT, "executor": " worker-1 ", "requester": "\tboss "}
+    assert verify.judge(padded, _ev(verifier="worker-1"))[1] == "verifier is the executor"
+    assert verify.judge(padded, _ev(verifier="boss"))[1] == "verifier is the requester"
+
+
+def _log(tmp_path, *rows):
+    import json
+    p = tmp_path / "log.jsonl"
+    p.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+    return p
+
+
+TS = "2025-03-01T00:00:00Z"
+UNIT_ROW = {"type": "unit_created", "ts": TS, "class": "synthetic", "unit": "u1", "kind": "do",
+            "deliverable": "code", "executor": "a", "requester": "r"}
+
+
+def test_string_booleans_are_schema_errors():
+    s = {"type": "status", "ts": TS, "class": "synthetic", "unit": "u1", "status": "done", "forced": "false"}
+    assert any("forced" in e for e in schema.validate(s))
+    v = {"type": "verify", "ts": TS, "class": "synthetic", "unit": "u1", "verifier": "v", "result": "pass",
+         "evidence": {"kind": "test_run", "ref": "r", "outcome_observed": "false"}}
+    assert any("outcome_observed" in e for e in schema.validate(v))
+    v["evidence"]["outcome_observed"] = False
+    assert schema.validate(v) == []
+
+
+def test_measure_load_rejects_a_bad_log_loudly(tmp_path):
+    from agent_scorecard import measure
+    bad = {"type": "status", "ts": TS, "class": "synthetic", "unit": "u1", "status": "done", "forced": "false"}
+    with pytest.raises(ValueError, match="line 2"):
+        measure.load(_log(tmp_path, UNIT_ROW, bad))
+    with pytest.raises(ValueError):
+        measure.load(_log(tmp_path, {"type": "ask", "ts": "2025-03-01T00:00:00", "class": "synthetic",
+                                     "ask_id": "a", "text": "t"}))
+    assert len(measure.load(_log(tmp_path, UNIT_ROW))) == 1
+
+
+def test_cli_measure_on_a_bad_log_does_not_report_numbers(tmp_path):
+    bad = {"type": "status", "ts": TS, "class": "synthetic", "unit": "u1", "status": "done", "forced": "false"}
+    log = _log(tmp_path, UNIT_ROW, bad)
+    with pytest.raises(ValueError):
+        cli.main(["measure", "--log", str(log)])
+
+
+def _tag_repo(tmp_path, message, tagger_name="DXdev", tagger_email="noreply@dxdev.com"):
+    _repo(tmp_path)
+    env = {**ENV, "GIT_COMMITTER_NAME": tagger_name, "GIT_COMMITTER_EMAIL": tagger_email}
+    subprocess.run(["git", "-C", str(tmp_path), "tag", "-a", "v9", "-m", message], check=True, capture_output=True, env=env)
+    return tmp_path
+
+
+def test_secret_in_annotated_tag_message_is_caught(tmp_path):
+    _tag_repo(tmp_path, "release " + TOKEN)
+    assert any(h[0].startswith("tag ") and h[2] == "secret-token" for h in ps.scan_history(tmp_path, []))
+
+
+def test_wrong_tagger_identity_is_caught(tmp_path):
+    _tag_repo(tmp_path, "release", tagger_name="Someone Else")
+    assert any(h[0].startswith("tag ") and h[2] == "identity" for h in ps.scan_history(tmp_path, []))
+
+
+def test_clean_annotated_tag_and_lightweight_tag_pass(tmp_path):
+    _tag_repo(tmp_path, "release one")
+    subprocess.run(["git", "-C", str(tmp_path), "tag", "light"], check=True, capture_output=True, env=ENV)
+    assert ps.scan_history(tmp_path, []) == []
+
+
+@pytest.mark.parametrize("d", [".vscode", ".idea"])
+def test_ide_settings_are_scanned(tmp_path, d):
+    (tmp_path / d).mkdir()
+    (tmp_path / d / "settings.json").write_text('{"k": "' + TOKEN + '"}\n', encoding="utf-8")
+    assert ps.main([str(tmp_path)]) == 1
+
+
+@pytest.mark.parametrize("name,data", [("a.pdf", b"%PDF-1.4\nplain text body\n%%EOF\n"),
+                                       ("noext", b"%PDF-1.4\nplain\n"),
+                                       ("pic.png", b"just text"),
+                                       ("z.dat", b"PK\x03\x04textonly")])
+def test_binary_without_nul_is_still_rejected(tmp_path, name, data):
+    (tmp_path / name).write_bytes(data)
+    assert any(h[2] == "binary-file" for h in ps.scan_tree(tmp_path, []))
+
+
+def test_k_below_one_is_rejected_by_argparse(tmp_path, capsys):
+    log = tmp_path / "l.jsonl"
+    log.write_text('{"type":"ask","ask_id":"a1","text":"one"}\n', encoding="utf-8")
+    for k in ("0", "-1"):
+        with pytest.raises(SystemExit) as e:
+            cli.main(["sample", "--log", str(log), "--k", k, "--out", str(tmp_path / "o.csv")])
+        assert e.value.code == 2
+    assert not (tmp_path / "o.csv").exists()
