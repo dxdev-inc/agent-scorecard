@@ -13,6 +13,7 @@ from pathlib import Path
 LABELS = ("finished", "partly_done", "dropped", "superseded", "cannot_tell", "not_a_request")
 FINISHED = "finished"
 STRICT_EVIDENCE = ("git", "ticket", "live")   # an evidence kind that is not the agent's own report
+# A strict finish also needs a non-empty evidence_ref: a kind with nothing to point at cannot be checked.
 
 
 def draw(rows, k, seed):
@@ -65,7 +66,8 @@ def score(csv_path):
     if n == 0:
         raise ValueError("no real requests in the table")
     all_f = sum(r["label"] == FINISHED for r in real)
-    strict = sum(r["label"] == FINISHED and r["evidence_kind"] in STRICT_EVIDENCE for r in real)
+    strict = sum(r["label"] == FINISHED and r["evidence_kind"] in STRICT_EVIDENCE
+                 and (r.get("evidence_ref") or "").strip() != "" for r in real)
     return {"real_requests": n, "not_a_request": len(rows) - n,
             "finished_all": all_f, "finished_all_pct": round(100 * all_f / n), "finished_all_ci95": wilson(all_f, n),
             "finished_strict": strict, "finished_strict_pct": round(100 * strict / n),

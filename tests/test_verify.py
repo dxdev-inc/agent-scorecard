@@ -49,3 +49,15 @@ def test_calibration_on_the_shipped_cases_reports_both_error_directions():
 def test_a_judge_that_never_passes_is_flagged():
     cases = [{"id": "x", "unit": u(), "event": e(verifier="worker-1"), "human": "pass"}]
     assert verify.calibrate(cases)["never_passes_suspect"]
+
+
+def test_a_pass_needs_a_named_verifier_and_an_evidence_ref():
+    no_verifier = e(verifier=None)
+    assert verify.judge(u(executor=None, requester=None), no_verifier)[0] == "inconclusive"
+    assert verify.judge(u(), e(verifier=""))[0] == "inconclusive"
+    no_ref = e()
+    no_ref["evidence"]["ref"] = ""
+    assert verify.judge(u(), no_ref) == ("inconclusive", "evidence has no ref to check it by")
+    del no_ref["evidence"]["ref"]
+    assert verify.judge(u(), no_ref)[0] == "inconclusive"
+    assert not verify.can_close(u(), [no_ref])[0]

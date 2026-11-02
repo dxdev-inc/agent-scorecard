@@ -129,3 +129,58 @@ def test_mode_is_stated_and_a_deny_file_changes_the_result(repo, tmp_path, monke
     (repo / "leak.md").write_text(FAKE_TERM + "\n", encoding="utf-8")
     assert ps.scan_tree(repo, []) == []
     assert ps.scan_tree(repo, ps.load_deny(str(f)))
+
+
+TRAILER = "Co-Authored-By: Claude Sonnet 5.5 <" + "noreply" + "@" + "anthropic.com>"
+
+
+def _commit_message(repo, message):
+    (repo / "m.txt").write_text(message[:8] + "\n", encoding="utf-8")
+    git(repo, "add", "-A")
+    git(repo, "commit", "-q", "-m", message)
+
+
+def test_assistant_coauthor_trailer_is_allowed_in_history(repo):
+    _commit_message(repo, "Add a thing\n\n" + TRAILER)
+    assert ps.scan_history(repo, DENY) == []
+
+
+def test_the_coauthor_allowance_stays_narrow(repo, tmp_path):
+    addr = "noreply" + "@" + "anthropic.com"
+    # same address, but not as a trailer line
+    _commit_message(repo, "mail " + addr + " about it")
+    assert any(h[2] == "email" for h in ps.scan_history(repo, DENY))
+    # a trailer that carries any other address
+    other = tmp_path / "other"
+    subprocess.run(["git", "init", "-q", str(other)], check=True, capture_output=True)
+    (other / "a.txt").write_text("x\n", encoding="utf-8")
+    git(other, "add", "-A")
+    git(other, "commit", "-q", "-m", "x\n\nCo-Authored-By: Someone <" + "someone" + "@" + "corp-mail.io>")
+    assert any(h[2] == "email" for h in ps.scan_history(other, DENY))
+    # a trailer that names the vendor address AND another one
+    third = tmp_path / "third"
+    subprocess.run(["git", "init", "-q", str(third)], check=True, capture_output=True)
+    (third / "a.txt").write_text("x\n", encoding="utf-8")
+    git(third, "add", "-A")
+    git(third, "commit", "-q", "-m", "x\n\nCo-Authored-By: A <" + addr + "> " + "b" + "@" + "corp-mail.io")
+    assert any(h[2] == "email" for h in ps.scan_history(third, DENY))
+    # in the tree it is still a hit
+    (repo / "note.md").write_text(TRAILER + "\n", encoding="utf-8")
+    assert any(h[2] == "email" for h in ps.scan_tree(repo, DENY))
+
+
+def test_a_git_failure_is_an_error_not_a_clean_scan(tmp_path, monkeypatch, capsys):
+    broken = tmp_path / "broken"
+    (broken / ".git").mkdir(parents=True)   # looks like a repo, is not one
+    with pytest.raises(ps.GitError):
+        ps.scan_history(broken, DENY)
+    with pytest.raises(ps.GitError):
+        ps.scan_tree(broken, DENY)
+
+    def failing(*a, **k):
+        return subprocess.CompletedProcess(a, 128, stdout=b"", stderr=b"fatal: not a git repository")
+
+    monkeypatch.setattr(ps.subprocess, "run", failing)
+    assert ps.main([]) == 1
+    out = capsys.readouterr().out
+    assert "COULD NOT RUN" in out and "privacy scan clean" not in out

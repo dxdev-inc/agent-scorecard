@@ -23,6 +23,7 @@ The loop takes the clock and the executor as arguments, so a replay is determini
 """
 from __future__ import annotations
 
+import copy
 from dataclasses import dataclass, field
 
 from . import verify
@@ -92,7 +93,10 @@ def run(units: list[dict], executor, checker, pool: Pool, cfg: Config | None = N
         u = ready[0]
         pool.consume()
         ran += 1
-        res = executor(u)
+        view = copy.deepcopy(u)   # the executor gets a copy: it cannot change the live unit, only report
+        res = executor(view)
+        if view.get("done_when") != u.get("done_when") and res.get("edits_done_when") is None:
+            res = {**res, "edits_done_when": "changed the unit's done_when directly"}
         elapsed += int(res.get("seconds", 0))
         if res.get("edits_done_when") is not None:
             refused.append(u["id"])
