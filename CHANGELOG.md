@@ -4,6 +4,11 @@ Dated, newest first. Each release says what we learned, what changed in the meth
 
 All figures in this repo are synthetic. A learning below is about the tools, not about any real factory.
 
+## Unreleased
+
+- Added docs/GLOSSARY.md (one glossary for the four vocabularies, and how by-hand `finished` differs from the event-log `done` for explore) and docs/FIRST_PILOT.md (checklist for a first real run). No code or results changed.
+- Still open: the glossary reconciles the two bars by naming them, it does not make them the same bar. Still no real-log run.
+
 ## 0.2.0 (2026-11-01)
 
 **What we learned**

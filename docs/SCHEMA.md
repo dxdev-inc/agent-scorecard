@@ -15,6 +15,8 @@ before you publish anything built from it.
 | `owner_idle` | `start`, `end` | The person was away. `ts` equals `start`. Used for the autonomy line. |
 | `intervention` | `unit` | The person supplied missing context mid-run. |
 
+Words used here are defined once in [GLOSSARY.md](GLOSSARY.md).
+
 ## Definitions the measures use
 
 - **Finished**: the unit's last status row at the measurement date is `done`.

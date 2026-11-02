@@ -24,7 +24,7 @@ What is in it:
 | Sample | `factory_kit/sample.py` | The by-hand check: a seeded draw of your asks, a table to label with six labels, and the finish share with a Wilson interval. |
 | Privacy scan | `scripts/privacy_scan.py` | Fails loudly on anything private in the tree, the file names or the whole git history. Tested by planting leaks. |
 
-The method in plain words is in [docs/METHOD.md](docs/METHOD.md). The log format is in [docs/SCHEMA.md](docs/SCHEMA.md).
+The method in plain words is in [docs/METHOD.md](docs/METHOD.md). The log format is in [docs/SCHEMA.md](docs/SCHEMA.md). Every special word is defined once in [docs/GLOSSARY.md](docs/GLOSSARY.md). To try it on your own work, follow [docs/FIRST_PILOT.md](docs/FIRST_PILOT.md).
 
 **What this repo is and is not.** It is a synthetic, illustrative implementation of the method. It does not reproduce the audit in the post: that used my private log and a separate script, and none of its data is here. What the repo does carry is the sampling and interval code (`sample.py`), so you can run the same kind of check on your own log. Evidence here comes in three separate classes: synthetic regression results (the tests and quickstart), hypotheses (the stated rules until someone tests them on a real log), and, when anyone publishes them, real-log findings, which will be labelled as such in the changelog.
 
