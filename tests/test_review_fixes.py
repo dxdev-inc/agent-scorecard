@@ -247,3 +247,27 @@ def test_k_below_one_is_rejected_by_argparse(tmp_path, capsys):
             cli.main(["sample", "--log", str(log), "--k", k, "--out", str(tmp_path / "o.csv")])
         assert e.value.code == 2
     assert not (tmp_path / "o.csv").exists()
+
+
+def test_sample_does_not_overwrite_hand_labels(tmp_path, capsys):
+    log = tmp_path / "l.jsonl"
+    log.write_text('{"type":"ask","ask_id":"a1","text":"one"}\n', encoding="utf-8")
+    out = tmp_path / "s.csv"
+    assert cli.main(["sample", "--log", str(log), "--out", str(out)]) == 0
+    labelled = out.read_text(encoding="utf-8").replace(",,,", ",finished,git,abc", 1)
+    out.write_text(labelled, encoding="utf-8")
+    assert "finished" in labelled
+    assert cli.main(["sample", "--log", str(log), "--out", str(out)]) == 2
+    assert out.read_text(encoding="utf-8") == labelled
+    assert "--force" in capsys.readouterr().out
+    assert cli.main(["sample", "--log", str(log), "--out", str(out), "--force"]) == 0
+    assert out.read_text(encoding="utf-8") != labelled
+
+
+def test_scoring_an_unlabelled_table_is_a_clean_message(tmp_path, capsys):
+    log = tmp_path / "l.jsonl"
+    log.write_text('{"type":"ask","ask_id":"a1","text":"one"}\n', encoding="utf-8")
+    out = tmp_path / "s.csv"
+    cli.main(["sample", "--log", str(log), "--out", str(out)])
+    assert cli.main(["sample", "--score", str(out)]) == 2
+    assert "cannot score" in capsys.readouterr().out
