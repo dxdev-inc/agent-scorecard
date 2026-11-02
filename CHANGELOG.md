@@ -15,11 +15,15 @@ All figures in this repo are synthetic. A learning below is about the tools, not
 - Timestamps: a timestamp with no zone is now an error instead of being read in the machine's local time. Explicit offsets are converted to UTC.
 - `sample`: `--k` larger than the number of asks is capped, with a printed note.
 - Privacy scan: the tree scan now includes git-ignored files (not caches or environments), takes an optional PATH to scan another folder, and exits 2 on unknown or conflicting flags.
+- Verification: executor, requester and verifier are compared after trimming whitespace on all three.
+- Event logs: `forced` and `outcome_observed` must be real JSON booleans (the string "false" is an error), and `measure.load` now validates every row and raises a ValueError naming the line, so `measure` and `scorecard` refuse a bad log instead of computing from it.
+- `sample --k` below 1 is rejected.
+- Privacy scan: annotated tag messages and tagger lines are scanned, `.idea` and `.vscode` are no longer skipped, and PDFs, archives, images and other known binary types are rejected by extension or file signature even when they contain no NUL byte.
 - Docs: added docs/GLOSSARY.md and docs/FIRST_PILOT.md; fixed the commands in the README and pilot guide to the full literal form; said plainly that the loose finished share does not check evidence.
 
 **What this breaks**
 - The Python package was renamed from `factory_kit` to `agent_scorecard` (`python -m agent_scorecard ...`, `import agent_scorecard`). Anything importing the old name must change. The `v0.2.0` tag points at the old layout, so use this release or later.
-- Event logs with naive timestamps (no `Z` or offset) now raise an error. Add the `Z`. The log schema version is unchanged (1).
+- Event logs with naive timestamps (no `Z` or offset), string booleans, or any other schema error now raise an error when loaded. Fix the rows. The log schema version is unchanged (1).
 
 **Still open**
 - The glossary reconciles the two bars by naming them, it does not make them the same bar. Still no real-log run.

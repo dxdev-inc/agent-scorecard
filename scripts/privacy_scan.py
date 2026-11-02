@@ -108,12 +108,26 @@ def _git(root: Path, *args: str) -> str:
     return p.stdout.decode("utf-8", errors="replace")
 
 
+BINARY_EXT = {".pdf", ".zip", ".gz", ".tgz", ".bz2", ".xz", ".7z", ".rar", ".tar", ".png", ".jpg", ".jpeg", ".gif",
+              ".bmp", ".tif", ".tiff", ".webp", ".ico", ".heic", ".psd", ".doc", ".docx", ".xls", ".xlsx", ".ppt",
+              ".pptx", ".odt", ".ods", ".ipynb", ".sqlite", ".db", ".pkl", ".parquet", ".exe", ".dll", ".so",
+              ".mp3", ".mp4", ".mov", ".wav", ".whl"}
+BINARY_MAGIC = (b"%PDF-", b"PK\x03\x04", b"GIF87a", b"GIF89a", b"\x89PNG", b"\xff\xd8\xff",
+                b"\x1f\x8b", b"7z\xbc\xaf", b"Rar!", b"SQLite format 3")
+
+
+def _binary_name(name: str) -> bool:
+    return Path(name).suffix.lower() in BINARY_EXT
+
+
 def _is_binary(path: Path) -> bool:
-    return b"\0" in path.read_bytes()[:8192]
+    head = path.read_bytes()[:8192]
+    return b"\0" in head or head.startswith(BINARY_MAGIC) or _binary_name(path.name)
 
 
 NOISE_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".tox", ".venv", "venv",
-              "node_modules", ".idea", ".vscode"}
+              "node_modules"}
+# .idea and .vscode are NOT noise: editor settings are where tokens and private paths end up.
 
 
 def _noise(rel_parts: tuple[str, ...]) -> bool:
@@ -149,6 +163,29 @@ def scan_tree(root: Path, deny=None) -> list[Hit]:
 IDENT = re.compile(r"^(?:Author|Commit):\s+(.*)$")
 
 
+TAGGER = re.compile(r"^tagger\s+(.*?)\s+\d+\s+[+-]\d{4}$")
+
+
+def scan_tags(root: Path, deny=None) -> list[Hit]:
+    """Annotated tag objects are published with their tags: scan the whole object (tagger line and message) and
+    require the tagger to be the one allowed identity."""
+    deny = deny if deny is not None else load_deny()
+    hits = []
+    listing = _git(root, "for-each-ref", "--format=%(objecttype) %(refname)", "refs/tags")
+    for entry in listing.splitlines():
+        kind, _, ref = entry.partition(" ")
+        if kind != "tag":
+            continue
+        body = _git(root, "cat-file", "-p", ref)
+        where = "tag " + ref
+        hits += scan_text(body, where, deny, trailers=True)
+        for n, line in enumerate(body.splitlines(), 1):
+            m = TAGGER.match(line)
+            if m and m.group(1).strip() not in ALLOWED_IDENTITIES:
+                hits.append(Hit(where, n, "identity"))
+    return hits
+
+
 def scan_history(root: Path, deny=None) -> list[Hit]:
     if not (root / ".git").exists():
         return [Hit("history", 0, "no-git-directory")]
@@ -165,6 +202,10 @@ def scan_history(root: Path, deny=None) -> list[Hit]:
             hits.append(Hit("history", n, "binary-in-history"))
     refs = _git(root, "for-each-ref", "--format=%(refname)")
     hits += scan_text(refs, "refs", deny)
+    for n, line in enumerate(log.splitlines(), 1):
+        if line.startswith("diff --git ") and _binary_name(line.split(" b/")[-1]):
+            hits.append(Hit("history", n, "binary-in-history"))
+    hits += scan_tags(root, deny)
     return hits
 
 

@@ -12,6 +12,13 @@ SAMPLE = ROOT / "data" / "sample" / "events.jsonl"
 CASES = ROOT / "data" / "verifier_cases.json"
 
 
+def _positive_int(s):
+    n = int(s)
+    if n < 1:
+        raise argparse.ArgumentTypeError(f"must be 1 or more, got {n}")
+    return n
+
+
 def _events(path):
     return measure.load(path or SAMPLE)
 
@@ -100,7 +107,7 @@ def main(argv=None) -> int:
     sub.add_parser("roleplay", help="run the 30 scenarios")
     sm = sub.add_parser("sample", help="draw a seeded sample of asks to label by hand, or score a filled-in table")
     sm.add_argument("--log", help="event log to draw ask rows from")
-    sm.add_argument("--k", type=int, default=80)
+    sm.add_argument("--k", type=_positive_int, default=80)
     sm.add_argument("--seed", type=int, default=7)
     sm.add_argument("--out", default="out/sample.csv")
     sm.add_argument("--score", help="a filled-in table from an earlier draw; prints both finish shares with 95 percent intervals")

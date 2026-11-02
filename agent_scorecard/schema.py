@@ -62,6 +62,18 @@ def validate(event: dict) -> list[str]:
             parse_ts(event["ts"])
         except (ValueError, TypeError):
             errs.append(f"{t}: bad ts {event['ts']!r}")
+    if t == "status" and "forced" in event and not isinstance(event["forced"], bool):
+        errs.append(f"status: forced must be true or false, got {event['forced']!r}")
+    if t == "verify" and event.get("evidence") is not None:
+        ev = event["evidence"]
+        if not isinstance(ev, dict):
+            errs.append("verify: evidence must be an object or null")
+        elif "outcome_observed" in ev and not isinstance(ev["outcome_observed"], bool):
+            errs.append(f"verify: outcome_observed must be true or false, got {ev['outcome_observed']!r}")
+    if t in ("unit_created", "verify"):
+        for f in ("executor", "requester", "verifier"):
+            if f in event and f in REQUIRED[t] and not isinstance(event[f], str):
+                errs.append(f"{t}: {f} must be a string")
     if t == "status" and event.get("status") not in STATUSES:
         errs.append(f"status: bad status {event.get('status')!r}")
     if t == "verify" and event.get("result") not in RESULTS:
