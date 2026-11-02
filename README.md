@@ -1,6 +1,18 @@
-# measure-the-agent-factory
+# agent-scorecard
 
 A small, stdlib-only Python kit for one question: of the work you hand to AI agents, how much actually finished, and how much of that can you trust? It logs asks, units and verification events, and computes finish rate, evidence-backed trust and stability, with every number labelled by how it was obtained. It is for engineers and AI leads who run agents on real work and suspect their task list undercounts what got done. You can run all of it in five minutes on a seeded synthetic log.
+
+## Try it
+
+You need Python 3.10 or newer and git. Nothing to install.
+
+```bash
+git clone https://github.com/dxdev-inc/agent-scorecard.git
+cd agent-scorecard
+python -m factory_kit quickstart
+```
+
+That builds an invented log and prints a scorecard from it in about a second. The numbers are synthetic, so they show what the tool does, not how any real team performs. The Python package is still called `factory_kit`, so that is the name in every command. Deeper reading: [method](docs/METHOD.md), [log format](docs/SCHEMA.md), [glossary](docs/GLOSSARY.md), [a first run on your own work](docs/FIRST_PILOT.md), and [Limits](#limits-read-this-before-quoting-anything).
 
 **The hypothesis behind it (from the first post in the series, not checked here).** When you hand work to agents across many parallel sessions, the work mostly finishes and the record of it mostly does not. In one week of my own requests (one operator, one AI reviewer, a small sample, no human check of the reviewer's labels yet) the tracker confirmed little, while git and tickets said most of it was done. The data and figures are not in this repo, so you cannot check that claim here. The kit is how you test it on your own log.
 
@@ -35,8 +47,8 @@ The method in plain words is in [docs/METHOD.md](docs/METHOD.md). The log format
 You need Python 3.10 or newer and git. No packages to install to run the tools.
 
 ```bash
-git clone <public repo URL, added when the repo is published> measure-the-agent-factory
-cd measure-the-agent-factory
+git clone https://github.com/dxdev-inc/agent-scorecard.git
+cd agent-scorecard
 python -m factory_kit quickstart
 ```
 
