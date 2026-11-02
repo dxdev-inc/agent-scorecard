@@ -1,6 +1,6 @@
 import pytest
 
-from factory_kit import capture as c
+from agent_scorecard import capture as c
 
 
 @pytest.mark.parametrize("text,kind", [

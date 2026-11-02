@@ -1,4 +1,4 @@
-"""python -m factory_kit <command>. Commands: quickstart, generate, measure, capture, verify, loop, scorecard, roleplay."""
+"""python -m agent_scorecard <command>. Commands: quickstart, generate, measure, capture, verify, loop, scorecard, roleplay."""
 from __future__ import annotations
 
 import argparse
@@ -80,7 +80,7 @@ def cmd_quickstart(a) -> int:
 
 
 def main(argv=None) -> int:
-    p = argparse.ArgumentParser(prog="factory_kit")
+    p = argparse.ArgumentParser(prog="agent_scorecard")
     sub = p.add_subparsers(dest="cmd", required=True)
     q = sub.add_parser("quickstart", help="run everything end to end on a fresh synthetic log")
     q.add_argument("--out", default="out")

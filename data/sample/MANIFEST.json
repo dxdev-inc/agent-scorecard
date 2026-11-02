@@ -1,6 +1,6 @@
 {
  "class": "synthetic",
- "generator": "factory_kit.synth.generate",
+ "generator": "agent_scorecard.synth.generate",
  "params": {
   "asks_per_day": 10,
   "days": 42

@@ -1,5 +1,5 @@
 {
- "note": "30 scenarios. Authored from the failure classes of the method; run with python -m factory_kit roleplay.",
+ "note": "30 scenarios. Authored from the failure classes of the method; run with python -m agent_scorecard roleplay.",
  "scenarios": [
   {
    "id": "c01",

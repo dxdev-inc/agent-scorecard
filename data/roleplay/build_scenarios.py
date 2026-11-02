@@ -59,7 +59,7 @@ loops = [
                {"id": "i2", "review_by": "2025-03-02", "done_when": None, "deliverable": "code", "executor": "worker-1", "requester": "owner"}],
      "expect": {"stop_reason": "done", "shipped": ["i1"], "dropped": ["i2"]}},
 ]
-out = {"note": "30 scenarios. Authored from the failure classes of the method; run with python -m factory_kit roleplay.",
+out = {"note": "30 scenarios. Authored from the failure classes of the method; run with python -m agent_scorecard roleplay.",
        "scenarios": cap + ver + loops}
 assert len(out["scenarios"]) == 30
 Path(__file__).with_name("scenarios.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")

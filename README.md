@@ -9,14 +9,14 @@ You need Python 3.10 or newer and git. Nothing to install.
 ```bash
 git clone https://github.com/dxdev-inc/agent-scorecard.git
 cd agent-scorecard
-python -m factory_kit quickstart
+python -m agent_scorecard quickstart
 ```
 
-That builds an invented log and prints a scorecard from it in about a second. The numbers are synthetic, so they show what the tool does, not how any real team performs. The Python package is still called `factory_kit`, so that is the name in every command. Deeper reading: [method](docs/METHOD.md), [log format](docs/SCHEMA.md), [glossary](docs/GLOSSARY.md), [a first run on your own work](docs/FIRST_PILOT.md), and [Limits](#limits-read-this-before-quoting-anything).
+That builds an invented log and prints a scorecard from it in about a second. The numbers are synthetic, so they show what the tool does, not how any real team performs. Deeper reading: [method](docs/METHOD.md), [log format](docs/SCHEMA.md), [glossary](docs/GLOSSARY.md), [a first run on your own work](docs/FIRST_PILOT.md), and [Limits](#limits-read-this-before-quoting-anything).
 
 **The hypothesis behind it (from the first post in the series, not checked here).** When you hand work to agents across many parallel sessions, the work mostly finishes and the record of it mostly does not. In one week of my own requests (one operator, one AI reviewer, a small sample, no human check of the reviewer's labels yet) the tracker confirmed little, while git and tickets said most of it was done. The data and figures are not in this repo, so you cannot check that claim here. The kit is how you test it on your own log.
 
-**How to measure it yourself.** Two halves. (1) By hand: sample your asks with `python -m factory_kit sample`, judge each against independent evidence (git, tickets, the live system) instead of the agent's say-so, then score the filled-in table with `sample --score`, which prints the share finished with a 95 percent interval. (2) With the event-log code: log asks, units and verification events in the schema in [docs/SCHEMA.md](docs/SCHEMA.md) and compute the measures.
+**How to measure it yourself.** Two halves. (1) By hand: sample your asks with `python -m agent_scorecard sample`, judge each against independent evidence (git, tickets, the live system) instead of the agent's say-so, then score the filled-in table with `sample --score`, which prints the share finished with a 95 percent interval. (2) With the event-log code: log asks, units and verification events in the schema in [docs/SCHEMA.md](docs/SCHEMA.md) and compute the measures.
 
 **Everything in this repo runs on synthetic data. There is no real figure anywhere in it, and the tools have not been run on a real log here.** Read [Limits](#limits-read-this-before-quoting-anything) before quoting a number.
 
@@ -26,14 +26,14 @@ What is in it:
 
 | Piece | Module | What it does |
 |---|---|---|
-| Measure | `factory_kit/measure.py` | Asks against finished work, from an event log. Finish rate, time to done, trust, stability, autonomy. `--as-of` makes a run reproducible. |
-| Capture | `factory_kit/capture.py` | Turns a message into zero or more units, each with a kind (do, decide, explore, manage) and a done test that fits the kind. Brainstorms get no fake gate. |
-| Verify | `factory_kit/verify.py` | Evidence-backed verification: independent verifier, evidence typed by deliverable, `inconclusive` as a real answer, a completion gate, and a calibration check against a labelled set. |
-| Loop | `factory_kit/loop.py` | A bounded execution loop: iteration and time bounds, capped retries, escalation, a no-progress stop, pause (not fail) when capacity runs out, and `done_when` read-only to the executor. |
-| Scorecard | `factory_kit/scorecard.py` | One table where every line is labelled MEASURED, REPLAY, ESTIMATED or `NO DATA (source: ...)`. No productivity multiplier. |
-| Synthetic data | `factory_kit/synth.py`, `data/sample/` | A seeded generator and the log it produced, with a manifest hash. Every row has `class=synthetic`. |
-| Role play | `factory_kit/roleplay.py`, `data/roleplay/scenarios.json` | 30 scripted scenarios across capture, verification and the loop, each with an expected outcome. |
-| Sample | `factory_kit/sample.py` | The by-hand check: a seeded draw of your asks, a table to label with six labels, and the finish share with a Wilson interval. |
+| Measure | `agent_scorecard/measure.py` | Asks against finished work, from an event log. Finish rate, time to done, trust, stability, autonomy. `--as-of` makes a run reproducible. |
+| Capture | `agent_scorecard/capture.py` | Turns a message into zero or more units, each with a kind (do, decide, explore, manage) and a done test that fits the kind. Brainstorms get no fake gate. |
+| Verify | `agent_scorecard/verify.py` | Evidence-backed verification: independent verifier, evidence typed by deliverable, `inconclusive` as a real answer, a completion gate, and a calibration check against a labelled set. |
+| Loop | `agent_scorecard/loop.py` | A bounded execution loop: iteration and time bounds, capped retries, escalation, a no-progress stop, pause (not fail) when capacity runs out, and `done_when` read-only to the executor. |
+| Scorecard | `agent_scorecard/scorecard.py` | One table where every line is labelled MEASURED, REPLAY, ESTIMATED or `NO DATA (source: ...)`. No productivity multiplier. |
+| Synthetic data | `agent_scorecard/synth.py`, `data/sample/` | A seeded generator and the log it produced, with a manifest hash. Every row has `class=synthetic`. |
+| Role play | `agent_scorecard/roleplay.py`, `data/roleplay/scenarios.json` | 30 scripted scenarios across capture, verification and the loop, each with an expected outcome. |
+| Sample | `agent_scorecard/sample.py` | The by-hand check: a seeded draw of your asks, a table to label with six labels, and the finish share with a Wilson interval. |
 | Privacy scan | `scripts/privacy_scan.py` | Fails loudly on anything private in the tree, the file names or the whole git history. Tested by planting leaks. |
 
 The method in plain words is in [docs/METHOD.md](docs/METHOD.md). The log format is in [docs/SCHEMA.md](docs/SCHEMA.md). Every special word is defined once in [docs/GLOSSARY.md](docs/GLOSSARY.md). To try it on your own work, follow [docs/FIRST_PILOT.md](docs/FIRST_PILOT.md).
@@ -49,7 +49,7 @@ You need Python 3.10 or newer and git. No packages to install to run the tools.
 ```bash
 git clone https://github.com/dxdev-inc/agent-scorecard.git
 cd agent-scorecard
-python -m factory_kit quickstart
+python -m agent_scorecard quickstart
 ```
 
 Run everything from a clone. The CLI reads `data/` next to the package, so `pip install .` alone is not supported.
@@ -64,7 +64,7 @@ python scripts/privacy_scan.py   # generic patterns only unless PRIVACY_DENY_FIL
 ```
 
 Other commands: `generate`, `measure --as-of 2025-04-01T00:00:00Z`, `scorecard`, `capture "text"`, `verify`, `loop`, `roleplay`, `sample`.
-Run `python -m factory_kit --help`.
+Run `python -m agent_scorecard --help`.
 
 ### What a clean run prints (abridged)
 
@@ -117,8 +117,8 @@ reported beside the finish rate because a higher finish rate could be a worse fa
 ## Use it on your own log
 
 1. Write an adapter that emits the rows in [docs/SCHEMA.md](docs/SCHEMA.md) from whatever you have. Keep it out of this repo.
-2. `python -m factory_kit measure --log your.jsonl --as-of 2025-06-01T00:00:00Z`
-3. Replace `data/verifier_cases.json` with 20 cases you labelled yourself, and run `python -m factory_kit verify`. Report both error directions it prints.
+2. `python -m agent_scorecard measure --log your.jsonl --as-of 2025-06-01T00:00:00Z`
+3. Replace `data/verifier_cases.json` with 20 cases you labelled yourself, and run `python -m agent_scorecard verify`. Report both error directions it prints.
 4. Replace the capture rules wherever your messages differ from mine. They are English keyword rules, and they will be wrong on your data.
 
 ## Limits (read this before quoting anything)
@@ -178,7 +178,7 @@ This repo is where the method lives and changes. When a definition, a schema fie
 - **See what changed.** On GitHub, choose Watch, then Custom, then Releases. You get a note per tagged release and nothing else.
 - **Hear the story behind it.** Subscribe to the newsletter at [dxdev.com/newsletter](https://dxdev.com/newsletter/). Issues carry the latest learning from this repo.
 - **Tell us what broke or what we missed.** Prior work, a wrong definition, an adapter you wrote: use the [contact form](https://dxdev.com/contact/). We read every note.
-- **Versions.** `factory_kit.__version__` and the changelog agree. The log format is versioned at the top of [docs/SCHEMA.md](docs/SCHEMA.md), and a release that changes it says so under "What this breaks".
+- **Versions.** `agent_scorecard.__version__` and the changelog agree. The log format is versioned at the top of [docs/SCHEMA.md](docs/SCHEMA.md), and a release that changes it says so under "What this breaks".
 
 **Release rhythm (proposal, not a promise).** Weekly, tied to the newsletter: cut a tagged release only when the method changed or a limit was lifted. A week with nothing gets no release and no "no change" entry. DXdev has not confirmed this cadence yet.
 
