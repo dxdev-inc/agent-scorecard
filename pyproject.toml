@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "measure-the-agent-factory"
+name = "agent-scorecard"
 version = "0.2.0"
 description = "Measure an agent factory by what finished, not by what was started."
 requires-python = ">=3.10"
