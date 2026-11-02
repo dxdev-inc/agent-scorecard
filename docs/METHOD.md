@@ -13,7 +13,7 @@ becomes a unit with a **kind** and a **done test that fits the kind**:
 |---|---|
 | do | the change is observable in the real target, and a check other than the builder recorded evidence |
 | decide | a decision is recorded: the choice and who made it |
-| explore | a finding is stored with its evidence (a concrete question), or NO done test (thinking out loud) |
+| explore | a finding is stored with its evidence (a concrete question), or NO done test (thinking out loud). Stricter than the by-hand `finished` label; see [GLOSSARY.md](GLOSSARY.md) |
 | manage | the relay reached its recipient and the named action was observed |
 
 Two rules run through all of it. A ticket, a next step or a written document only advances status; none of them is a
