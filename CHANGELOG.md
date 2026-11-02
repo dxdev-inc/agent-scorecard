@@ -4,10 +4,26 @@ Dated, newest first. Each release says what we learned, what changed in the meth
 
 All figures in this repo are synthetic. A learning below is about the tools, not about any real factory.
 
-## Unreleased
+## 0.3.0 (2026-11-01)
 
-- Added docs/GLOSSARY.md (one glossary for the four vocabularies, and how by-hand `finished` differs from the event-log `done` for explore) and docs/FIRST_PILOT.md (checklist for a first real run). No code or results changed.
-- Still open: the glossary reconciles the two bars by naming them, it does not make them the same bar. Still no real-log run.
+**What we learned**
+- An outside review found that several of our own safeguards could be defeated or were false-clean: a verifier or evidence ref of only spaces counted as a trusted pass, the privacy scan skipped git-ignored files (where `out/` sample tables live), and passing both `--tree-only` and `--history-only` scanned nothing and reported clean.
+- The documented commands had never been run literally. `sample --score` without a path failed, and the default sample size failed on a log with fewer than 80 asks.
+
+**What changed in the method**
+- Verification: a verifier name or evidence `ref` that is empty after trimming whitespace is treated as missing (inconclusive).
+- Timestamps: a timestamp with no zone is now an error instead of being read in the machine's local time. Explicit offsets are converted to UTC.
+- `sample`: `--k` larger than the number of asks is capped, with a printed note.
+- Privacy scan: the tree scan now includes git-ignored files (not caches or environments), takes an optional PATH to scan another folder, and exits 2 on unknown or conflicting flags.
+- Docs: added docs/GLOSSARY.md and docs/FIRST_PILOT.md; fixed the commands in the README and pilot guide to the full literal form; said plainly that the loose finished share does not check evidence.
+
+**What this breaks**
+- The Python package was renamed from `factory_kit` to `agent_scorecard` (`python -m agent_scorecard ...`, `import agent_scorecard`). Anything importing the old name must change. The `v0.2.0` tag points at the old layout, so use this release or later.
+- Event logs with naive timestamps (no `Z` or offset) now raise an error. Add the `Z`. The log schema version is unchanged (1).
+
+**Still open**
+- The glossary reconciles the two bars by naming them, it does not make them the same bar. Still no real-log run.
+- Capture replay counts only the first ask of a message that holds several.
 
 ## 0.2.0 (2026-11-01)
 

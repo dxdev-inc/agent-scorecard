@@ -36,6 +36,7 @@ def judge(unit: dict, event: dict) -> tuple[str, str]:
     if claimed != "pass":
         return claimed, "verifier did not claim a pass"
     verifier = event.get("verifier")
+    verifier = verifier.strip() if isinstance(verifier, str) else verifier
     if not verifier:
         return "inconclusive", "no verifier recorded"
     if verifier == unit.get("executor"):
@@ -45,7 +46,8 @@ def judge(unit: dict, event: dict) -> tuple[str, str]:
     ev = event.get("evidence")
     if not ev:
         return "inconclusive", "no evidence recorded"
-    if not ev.get("ref"):
+    ref = ev.get("ref")
+    if not (ref.strip() if isinstance(ref, str) else ref):
         return "inconclusive", "evidence has no ref to check it by"
     kind = ev.get("kind")
     if kind in PRESENCE_ONLY:

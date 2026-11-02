@@ -141,7 +141,12 @@ def main(argv=None) -> int:
             print("give --log to draw a sample, or --score to score a filled-in table")
             return 2
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
-        drawn = sample.draw(sample.ask_rows(a.log), a.k, a.seed)
+        rows = sample.ask_rows(a.log)
+        k = a.k
+        if k > len(rows):
+            print(f"note: the log has only {len(rows)} asks, so --k {k} is capped to {len(rows)} (every ask is drawn)")
+            k = len(rows)
+        drawn = sample.draw(rows, k, a.seed)
         sample.write_template(drawn, a.out)
         print(f"wrote {len(drawn)} rows to {a.out}; fill label, evidence_kind, evidence_ref, then run with --score")
         return 0
