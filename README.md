@@ -133,7 +133,7 @@ reported beside the finish rate because a higher finish rate could be a worse fa
 - **Tested on one machine** (Windows, Python 3.13.5, git 2.20.1). Not tested elsewhere. Nothing here needs a newer git.
 - **The privacy scan is pattern matching.** It cannot tell that a paragraph describes private structure in words it
   does not know. A semantic review by a person or a different model is a separate step and has not been done for this
-  draft. gitleaks 8.30.1 and trufflehog 3.99.7 were run over the full git history on 2026-11-01 and found nothing; that shows no known secret pattern, not that nothing private is there.
+  draft. On 2026-11-01 gitleaks 8.30.1 (git history and working tree) and trufflehog 3.99.7 (git history and tracked files, with verification off) were run on this repo and reported nothing; that shows no known secret pattern, not that nothing private is there. They were not re-run after later commits.
 
 ## Prior work
 
