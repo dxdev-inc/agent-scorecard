@@ -36,7 +36,12 @@ REQUIRED = {
 
 
 def parse_ts(s: str) -> datetime:
-    return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(timezone.utc)
+    """Parse an ISO 8601 timestamp to UTC. The timestamp must say its zone (`Z` or an offset). A naive one is an
+    error: reading it in the machine's local zone would make results depend on where the code runs."""
+    dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        raise ValueError(f"timestamp {s!r} has no zone; use UTC with a Z suffix")
+    return dt.astimezone(timezone.utc)
 
 
 def fmt_ts(dt: datetime) -> str:

@@ -1,6 +1,6 @@
 # Event log schema (version 1)
 
-One JSON object per line, UTF-8. Every row has `ts` (UTC, ISO 8601, `Z` suffix), `type`, and `class`.
+One JSON object per line, UTF-8. Every row has `ts` (UTC, ISO 8601, `Z` suffix; a timestamp with no zone is rejected as an error, an explicit offset is converted to UTC), `type`, and `class`.
 `class` is the privacy classification of the row. Every row this repo ships is `synthetic`. If you point the
 tools at your own log, set `class` to whatever your own policy says, and decide what may leave your machine
 before you publish anything built from it.

@@ -5,6 +5,11 @@
     python scripts/privacy_scan.py --tree-only
     python scripts/privacy_scan.py --history-only
     python scripts/privacy_scan.py --deny-file /path/to/deny.txt
+    python scripts/privacy_scan.py PATH         # scan another directory (a folder you plan to publish)
+
+The tree scan covers tracked files, untracked files AND git-ignored files (out/ is ignored and holds the sample
+CSVs). Caches and environments (.git, __pycache__, .pytest_cache, .venv, node_modules and similar) are skipped.
+A PATH that is not a git repository is scanned as a tree only. Conflicting or unknown flags exit 2.
 
 What it checks:
   * a deny list, one case-insensitive regex per line, read from a file that is NOT in this repo. Give its path
@@ -107,11 +112,25 @@ def _is_binary(path: Path) -> bool:
     return b"\0" in path.read_bytes()[:8192]
 
 
+NOISE_DIRS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".tox", ".venv", "venv",
+              "node_modules", ".idea", ".vscode"}
+
+
+def _noise(rel_parts: tuple[str, ...]) -> bool:
+    return (any(p in NOISE_DIRS or p.endswith(".egg-info") for p in rel_parts)
+            or rel_parts[-1].endswith((".pyc", ".pyo")))
+
+
 def tree_files(root: Path) -> list[Path]:
+    """Every file in the working tree: tracked, untracked, and git-ignored, minus cache and environment noise."""
     if (root / ".git").exists():
-        names = _git(root, "ls-files", "-z", "--cached", "--others", "--exclude-standard").split("\0")
-        return [root / n for n in names if n and (root / n).is_file()]
-    return [p for p in root.rglob("*") if p.is_file() and ".git" not in p.parts]
+        out = _git(root, "ls-files", "-z", "--cached", "--others", "--exclude-standard")
+        out += "\0" + _git(root, "ls-files", "-z", "--others", "--ignored", "--exclude-standard")
+        names = sorted(set(out.split("\0")))
+        cands = [root / n for n in names if n]
+    else:
+        cands = list(root.rglob("*"))
+    return [f for f in cands if f.is_file() and not _noise(f.relative_to(root).parts)]
 
 
 def scan_tree(root: Path, deny=None) -> list[Hit]:
@@ -149,24 +168,58 @@ def scan_history(root: Path, deny=None) -> list[Hit]:
     return hits
 
 
+def _parse(argv):
+    """(deny_file, tree_only, history_only, target) or an error string."""
+    deny_file, tree_only, history_only, target = None, False, False, None
+    it = iter(argv)
+    for a in it:
+        if a == "--deny-file":
+            deny_file = next(it, None)
+            if not deny_file:
+                return "--deny-file needs a path"
+        elif a == "--tree-only":
+            tree_only = True
+        elif a == "--history-only":
+            history_only = True
+        elif a.startswith("-"):
+            return f"unknown option {a}"
+        elif target is None:
+            target = a
+        else:
+            return "only one PATH may be given"
+    if tree_only and history_only:
+        return "--tree-only and --history-only conflict: together they would scan nothing"
+    return deny_file, tree_only, history_only, target
+
+
 def main(argv=None) -> int:
     argv = list(argv if argv is not None else sys.argv[1:])
-    deny_file = None
-    if "--deny-file" in argv:
-        i = argv.index("--deny-file")
-        deny_file = argv[i + 1]
-        del argv[i:i + 2]
-    args = set(argv)
-    deny = load_deny(deny_file)
+    parsed = _parse(argv)
+    if isinstance(parsed, str):
+        print(f"privacy_scan: {parsed}")
+        print("usage: privacy_scan.py [--tree-only | --history-only] [--deny-file PATH] [PATH]")
+        return 2
+    deny_file, tree_only, history_only, target = parsed
+    root = Path(target).resolve() if target else Path(__file__).resolve().parent.parent
+    if not root.is_dir():
+        print(f"privacy_scan: target {target} is not a directory")
+        return 2
+    try:
+        deny = load_deny(deny_file)
+    except (OSError, re.error) as e:
+        print(f"privacy_scan: cannot use the deny file: {e}")
+        return 2
     mode = (f"MODE: deny list ({len(deny)} entries) + generic patterns" if deny
             else "MODE: GENERIC PATTERNS ONLY (no deny list given; set PRIVACY_DENY_FILE or --deny-file)")
     print(mode)
-    root = Path(__file__).resolve().parent.parent
+    if target is not None and not (root / ".git").exists() and not history_only:
+        tree_only = True
+        print("note: target is not a git repository; scanning the tree only")
     hits: list[Hit] = []
     try:
-        if "--history-only" not in args:
+        if not history_only:
             hits += scan_tree(root, deny)
-        if "--tree-only" not in args:
+        if not tree_only:
             hits += scan_history(root, deny)
     except GitError as e:
         print(f"PRIVACY SCAN COULD NOT RUN: {e}\nThis is a failure, not a clean result.")
@@ -177,7 +230,7 @@ def main(argv=None) -> int:
         for h in hits[:200]:
             print("  " + str(h))
         return 1
-    scope = "tree" if "--tree-only" in args else "history" if "--history-only" in args else "tree + history"
+    scope = "tree" if tree_only else "history" if history_only else "tree + history"
     print(f"privacy scan clean ({scope}): {len(deny)} deny entries, {len(GENERIC)} generic patterns")
     return 0
 

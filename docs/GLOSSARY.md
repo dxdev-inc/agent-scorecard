@@ -15,7 +15,7 @@ You read a sampled ask and judge it against independent evidence (git, a ticket,
 | `cannot_tell` | You could not find evidence either way. |
 | `not_a_request` | Not work: thanks, acknowledgement, chatter. |
 
-Evidence kind for a `finished` row: `git`, `ticket`, `live` (all count as strict) or `agent_report` (counts only in the loose share). The loose share is every `finished`. The strict share is `finished` backed by `git`, `ticket` or `live`.
+Evidence kind for a `finished` row: `git`, `ticket`, `live` (all count as strict) or `agent_report` (counts only in the loose share). The loose share is every `finished`, and it does not check evidence: a `finished` row with blank `evidence_kind` and `evidence_ref` still counts in it. The strict share is `finished` backed by `git`, `ticket` or `live`.
 
 ## 2. Event log kinds (`unit_created.kind`)
 
