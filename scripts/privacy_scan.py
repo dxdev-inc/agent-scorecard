@@ -32,8 +32,11 @@ from pathlib import Path
 
 import os
 
-ALLOWED_IDENTITIES = {"DXdev <noreply@dxdev.com>"}
-ALLOWED_EMAIL = re.compile(r"^(?:noreply@dxdev\.com|[\w.+-]+@example\.(?:com|org))$", re.I)
+ALLOWED_IDENTITIES = {
+    "DXdev <noreply@dxdev.com>",
+    "Ben Downey <4150101+akamaiben@users.noreply.github.com>",
+}
+ALLOWED_EMAIL = re.compile(r"^(?:noreply@dxdev\.com|4150101\+akamaiben@users\.noreply\.github\.com|[\w.+-]+@example\.(?:com|org))$", re.I)
 TICKET_PREFIX_OK = {"ISO", "SHA", "RFC", "PEP"}
 # The one extra address allowed anywhere in HISTORY, and only as the whole of a Co-Authored-By trailer that names
 # nobody else: the public vendor no-reply address that coding assistants add to commit messages. It is not
